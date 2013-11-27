@@ -1,0 +1,714 @@
+TmeDemoApp
+v6
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Info.plist /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/meDemoApp-Info.plist
+cCpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist build/device/meDemoApp.app/ResourceRules.plist
+cPhaseScriptExecution Copy\ www\ directory /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Script-304B58A110DAC018002A0835.sh
+cCpResource meDemoApp/config.xml build/device/meDemoApp.app/config.xml
+cCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon-72.png meDemoApp/Resources/icons/icon-72.png
+cCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon.png meDemoApp/Resources/icons/icon.png
+cCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon@2x.png meDemoApp/Resources/icons/icon@2x.png
+cCopyStringsFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/en.lproj/Localizable.strings meDemoApp/Resources/en.lproj/Localizable.strings
+cCopyStringsFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/es.lproj/Localizable.strings meDemoApp/Resources/es.lproj/Localizable.strings
+cCompileXIB /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.xib
+cCopyStringsFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/de.lproj/Localizable.strings meDemoApp/Resources/de.lproj/Localizable.strings
+cCopyStringsFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/se.lproj/Localizable.strings meDemoApp/Resources/se.lproj/Localizable.strings
+cCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Landscape@2x~ipad.png meDemoApp/Resources/splash/Default-Landscape@2x~ipad.png
+cCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Landscape~ipad.png meDemoApp/Resources/splash/Default-Landscape~ipad.png
+cCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Portrait@2x~ipad.png meDemoApp/Resources/splash/Default-Portrait@2x~ipad.png
+cCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Portrait~ipad.png meDemoApp/Resources/splash/Default-Portrait~ipad.png
+cCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default@2x~iphone.png meDemoApp/Resources/splash/Default@2x~iphone.png
+cCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default~iphone.png meDemoApp/Resources/splash/Default~iphone.png
+cCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-568h@2x~iphone.png meDemoApp/Resources/splash/Default-568h@2x~iphone.png
+cCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon-72@2x.png meDemoApp/Resources/icons/icon-72@2x.png
+cProcessPCH /var/folders/13/8286njsn4lsgq3l_m8f6jqvc0000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/meDemoApp-Prefix-fmudiozzjijzyfaxbopbrasitzua/meDemoApp-Prefix.pch.pch meDemoApp/meDemoApp-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/main.o /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/AppDelegate.o /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/AppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/MainViewController.o /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/meDemoApp normal armv7
+cGenerateDSYMFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app.dSYM /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/meDemoApp
+cProcessProductPackaging /Users/AngeSSmith/Library/MobileDevice/Provisioning\ Profiles/D54B0926-01A3-48E0-AB14-83B51A93FC27.mobileprovision /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/embedded.mobileprovision
+cTouch /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app
+cProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp.xcent
+cCodeSign /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk
+c00000000525642EE0000000000000110
+t1381384942
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist
+c000000005293C24A0000000000000094
+t1385415242
+s148
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist
+c000000005293C24A0000000000000096
+t1385415242
+s150
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/SDKSettings.plist
+c000000005293C24A000000000000036B
+t1385415242
+s875
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/CoreServices/SystemVersion.plist
+c000000005293C24B00000000000001A0
+t1385415243
+s416
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
+c000000005293C24B0000000000075BB0
+t1385415243
+s482224
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000005293C24C00000000004D63C0
+t1385415244
+s5071808
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c000000005293C24C0000000000146100
+t1385415244
+s1335552
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+c000000005293C24D0000000000210C80
+t1385415245
+s2165888
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/libCordova.a
+c000000005295747100000000000E39D0
+t1385526385
+s932304
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app
+t1385526386
+s816
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app.dSYM
+t2
+s0
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-568h@2x~iphone.png
+t1385526385
+s61990
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Landscape@2x~ipad.png
+t1385526385
+s143186
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Landscape~ipad.png
+t1385526385
+s65305
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Portrait@2x~ipad.png
+t1385526385
+s136924
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Portrait~ipad.png
+t1385526385
+s63460
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default@2x~iphone.png
+t1385526385
+s55319
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default~iphone.png
+t1385526385
+s20021
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Info.plist
+t1385526385
+s1354
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/MainViewController.nib
+t1385526385
+s1332
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/PkgInfo
+t2
+s0
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/ResourceRules.plist
+t1385526385
+s150
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/config.xml
+t1385526385
+s2211
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/de.lproj/Localizable.strings
+t1385526385
+s280
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/embedded.mobileprovision
+t1385526386
+s9074
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/en.lproj/Localizable.strings
+t1385526385
+s166
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/es.lproj/Localizable.strings
+t1385526385
+s334
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon-72.png
+t1385526385
+s8045
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon-72@2x.png
+t1385526385
+s17926
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon.png
+t1385526385
+s5977
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon@2x.png
+t1385526385
+s13012
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/meDemoApp
+t1385526386
+s300328
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/se.lproj/Localizable.strings
+t1385526385
+s283
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/AppDelegate.o
+t1385526385
+s77988
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/MainViewController.o
+t1385526385
+s53236
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/main.o
+t1385526385
+s3096
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/meDemoApp.LinkFileList
+c000000005295747100000000000001A1
+t1385526385
+s417
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Script-304B58A110DAC018002A0835.sh
+c0000000052957471000000000000002D
+t1385526385
+s45
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp.xcent
+t1385526386
+s676
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/AppDelegate.m
+c000000005295744E00000000000013A9
+t1385526350
+s5033
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.m
+c000000005295744E000000000000126A
+t1385526350
+s4714
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.xib
+c000000005295744D0000000000001759
+t1385526349
+s5977
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/de.lproj/Localizable.strings
+c000000005295744D00000000000004BF
+t1385526349
+s1215
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/en.lproj/Localizable.strings
+c000000005295744D00000000000004AA
+t1385526349
+s1194
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/es.lproj/Localizable.strings
+c000000005295744D00000000000004B7
+t1385526349
+s1207
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/icons/icon-72.png
+c000000005295744D0000000000001350
+t1385526349
+s4944
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/icons/icon-72@2x.png
+c000000005295744D0000000000002DBA
+t1385526349
+s11706
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/icons/icon.png
+c000000005295744D0000000000000F3E
+t1385526349
+s3902
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/icons/icon@2x.png
+c000000005295744D0000000000001EBD
+t1385526349
+s7869
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/se.lproj/Localizable.strings
+c000000005295744D00000000000004AB
+t1385526349
+s1195
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default-568h@2x~iphone.png
+c000000005295744D00000000000085B1
+t1385526349
+s34225
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default-Landscape@2x~ipad.png
+c000000005295744D0000000000012DF4
+t1385526349
+s77300
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default-Landscape~ipad.png
+c000000005295744D0000000000008877
+t1385526349
+s34935
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default-Portrait@2x~ipad.png
+c000000005295744D0000000000012B02
+t1385526349
+s76546
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default-Portrait~ipad.png
+c000000005295744D00000000000085E6
+t1385526349
+s34278
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default@2x~iphone.png
+c000000005295744D0000000000007323
+t1385526349
+s29475
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default~iphone.png
+c000000005295744D000000000000289A
+t1385526349
+s10394
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/config.xml
+c000000005295746E00000000000008A3
+t1385526382
+s2211
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/main.m
+c000000005295744E000000000000045B
+t1385526350
+s1115
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/meDemoApp-Info.plist
+c000000005295746E0000000000000743
+t1385526382
+s1859
+
+N/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/meDemoApp-Prefix.pch
+c000000005295744E00000000000003C3
+t1385526350
+s963
+
+N/Users/AngeSSmith/Library/MobileDevice/Provisioning Profiles/D54B0926-01A3-48E0-AB14-83B51A93FC27.mobileprovision
+c00000000529560280000000000002372
+t1385521192
+s9074
+
+N/var/folders/13/8286njsn4lsgq3l_m8f6jqvc0000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/meDemoApp-Prefix-fmudiozzjijzyfaxbopbrasitzua/meDemoApp-Prefix.pch.pch
+t1385526372
+s5279912
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies630d6bf1ab45b841^86ab6bf1ab45b841^---0#1#1#--18"Check dependencies36"3D50C31F-52CE-4477-8A68-CDEB0C385627-
+
+CCodeSign /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app
+s407219186.095177
+e407219188.838132
+r1
+xCodeSign
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"CodeSign build/device/meDemoApp.app35"CodeSign build/device/meDemoApp.app037718f2ab45b841^2590d6f4ab45b841^---0#0#1#-19%DVTDocumentLocation2@94"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/0000000000000000^1152"CodeSign build/device/meDemoApp.app    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv CODESIGN_ALLOCATE /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    Using code signing identity "iPhone Developer: Jennifer McCarrick (VET4496F2Z)" and provisioning profile "demoApp" (D54B0926-01A3-48E0-AB14-83B51A93FC27)    codesign --force --sign 7B249ED2A726DE4C43DC8B6AECDCDB656072C197 --resource-rules=/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/ResourceRules.plist --entitlements /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp.xcent /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app36"35F08EF2-C8E2-4B93-9785-24248B84413B-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCompileC build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/AppDelegate.o /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/AppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s407219185.903838
+e407219185.952962
+r1
+xCompileC
+xbuild/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/AppDelegate.o
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/AppDelegate.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/AppDelegate.m
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/AppDelegate.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVViewController.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVAvailability.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVInvokedUrlCommand.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVCommandDelegate.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVCommandQueue.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVWhitelist.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVScreenOrientationDelegate.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVPlugin.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVPluginResult.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/NSMutableArray+QueueAdditions.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVCommandDelegateImpl.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/AppDelegate.m197"CompileC build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/AppDelegate.o meDemoApp/Classes/AppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler897ce7f1ab45b841^a5f5f3f1ab45b841^---0#0#1#-19%DVTDocumentLocation2@98"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/AppDelegate.m0000000000000000^3730"CompileC build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/AppDelegate.o meDemoApp/Classes/AppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp-generated-files.hmap -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp-own-target-headers.hmap -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp-all-target-headers.hmap -iquote /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp-project-headers.hmap -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/usr/local/lib/include -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/UninstalledProducts/include -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/DerivedSources/armv7 -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/DerivedSources -F/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device -include /var/folders/13/8286njsn4lsgq3l_m8f6jqvc0000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/meDemoApp-Prefix-fmudiozzjijzyfaxbopbrasitzua/meDemoApp-Prefix.pch -MMD -MT dependencies -MF /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/AppDelegate.d --serialize-diagnostics /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/AppDelegate.dia -c /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/AppDelegate.m -o /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/AppDelegate.o36"42FD295C-4A91-45F7-8EB5-18FE2CEA575B-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCompileC build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/MainViewController.o /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s407219185.903843
+e407219185.944803
+r1
+xCompileC
+xbuild/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/MainViewController.o
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.m
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVViewController.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVAvailability.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVInvokedUrlCommand.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVCommandDelegate.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVCommandQueue.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVWhitelist.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVScreenOrientationDelegate.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVPlugin.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVPluginResult.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/NSMutableArray+QueueAdditions.h
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include/Cordova/CDVCommandDelegateImpl.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Compile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.m211"CompileC build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/MainViewController.o meDemoApp/Classes/MainViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compilercc7ce7f1ab45b841^bedef1f1ab45b841^---0#0#1#-19%DVTDocumentLocation2@105"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.m0000000000000000^3772"CompileC build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/MainViewController.o meDemoApp/Classes/MainViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp-generated-files.hmap -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp-own-target-headers.hmap -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp-all-target-headers.hmap -iquote /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp-project-headers.hmap -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/usr/local/lib/include -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/UninstalledProducts/include -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/DerivedSources/armv7 -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/DerivedSources -F/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device -include /var/folders/13/8286njsn4lsgq3l_m8f6jqvc0000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/meDemoApp-Prefix-fmudiozzjijzyfaxbopbrasitzua/meDemoApp-Prefix.pch -MMD -MT dependencies -MF /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/MainViewController.d --serialize-diagnostics /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/MainViewController.dia -c /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.m -o /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/MainViewController.o36"7EB98ACC-DB2B-4F91-9893-7EBEA4B3AAB6-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCompileC build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/main.o /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s407219185.903836
+e407219185.919805
+r1
+xCompileC
+xbuild/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/main.o
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/main.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/main.m
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/main.m175"CompileC build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/main.o meDemoApp/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler2977e7f1ab45b841^3678ebf1ab45b841^---0#0#1#-19%DVTDocumentLocation2@83"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/main.m0000000000000000^3672"CompileC build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/main.o meDemoApp/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -miphoneos-version-min=5.0 -iquote /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp-generated-files.hmap -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp-own-target-headers.hmap -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp-all-target-headers.hmap -iquote /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp-project-headers.hmap -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/usr/local/lib/include -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/UninstalledProducts/include -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/DerivedSources/armv7 -I/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/DerivedSources -F/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device -include /var/folders/13/8286njsn4lsgq3l_m8f6jqvc0000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/meDemoApp-Prefix-fmudiozzjijzyfaxbopbrasitzua/meDemoApp-Prefix.pch -MMD -MT dependencies -MF /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/main.d --serialize-diagnostics /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/main.dia -c /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/main.m -o /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/main.o36"9FD9DE91-786C-49C8-888C-09E64153ABF1-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCompileXIB /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.xib
+s407219185.617513
+e407219185.645925
+r1
+xCompileXIB
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.xib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compiling /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.xib51"CompileXIB meDemoApp/Classes/MainViewController.xib52299ef1ab45b841^bc5ba5f1ab45b841^---0#0#1#-19%DVTDocumentLocation2@107"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.xib0000000000000000^932"CompileXIB meDemoApp/Classes/MainViewController.xib    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 5.0 --output-format human-readable-text --compile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/MainViewController.nib /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Classes/MainViewController.xib36"C423FE4E-708C-48E6-B9A4-EF1D0D94094E-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-568h@2x~iphone.png meDemoApp/Resources/splash/Default-568h@2x~iphone.png
+s407219185.655123
+e407219185.755495
+r1
+xCopyPNGFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-568h@2x~iphone.png
+xmeDemoApp/Resources/splash/Default-568h@2x~iphone.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"CopyPNGFile build/device/meDemoApp.app/Default-568h@2x~iphone.png meDemoApp/Resources/splash/Default-568h@2x~iphone.png119"CopyPNGFile build/device/meDemoApp.app/Default-568h@2x~iphone.png meDemoApp/Resources/splash/Default-568h@2x~iphone.pngd5cba7f1ab45b841^5168c1f1ab45b841^---0#0#1#-19%DVTDocumentLocation2@120"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default-568h@2x~iphone.png0000000000000000^868"CopyPNGFile build/device/meDemoApp.app/Default-568h@2x~iphone.png meDemoApp/Resources/splash/Default-568h@2x~iphone.png    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default-568h@2x~iphone.png /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-568h@2x~iphone.png36"67EE0DE2-120D-4F51-8F54-4B3F93D5FF8B-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Landscape@2x~ipad.png meDemoApp/Resources/splash/Default-Landscape@2x~ipad.png
+s407219185.625327
+e407219185.891676
+r1
+xCopyPNGFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Landscape@2x~ipad.png
+xmeDemoApp/Resources/splash/Default-Landscape@2x~ipad.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"CopyPNGFile build/device/meDemoApp.app/Default-Landscape@2x~ipad.png meDemoApp/Resources/splash/Default-Landscape@2x~ipad.png125"CopyPNGFile build/device/meDemoApp.app/Default-Landscape@2x~ipad.png meDemoApp/Resources/splash/Default-Landscape@2x~ipad.png882aa0f1ab45b841^3545e4f1ab45b841^---0#0#1#-19%DVTDocumentLocation2@123"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default-Landscape@2x~ipad.png0000000000000000^880"CopyPNGFile build/device/meDemoApp.app/Default-Landscape@2x~ipad.png meDemoApp/Resources/splash/Default-Landscape@2x~ipad.png    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default-Landscape@2x~ipad.png /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Landscape@2x~ipad.png36"A8CD938D-58DC-4F06-8AC7-30DE74364C32-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Landscape~ipad.png meDemoApp/Resources/splash/Default-Landscape~ipad.png
+s407219185.626393
+e407219185.749206
+r1
+xCopyPNGFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Landscape~ipad.png
+xmeDemoApp/Resources/splash/Default-Landscape~ipad.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"CopyPNGFile build/device/meDemoApp.app/Default-Landscape~ipad.png meDemoApp/Resources/splash/Default-Landscape~ipad.png119"CopyPNGFile build/device/meDemoApp.app/Default-Landscape~ipad.png meDemoApp/Resources/splash/Default-Landscape~ipad.png156fa0f1ab45b841^7dccbff1ab45b841^---0#0#1#-19%DVTDocumentLocation2@120"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default-Landscape~ipad.png0000000000000000^868"CopyPNGFile build/device/meDemoApp.app/Default-Landscape~ipad.png meDemoApp/Resources/splash/Default-Landscape~ipad.png    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default-Landscape~ipad.png /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Landscape~ipad.png36"CDB24A19-95C2-4332-9D5D-71DA1CD2B356-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Portrait@2x~ipad.png meDemoApp/Resources/splash/Default-Portrait@2x~ipad.png
+s407219185.626536
+e407219185.893945
+r1
+xCopyPNGFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Portrait@2x~ipad.png
+xmeDemoApp/Resources/splash/Default-Portrait@2x~ipad.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"CopyPNGFile build/device/meDemoApp.app/Default-Portrait@2x~ipad.png meDemoApp/Resources/splash/Default-Portrait@2x~ipad.png123"CopyPNGFile build/device/meDemoApp.app/Default-Portrait@2x~ipad.png meDemoApp/Resources/splash/Default-Portrait@2x~ipad.png9a77a0f1ab45b841^05dbe4f1ab45b841^---0#0#1#-19%DVTDocumentLocation2@122"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default-Portrait@2x~ipad.png0000000000000000^876"CopyPNGFile build/device/meDemoApp.app/Default-Portrait@2x~ipad.png meDemoApp/Resources/splash/Default-Portrait@2x~ipad.png    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default-Portrait@2x~ipad.png /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Portrait@2x~ipad.png36"8E8F964D-3556-4401-8637-7D00780639E7-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Portrait~ipad.png meDemoApp/Resources/splash/Default-Portrait~ipad.png
+s407219185.630001
+e407219185.748519
+r1
+xCopyPNGFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Portrait~ipad.png
+xmeDemoApp/Resources/splash/Default-Portrait~ipad.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"CopyPNGFile build/device/meDemoApp.app/Default-Portrait~ipad.png meDemoApp/Resources/splash/Default-Portrait~ipad.png117"CopyPNGFile build/device/meDemoApp.app/Default-Portrait~ipad.png meDemoApp/Resources/splash/Default-Portrait~ipad.png6c5ea1f1ab45b841^889fbff1ab45b841^---0#0#1#-19%DVTDocumentLocation2@119"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default-Portrait~ipad.png0000000000000000^864"CopyPNGFile build/device/meDemoApp.app/Default-Portrait~ipad.png meDemoApp/Resources/splash/Default-Portrait~ipad.png    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default-Portrait~ipad.png /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default-Portrait~ipad.png36"BDE4AE8E-ECBE-4633-8E82-6AD64C6CE970-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default@2x~iphone.png meDemoApp/Resources/splash/Default@2x~iphone.png
+s407219185.647228
+e407219185.743451
+r1
+xCopyPNGFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default@2x~iphone.png
+xmeDemoApp/Resources/splash/Default@2x~iphone.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"CopyPNGFile build/device/meDemoApp.app/Default@2x~iphone.png meDemoApp/Resources/splash/Default@2x~iphone.png109"CopyPNGFile build/device/meDemoApp.app/Default@2x~iphone.png meDemoApp/Resources/splash/Default@2x~iphone.png19c6a5f1ab45b841^8753bef1ab45b841^---0#0#1#-19%DVTDocumentLocation2@115"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default@2x~iphone.png0000000000000000^848"CopyPNGFile build/device/meDemoApp.app/Default@2x~iphone.png meDemoApp/Resources/splash/Default@2x~iphone.png    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default@2x~iphone.png /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default@2x~iphone.png36"15F3BAB7-9EFD-424C-B18A-3D1B723E65F9-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default~iphone.png meDemoApp/Resources/splash/Default~iphone.png
+s407219185.652186
+e407219185.702033
+r1
+xCopyPNGFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default~iphone.png
+xmeDemoApp/Resources/splash/Default~iphone.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"CopyPNGFile build/device/meDemoApp.app/Default~iphone.png meDemoApp/Resources/splash/Default~iphone.png103"CopyPNGFile build/device/meDemoApp.app/Default~iphone.png meDemoApp/Resources/splash/Default~iphone.png8d0ba7f1ab45b841^f5b8b3f1ab45b841^---0#0#1#-19%DVTDocumentLocation2@112"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default~iphone.png0000000000000000^836"CopyPNGFile build/device/meDemoApp.app/Default~iphone.png meDemoApp/Resources/splash/Default~iphone.png    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/splash/Default~iphone.png /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Default~iphone.png36"78D7BA29-26B5-45AA-A9EC-5BE1C6C8BBAB-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon-72.png meDemoApp/Resources/icons/icon-72.png
+s407219185.617283
+e407219185.653842
+r1
+xCopyPNGFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon-72.png
+xmeDemoApp/Resources/icons/icon-72.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"CopyPNGFile build/device/meDemoApp.app/icon-72.png meDemoApp/Resources/icons/icon-72.png88"CopyPNGFile build/device/meDemoApp.app/icon-72.png meDemoApp/Resources/icons/icon-72.png4c179ef1ab45b841^ac70a7f1ab45b841^---0#0#1#-19%DVTDocumentLocation2@104"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/icons/icon-72.png0000000000000000^806"CopyPNGFile build/device/meDemoApp.app/icon-72.png meDemoApp/Resources/icons/icon-72.png    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/icons/icon-72.png /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon-72.png36"69FB98BD-4873-4E90-AAAD-97D9431D1CF3-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon-72@2x.png meDemoApp/Resources/icons/icon-72@2x.png
+s407219185.657129
+e407219185.693448
+r1
+xCopyPNGFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon-72@2x.png
+xmeDemoApp/Resources/icons/icon-72@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"CopyPNGFile build/device/meDemoApp.app/icon-72@2x.png meDemoApp/Resources/icons/icon-72@2x.png94"CopyPNGFile build/device/meDemoApp.app/icon-72@2x.png meDemoApp/Resources/icons/icon-72@2x.png834ea8f1ab45b841^5586b1f1ab45b841^---0#0#1#-19%DVTDocumentLocation2@107"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/icons/icon-72@2x.png0000000000000000^818"CopyPNGFile build/device/meDemoApp.app/icon-72@2x.png meDemoApp/Resources/icons/icon-72@2x.png    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/icons/icon-72@2x.png /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon-72@2x.png36"8410265F-F179-4815-80F9-104553CB2D9A-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon.png meDemoApp/Resources/icons/icon.png
+s407219185.617321
+e407219185.650820
+r1
+xCopyPNGFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon.png
+xmeDemoApp/Resources/icons/icon.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"CopyPNGFile build/device/meDemoApp.app/icon.png meDemoApp/Resources/icons/icon.png82"CopyPNGFile build/device/meDemoApp.app/icon.png meDemoApp/Resources/icons/icon.png1d1e9ef1ab45b841^b8b0a6f1ab45b841^---0#0#1#-19%DVTDocumentLocation2@101"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/icons/icon.png0000000000000000^794"CopyPNGFile build/device/meDemoApp.app/icon.png meDemoApp/Resources/icons/icon.png    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/icons/icon.png /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon.png36"867B66E6-2F4C-44B7-B107-360FA9B2EAA5-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCopyPNGFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon@2x.png meDemoApp/Resources/icons/icon@2x.png
+s407219185.617324
+e407219185.655836
+r1
+xCopyPNGFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon@2x.png
+xmeDemoApp/Resources/icons/icon@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"CopyPNGFile build/device/meDemoApp.app/icon@2x.png meDemoApp/Resources/icons/icon@2x.png88"CopyPNGFile build/device/meDemoApp.app/icon@2x.png meDemoApp/Resources/icons/icon@2x.pngc4229ef1ab45b841^0ce6a7f1ab45b841^---0#0#1#-19%DVTDocumentLocation2@104"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/icons/icon@2x.png0000000000000000^806"CopyPNGFile build/device/meDemoApp.app/icon@2x.png meDemoApp/Resources/icons/icon@2x.png    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/icons/icon@2x.png /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/icon@2x.png36"DA396FB3-2900-4000-B6F4-FA4186D5303C-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCopyStringsFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/de.lproj/Localizable.strings meDemoApp/Resources/de.lproj/Localizable.strings
+s407219185.617521
+e407219185.626259
+r1
+xCopyStringsFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/de.lproj/Localizable.strings
+xmeDemoApp/Resources/de.lproj/Localizable.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Copy meDemoApp/Resources/de.lproj/Localizable.strings120"CopyStringsFile build/device/meDemoApp.app/de.lproj/Localizable.strings meDemoApp/Resources/de.lproj/Localizable.strings67289ef1ab45b841^5d53a0f1ab45b841^---0#0#1#-19%DVTDocumentLocation2@115"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/de.lproj/Localizable.strings0000000000000000^777"CopyStringsFile build/device/meDemoApp.app/de.lproj/Localizable.strings meDemoApp/Resources/de.lproj/Localizable.strings    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/de.lproj -- meDemoApp/Resources/de.lproj/Localizable.strings36"AE94D936-D289-46FD-A63A-98D759F59824-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCopyStringsFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/en.lproj/Localizable.strings meDemoApp/Resources/en.lproj/Localizable.strings
+s407219185.617339
+e407219185.624084
+r1
+xCopyStringsFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/en.lproj/Localizable.strings
+xmeDemoApp/Resources/en.lproj/Localizable.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Copy meDemoApp/Resources/en.lproj/Localizable.strings120"CopyStringsFile build/device/meDemoApp.app/en.lproj/Localizable.strings meDemoApp/Resources/en.lproj/Localizable.stringsab249ef1ab45b841^09c49ff1ab45b841^---0#0#1#-19%DVTDocumentLocation2@115"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/en.lproj/Localizable.strings0000000000000000^777"CopyStringsFile build/device/meDemoApp.app/en.lproj/Localizable.strings meDemoApp/Resources/en.lproj/Localizable.strings    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/en.lproj -- meDemoApp/Resources/en.lproj/Localizable.strings36"7815462C-905C-4B9E-9072-D69D010E5543-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCopyStringsFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/es.lproj/Localizable.strings meDemoApp/Resources/es.lproj/Localizable.strings
+s407219185.617352
+e407219185.625202
+r1
+xCopyStringsFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/es.lproj/Localizable.strings
+xmeDemoApp/Resources/es.lproj/Localizable.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Copy meDemoApp/Resources/es.lproj/Localizable.strings120"CopyStringsFile build/device/meDemoApp.app/es.lproj/Localizable.strings meDemoApp/Resources/es.lproj/Localizable.strings25249ef1ab45b841^910da0f1ab45b841^---0#0#1#-19%DVTDocumentLocation2@115"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/es.lproj/Localizable.strings0000000000000000^777"CopyStringsFile build/device/meDemoApp.app/es.lproj/Localizable.strings meDemoApp/Resources/es.lproj/Localizable.strings    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/es.lproj -- meDemoApp/Resources/es.lproj/Localizable.strings36"12D443D8-61A9-41E8-8497-D4F371F95C32-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCopyStringsFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/se.lproj/Localizable.strings meDemoApp/Resources/se.lproj/Localizable.strings
+s407219185.620717
+e407219185.628634
+r1
+xCopyStringsFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/se.lproj/Localizable.strings
+xmeDemoApp/Resources/se.lproj/Localizable.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Copy meDemoApp/Resources/se.lproj/Localizable.strings120"CopyStringsFile build/device/meDemoApp.app/se.lproj/Localizable.strings meDemoApp/Resources/se.lproj/Localizable.strings1ff69ef1ab45b841^6ceea0f1ab45b841^---0#0#1#-19%DVTDocumentLocation2@115"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/Resources/se.lproj/Localizable.strings0000000000000000^777"CopyStringsFile build/device/meDemoApp.app/se.lproj/Localizable.strings meDemoApp/Resources/se.lproj/Localizable.strings    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/se.lproj -- meDemoApp/Resources/se.lproj/Localizable.strings36"DD5DD924-79B9-46D7-89D8-7A462FC47686-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist build/device/meDemoApp.app/ResourceRules.plist
+s407219185.432415
+e407219185.434320
+r1
+xCpResource
+x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist
+xbuild/device/meDemoApp.app/ResourceRules.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/device/meDemoApp.app/ResourceRules.plist179"CpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist build/device/meDemoApp.app/ResourceRules.plist6ac26ef1ab45b841^fd2f6ff1ab45b841^---0#0#1#-19%DVTDocumentLocation2@113"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/ResourceRules.plist00381879ddffdf42^919"CpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist build/device/meDemoApp.app/ResourceRules.plist    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app36"7BE5342F-92AF-487B-83B2-BEEF2A69AC17-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CCpResource meDemoApp/config.xml build/device/meDemoApp.app/config.xml
+s407219185.617281
+e407219185.619514
+r1
+xCpResource
+xmeDemoApp/config.xml
+xbuild/device/meDemoApp.app/config.xml
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Copy build/device/meDemoApp.app/config.xml69"CpResource meDemoApp/config.xml build/device/meDemoApp.app/config.xml16189ef1ab45b841^ab989ef1ab45b841^---0#0#1#-19%DVTDocumentLocation2@104"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/config.xml00381879ddffdf42^759"CpResource meDemoApp/config.xml build/device/meDemoApp.app/config.xml    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/config.xml /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app36"4FC6F84E-7868-43A6-8D7A-4FEE8FF981BB-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CGenerateDSYMFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app.dSYM /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/meDemoApp
+s407219186.018095
+e407219186.052548
+r1
+xGenerateDSYMFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app.dSYM
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/meDemoApp
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Generate /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app.dSYM85"GenerateDSYMFile build/device/meDemoApp.app.dSYM build/device/meDemoApp.app/meDemoAppc0b004f2ab45b841^4f740df2ab45b841^---0#0#1#-19%DVTDocumentLocation2@98"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app.dSYM00381879ddffdf42^787"GenerateDSYMFile build/device/meDemoApp.app.dSYM build/device/meDemoApp.app/meDemoApp    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/meDemoApp -o /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app.dSYM36"91CA695F-AB50-4B67-AD06-B385EF423E32-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CLd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/meDemoApp normal armv7
+s407219185.961657
+e407219186.010013
+r1
+xLd
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/meDemoApp
+xnormal
+xarmv7
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/meDemoApp.LinkFileList
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/libCordova.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/crt1.3.1.o
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/main.o
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/AppDelegate.o
+d/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/MainViewController.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/arc/libarclite_iphoneos.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.ios.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/AVFoundation.framework/libAVFAudio.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libcache.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libcommonCrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libcompiler_rt.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libcopyfile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libcorecrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libdyld.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libkeymgr.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/liblaunch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libmacho.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libremovefile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_asl.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_kernel.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_malloc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_notify.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_platform.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_pthread.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_sandbox.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_stats.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libunwind.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libxpc.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Link /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/meDemoApp52"Ld build/device/meDemoApp.app/meDemoApp normal armv71c41f6f1ab45b841^589002f2ab45b841^---0#0#1#--1781"Ld build/device/meDemoApp.app/meDemoApp normal armv7    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch armv7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -L/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device -F/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device -filelist /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/meDemoApp.LinkFileList -dead_strip -weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -force_load /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/libCordova.a -ObjC -fobjc-arc -fobjc-link-runtime -miphoneos-version-min=5.0 -framework AssetsLibrary /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/libCordova.a -framework CoreGraphics -framework MobileCoreServices -framework CoreLocation -Xlinker -dependency_info -Xlinker /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/meDemoApp_dependency_info.dat -o /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/meDemoApp36"A6AC9D31-BF76-4891-BCBD-C31AA98A2C87-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CPhaseScriptExecution Copy\ www\ directory /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Script-304B58A110DAC018002A0835.sh
+s407219185.443389
+e407219185.608879
+r1
+xPhaseScriptExecution
+xCopy www directory
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Script-304B58A110DAC018002A0835.sh
+o
+oreal	0m0.147s
+ouser	0m0.066s
+osys	0m0.071s
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Run custom shell script 'Copy www directory'129"PhaseScriptExecution Copy\ www\ directory build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Script-304B58A110DAC018002A0835.sh630e72f1ab45b841^c1e39bf1ab45b841^-42"real	0m0.147suser	0m0.066ssys	0m0.071s3(21%IDEActivityLogMessage2@14"real	0m0.147s-407219185#1#14#-0#-----2@14"user	0m0.066s-407219185#15#14#-0#-----2@13"sys	0m0.071s-407219185#29#13#-0#-----0#0#1#--22365"PhaseScriptExecution Copy\ www\ directory build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Script-304B58A110DAC018002A0835.sh    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv ACTION build    setenv AD_HOC_CODE_SIGNING_ALLOWED NO    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER AngeSSmith    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv ALWAYS_USE_SEPARATE_HEADERMAPS YES    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS armv7    setenv ARCHS_STANDARD "armv7 armv7s"    setenv ARCHS_STANDARD_32_64_BIT "armv7 armv7s"    setenv ARCHS_STANDARD_32_BIT "armv7 armv7s"    setenv ARCHS_STANDARD_64_BIT arm64    setenv ARCHS_STANDARD_INCLUDING_64_BIT "armv7 armv7s arm64"    setenv ARCHS_UNIVERSAL_IPHONE_OS "armv7 armv7s"    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build    setenv BUILD_ROOT /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device    setenv CACHE_ROOT /var/folders/13/8286njsn4lsgq3l_m8f6jqvc0000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode    setenv CCHROOT /var/folders/13/8286njsn4lsgq3l_m8f6jqvc0000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLANG_ENABLE_OBJC_ARC YES    setenv CLANG_WARN_BOOL_CONVERSION YES    setenv CLANG_WARN_CONSTANT_CONVERSION YES    setenv CLANG_WARN_EMPTY_BODY YES    setenv CLANG_WARN_ENUM_CONVERSION YES    setenv CLANG_WARN_INT_CONVERSION YES    setenv CLANG_WARN__DUPLICATE_METHOD_MATCH YES    setenv CLASS_FILE_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app    setenv CODE_SIGNING_ALLOWED YES    setenv CODE_SIGNING_REQUIRED YES    setenv CODE_SIGN_CONTEXT_CLASS XCiPhoneOSCodeSignContext    setenv CODE_SIGN_IDENTITY "iPhone Developer"    setenv COLOR_DIAGNOSTICS NO    setenv COMBINE_HIDPI_IMAGES NO    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/13/8286njsn4lsgq3l_m8f6jqvc0000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device    setenv CONFIGURATION_TEMP_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos    setenv CONTENTS_FOLDER_PATH meDemoApp.app    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CREATE_INFOPLIST_SECTION_IN_BINARY NO    setenv CURRENT_ARCH armv7    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING YES    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0    setenv DEFAULT_KEXT_INSTALL_PATH /System/Library/Extensions    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH meDemoApp.app/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/meDemoApp.dst    setenv DT_TOOLCHAIN_DIR /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain    setenv DWARF_DSYM_FILE_NAME meDemoApp.app.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device    setenv EFFECTIVE_PLATFORM_NAME -iphoneos    setenv EMBEDDED_PROFILE_NAME embedded.mobileprovision    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENTITLEMENTS_ALLOWED YES    setenv ENTITLEMENTS_REQUIRED YES    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH meDemoApp.app/Executables    setenv EXECUTABLE_FOLDER_PATH meDemoApp.app    setenv EXECUTABLE_NAME meDemoApp    setenv EXECUTABLE_PATH meDemoApp.app/meDemoApp    setenv FILE_LIST /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH meDemoApp.app/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME meDemoApp.app    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD c99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER meDemoApp/meDemoApp-Prefix.pch    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES    setenv GCC_THUMB_SUPPORT NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_VERSION_IDENTIFIER com_apple_compilers_llvm_clang_1_0    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNDECLARED_SELECTOR YES    setenv GCC_WARN_UNINITIALIZED_AUTOS YES    setenv GCC_WARN_UNUSED_FUNCTION YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/include \"/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/usr/local/lib/include\" \"/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/UninstalledProducts/include\" \"/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device\""    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE meDemoApp/meDemoApp-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH meDemoApp.app/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH meDemoApp.app/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/meDemoApp.dst/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER AngeSSmith    setenv INSTALL_PATH /Applications    setenv INSTALL_ROOT /tmp/meDemoApp.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH meDemoApp.app/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_DEPENDENCY_INFO_FILE /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/meDemoApp_dependency_info.dat    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp-LinkMap-normal-armv7.txt    setenv LD_NO_PIE NO    setenv LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER YES    setenv LEGACY_DEVELOPER_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_KEXT_INSTALL_PATH /Library/Extensions    setenv LIBRARY_SEARCH_PATHS "/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_armv7 /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal/armv7/meDemoApp.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH meDemoApp.app/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 12E55    setenv MAC_OS_X_VERSION_ACTUAL 1084    setenv MAC_OS_X_VERSION_MAJOR 1080    setenv MAC_OS_X_VERSION_MINOR 0804    setenv MODULE_CACHE_DIR /var/folders/13/8286njsn4lsgq3l_m8f6jqvc0000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/ModuleCache    setenv NATIVE_ARCH armv7    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJECT_FILE_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Objects-normal    setenv OBJROOT /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build    setenv ONLY_ACTIVE_ARCH YES    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_LDFLAGS "-weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -force_load \"/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/libCordova.a\" -ObjC"    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH meDemoApp.app/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PKGINFO_FILE_PATH /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/PkgInfo    setenv PKGINFO_PATH meDemoApp.app/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr    setenv PLATFORM_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform    setenv PLATFORM_NAME iphoneos    setenv PLATFORM_PREFERRED_ARCH arm64    setenv PLATFORM_PRODUCT_BUILD_VERSION 11B508    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH meDemoApp.app/PlugIns    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH meDemoApp.app/PrivateHeaders    setenv PRODUCT_NAME meDemoApp    setenv PRODUCT_SETTINGS_PATH /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/meDemoApp-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT meDemoApp    setenv PROJECT_DERIVED_FILE_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/DerivedSources    setenv PROJECT_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PROJECT_FILE_PATH /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp.xcodeproj    setenv PROJECT_NAME meDemoApp    setenv PROJECT_TEMP_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build    setenv PROJECT_TEMP_ROOT /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build    setenv PROVISIONING_PROFILE_REQUIRED YES    setenv PUBLIC_HEADERS_FOLDER_PATH meDemoApp.app/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_HG_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv RESOURCE_RULES_REQUIRED YES    setenv REZ_COLLECTOR_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device "    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH meDemoApp.app/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk    setenv SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk    setenv SDK_NAME iphoneos7.0    setenv SDK_PRODUCT_BUILD_VERSION 11B508    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH meDemoApp.app/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/13/8286njsn4lsgq3l_m8f6jqvc0000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH meDemoApp.app/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv SRCROOT /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_DEVICE_FAMILIES 1,2    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"    setenv SYMROOT /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Applications/Xcode.app/Contents/Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Applications/Xcode.app/Contents/Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_KEXT_INSTALL_PATH /System/Library/Extensions    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1,2    setenv TARGETNAME meDemoApp    setenv TARGET_BUILD_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device    setenv TARGET_NAME meDemoApp    setenv TARGET_TEMP_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build    setenv TEMP_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build    setenv TEMP_FILES_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build    setenv TEMP_FILE_DIR /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build    setenv TEMP_ROOT /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build    setenv TOOLCHAINS com.apple.dt.toolchain.XcodeDefault    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH meDemoApp.app    setenv UNSTRIPPED_PRODUCT NO    setenv USER AngeSSmith    setenv USER_APPS_DIR /Users/AngeSSmith/Applications    setenv USER_LIBRARY_DIR /Users/AngeSSmith/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS "armv7 armv7s"    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH meDemoApp.app/version.plist    setenv VERSION_INFO_BUILDER AngeSSmith    setenv VERSION_INFO_FILE meDemoApp_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:meDemoApp  PROJECT:meDemoApp-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME meDemoApp.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Applications/Xcode.app/Contents/Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 5A3005    setenv XCODE_VERSION_ACTUAL 0502    setenv XCODE_VERSION_MAJOR 0500    setenv XCODE_VERSION_MINOR 0500    setenv XPCSERVICES_FOLDER_PATH meDemoApp.app/XPCServices    setenv YACC yacc    setenv arch armv7    setenv variant normal    /bin/sh -c /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/Script-304B58A110DAC018002A0835.sh36"D754B003-7963-4146-A6AE-28A377539634-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CProcessInfoPlistFile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Info.plist /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/meDemoApp-Info.plist
+s407219185.422166
+e407219185.424854
+r1
+xProcessInfoPlistFile
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Info.plist
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/meDemoApp-Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Process /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/meDemoApp-Info.plist89"ProcessInfoPlistFile build/device/meDemoApp.app/Info.plist meDemoApp/meDemoApp-Info.plist9a226cf1ab45b841^48c46cf1ab45b841^---0#0#1#-19%DVTDocumentLocation2@97"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/meDemoApp-Info.plist0000000000000000^990"ProcessInfoPlistFile build/device/meDemoApp.app/Info.plist meDemoApp/meDemoApp-Info.plist    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    builtin-infoPlistUtility /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/meDemoApp/meDemoApp-Info.plist -genpkginfo /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/ResourceRules.plist -o /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/Info.plist36"83719D37-C088-48A7-872F-386EC1205BFB-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CProcessPCH /var/folders/13/8286njsn4lsgq3l_m8f6jqvc0000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/meDemoApp-Prefix-fmudiozzjijzyfaxbopbrasitzua/meDemoApp-Prefix.pch.pch meDemoApp/meDemoApp-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp.xcent
+s407219186.084229
+e407219186.086853
+r1
+xProcessProductPackaging
+x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp.xcent
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection213"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp.xcent213"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp.xcentc39f15f2ab45b841^213c16f2ab45b841^---0#0#1#-19%DVTDocumentLocation2@135"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp.xcent00381879ddffdf42^947"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp.xcent    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    builtin-productPackagingUtility /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist -entitlements -format xml -o /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/meDemoApp.build/Debug-iphoneos/meDemoApp.build/meDemoApp.xcent36"FCE65652-3DF6-4F4A-B73F-935CA16D5F8F-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CProcessProductPackaging /Users/AngeSSmith/Library/MobileDevice/Provisioning\ Profiles/D54B0926-01A3-48E0-AB14-83B51A93FC27.mobileprovision /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/embedded.mobileprovision
+s407219186.060346
+e407219186.062471
+r1
+xProcessProductPackaging
+x/Users/AngeSSmith/Library/MobileDevice/Provisioning Profiles/D54B0926-01A3-48E0-AB14-83B51A93FC27.mobileprovision
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/embedded.mobileprovision
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection190"ProcessProductPackaging /Users/AngeSSmith/Library/MobileDevice/Provisioning\ Profiles/D54B0926-01A3-48E0-AB14-83B51A93FC27.mobileprovision build/device/meDemoApp.app/embedded.mobileprovision190"ProcessProductPackaging /Users/AngeSSmith/Library/MobileDevice/Provisioning\ Profiles/D54B0926-01A3-48E0-AB14-83B51A93FC27.mobileprovision build/device/meDemoApp.app/embedded.mobileprovision88840ff2ab45b841^a0fe0ff2ab45b841^---0#0#1#-19%DVTDocumentLocation2@118"file://localhost/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/embedded.mobileprovision00381879ddffdf42^875"ProcessProductPackaging /Users/AngeSSmith/Library/MobileDevice/Provisioning\ Profiles/D54B0926-01A3-48E0-AB14-83B51A93FC27.mobileprovision build/device/meDemoApp.app/embedded.mobileprovision    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    builtin-productPackagingUtility /Users/AngeSSmith/Library/MobileDevice/Provisioning\ Profiles/D54B0926-01A3-48E0-AB14-83B51A93FC27.mobileprovision -o /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app/embedded.mobileprovision36"1318ECF4-A50A-449A-8B4E-D06044A0D941-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+
+CTouch /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app
+s407219186.071536
+e407219186.076487
+r1
+xTouch
+x/Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Touch /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app32"Touch build/device/meDemoApp.app8d6112f2ab45b841^2d9513f2ab45b841^---0#0#1#--560"Touch build/device/meDemoApp.app    cd /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/platform-tools:/Users/AngeSSmith/Downloads/adt-bundle-mac-x86_64-20130917/sdk/tools"    /usr/bin/touch -c /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/build/device/meDemoApp.app36"E3F149A0-1EC9-42F6-9029-12C101E7E5CB-
+b68466D10-BDF4-44D8-A17D-6BE971321476
+

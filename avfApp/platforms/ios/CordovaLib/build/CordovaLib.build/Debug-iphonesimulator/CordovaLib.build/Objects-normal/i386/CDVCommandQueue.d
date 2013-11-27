@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDV.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVAvailability.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVPlugin.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVPluginResult.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVViewController.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVCommandQueue.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVWhitelist.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVURLProtocol.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVDebug.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVLocalStorage.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVTimer.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/NSData+Base64.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVJSON.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.h
