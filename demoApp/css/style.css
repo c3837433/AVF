@@ -4,23 +4,17 @@ Angela Smith
 Week 1
  */
 
+/* Listview */
 .ui-li {
 	border-top: 1px solid #ffffff;
-	height: 45px;
+	height: 50px;
 	color: #666666;
 }
-.ui-li a, .ui-bar a {
-	color: #666666;
-	text-decoration: none;
-	padding-top: 10px; 
-	padding-bottom: 10px; 
-}
-.ui-btn-up-a {
-	background-image: linear-gradient(#cococo,#2d2d2d);
-}
+
 .ui-li-desc {
 	color: #666666;
 }
+/* Background */
 #home, #research   {
 	background-image:url('../img/bg.jpg');
 	background-repeat:repeat;
@@ -29,29 +23,23 @@ Week 1
 	background:rgba(245,241,240,.4);
 }
 
-img {
-	height: 40px;
-	padding-left: 8px;
-	padding-top: 1px;
-}
-
+/* Header */
 .ui-bar-a {
 	text-align: center;
 	background: #ffffff;
 	padding-bottom: 4px;
 	border-bottom: none;
 }
-header p {
-	font-size: 12px;
+header {
+	padding-top: 10px;
 }
-.ui-header .ui-title {
-    margin-top: 25px;
-    margin-bottom: 0px;
+/* Icon */
+img {
+	height: 40px;
+	padding-left: 8px;
+	padding-top: 3px;
 }
 .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit {
-padding-left: 55px;
-padding-top: 20px;
-}
-h4 {
-	margin: 20px 8px; 	
+	padding-left: 55px;
+	padding-top: 23px;
 }
