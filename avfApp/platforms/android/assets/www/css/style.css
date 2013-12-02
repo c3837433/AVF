@@ -31,7 +31,11 @@ Week 1
 	border-bottom: none;
 }
 header {
-	padding-top: 10px;
+	padding-top: 25px;
+}
+header img {
+    width: 250px;
+    height: auto;
 }
 /* Icon */
 img {
