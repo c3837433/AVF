@@ -1,0 +1,14 @@
+dependencies: \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVAvailability.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVJSON.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVCommandQueue.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVPluginResult.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVViewController.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVWhitelist.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/CDVPlugin.h \
+  /Users/AngeSSmith/Desktop/AVF/avfApp/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h
