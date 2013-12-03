@@ -35,10 +35,10 @@
     					<a href="#"><img src="img/camera.png"><p>CAMERA</p></a>
     				</li>
     				<li>
-	                    <a href="#"><img src="img/twitter.png"><p>TWITTER API</p></a>
+	                    <a href="#instagram"><img src="img/instagram.png"><p>INSTAGRAM API</p></a>
 	                </li>
 	                <li>
-	                    <a href="#"><img src="img/weather.png"><p>WEATHER API</p></a>
+	                    <a href="#weather"><img src="img/weather.png"><p>WEATHER API</p></a>
 	                </li>
     				<li>
 	                    <a href="#research"><img src="img/research.png"><p>RESEARCH</p></a>
@@ -47,6 +47,52 @@
         	</section> <!-- End list section -->
     	</section>	<!-- End Home Page -->
     	
+    	<section data-role="page" id="instagram" data-add-back-btn="true"> <!-- Begin Instagram API page -->
+    		<header data-role="header"> <!-- Begin Header -->
+    			<img src="img/logo.png">
+    		</header> <!-- End Header -->
+    		<section data-role="content"> <!-- Begin form and list section -->
+    			<form>
+    					<div>
+							<label for="location">Search by tag:</label>
+							<input type="text" id="location" placeholder="Dreams" data-clear-btn="true" class="required">
+							<p>Enter the tag you would like to search by.</p>
+						</div>
+						<div>							
+							<input type="submit" id="submit" value="Search Instagram"></input>	
+						</div>
+    			</form>  			
+    			<ul data-role="listview" data-inset="true" id="results">
+                    <li>
+    					
+    				</li>
+    			</ul>
+        	</section> <!-- End list section -->
+    	</section>	<!-- End Instagram Page -->
+    	
+    	<section data-role="page" id="weather" data-add-back-btn="true"> <!-- Begin weather API page -->
+    		<header data-role="header"> <!-- Begin Header -->
+    			<img src="img/logo.png">
+    		</header> <!-- End Header -->
+    		<section data-role="content"> <!-- Begin list section -->
+    			<form>
+    					<div>
+							<label for="location">Location to search:</label>
+							<input type="text" id="location" placeholder="Paris, France" data-clear-btn="true" class="required">
+							<p>Enter the name or zip code for a location.</p>
+						</div>
+						<div>							
+							<input type="submit" id="submit" value="Lookup Weather"></input>	
+						</div>
+    			</form>  			
+    			<ul data-role="listview" data-inset="true" id="results">
+                    <li>
+    					
+    				</li>
+    			</ul>
+        	</section> <!-- End list section -->
+    	</section>	<!-- End weather Page -->
+    	
     	<section data-role="page" id="research" data-add-back-btn="true"> <!-- Begin Research Page -->
     		<header data-role="header"> <!-- Begin Header -->
     			<img src="img/logo.png">
@@ -54,7 +100,7 @@
             <section data-role="collapsible-set"> <!-- Begin Research Information -->
             	<h4>Research</h4>
                 <div data-role="collapsible" data-collapsed="false" data-inset="true"> <!-- Begin Collapsable  -->
-                	<h4>Week 1</h4>
+                	<h4>1: Data Research and Project Intent</h4>
 					<h4>1. Less obvious perks of using 'live' data resources include logins and payments. How could Twitter be used in these two scenarios?.</h4>
 					<p>The average user today can have quite an extensive list of logins and passwords. This can be simplified by integrating optional automatic sign-ins from companies that users already have. Sign in with Twitter is available on websites and mobile and desktop applications. Not only does this provide the user with a two-click sign-in, the users now the ability to integrate Twitter API’s through the app. American Express has teamed up with Twitter to offer payments through the use of a hashtag tweet. Although for this to be used the user need a compatible American Express card and a cooperating product.</p>
 					<h4>2. Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</h4>
@@ -65,19 +111,15 @@
 					<p>One of my previous apps was a biking app. With that theme I was able to come up with many possible ways to combine for my demo app. I could use Geolocation and maps to track rides, post those times and distances to twitter, post camera images to twitter, or pull latest tweets or Instagram images to compare with. I could also pull weather data to determine specific trail conditions.</p>
 					<h4>5.	Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.</h4>
 					<p>Previously the area where I have had the most difficulty is when I try to see the end in the beginning. Due to this, I end up reworking my project repeatedly. I have learned that I need to develop a clear vision and lay out my project only after thorough research. While I don’t mind reworking my project, since I most likely learned something in the process, I would like to reduce unnecessary work.</p>
-				</div> <!-- End Week 1 -->
-                 <div data-role="collapsible" data-collapsed="true"> <!-- Begin Week 2 -->
-					<h3>Week 2</h3>
+				</div> <!-- End  1 -->
+                 <div data-role="collapsible" data-collapsed="true"> <!-- Begin 2 -->
+					<h3>2: Accessibility</h3>
 					<p></p>
-				</div> <!-- End Week 2 -->
-				 <div data-role="collapsible" data-collapsed="true"> <!-- Begin Week 3 -->
-					<h3>Week 3</h3>
+				</div> <!-- End  2 -->
+				 <div data-role="collapsible" data-collapsed="true"> <!-- Begin 3 -->
+					<h3>3: Industry Research</h3>
 					<p></p>
-				</div> <!-- End Week 3 -->
-				 <div data-role="collapsible" data-collapsed="true"> <!-- Begin Week 4 -->
-					<h3>Week 4</h3>
-					<p></p>
-				</div> <!-- End Week 4 -->
+				</div> <!-- End 3 -->
     		</section> <!-- End collapsable section -->
     	</section> <!-- End Research Page -->
     	
