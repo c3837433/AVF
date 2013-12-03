@@ -47,7 +47,7 @@ var getImages = function(){
 	//https://api.instagram.com/v1/media/popular?client_id=CLIENT-ID. 
 	//https://api.instagram.com/v1/tags/snow/media/recent?access_token=ACCESS-TOKEN
 	//Replace client with my data.
-	var api = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?client_id=2599f607aa5047dc979bee933438ef61";
+	var api = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?client_id=bf7a180389d34095a78d6f44b6660f73";
 	$.getJSON(api, displayResults);
 };
 
