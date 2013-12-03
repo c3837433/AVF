@@ -1,0 +1,45 @@
+/*
+Advanced Visual Frameworks 1312
+Angela Smith
+Week 1
+ */
+
+/* Listview */
+.ui-li {
+	border-top: 1px solid #ffffff;
+	height: 50px;
+	color: #666666;
+}
+
+.ui-li-desc {
+	color: #666666;
+}
+/* Background */
+#home, #research   {
+	background-image:url('../img/bg.jpg');
+	background-repeat:repeat;
+}
+#research div {
+	background:rgba(245,241,240,.4);
+}
+
+/* Header */
+.ui-bar-a {
+	text-align: center;
+	background: #ffffff;
+	padding-bottom: 4px;
+	border-bottom: none;
+}
+header {
+	padding-top: 10px;
+}
+/* Icon */
+img {
+	height: 40px;
+	padding-left: 8px;
+	padding-top: 3px;
+}
+.ui-li-has-thumb .ui-btn-inner a.ui-link-inherit {
+	padding-left: 55px;
+	padding-top: 23px;
+}
