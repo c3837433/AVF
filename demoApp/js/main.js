@@ -49,6 +49,7 @@ var getImages = function(){
 	//Replace client with my data. Without callback=?&amp; will not receive results
 	var api = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?callback=?&amp;client_id=bf7a180389d34095a78d6f44b6660f73";
 	$.getJSON(api, displayImages);
+	return false;
 
 };
 var displayImages = function(results){
