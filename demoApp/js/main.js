@@ -48,12 +48,20 @@ var getImages = function(){
 	//https://api.instagram.com/v1/tags/snow/media/recent?access_token=ACCESS-TOKEN
 	//Replace client with my data. Without callback=?&amp; will not receive results
 	var api = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?callback=?&amp;client_id=bf7a180389d34095a78d6f44b6660f73";
-	$.getJSON(api, displayResults);
-};
+	$.getJSON(api, displayImages);
 
-var displayResults = function(instData){
-	console.log(instData);
-}; // end displayResults function
+};
+var displayImages = function(results){
+	//Empty the Listview
+	$('#resultsInst').empty();
+	// Sample HTML
+	//<img src="url" alt="user_fullname"/><h2>username</h2><p>caption<p/><p>filter</p>
+	$.each(results.data, function(index, value){
+		var image = "<li><img src='" + value.images.standard_resolution.url + "' alt='" + value.user.full_name + "'/><h2>" + value.user.username + "</h2><p>Current likes=" + value.likes.count + "</p>";
+	$('#resultsInst').append(image);	
+	}); // end loop through retrieved results
+};  // end displayImages function
+
 /*
  Instagram API info
 CLIENT ID	2599f607aa5047dc979bee933438ef61
