@@ -59,7 +59,7 @@ var displayData = function(results){
 	var thisObj = {
 		temp : "Current Temperature: "+ city.main.temp + "&degF",
 		clouds : "Conditions: " + city.weather[0].description,
-		wind : "Wind speed: " + city.wind.speed + "mps" 
+		wind : "Wind speed: " + city.wind.speed + " mps" 
 	}; // end thisObj object
 	console.log(thisObj);
 	$.each(thisObj, function(index, value){
