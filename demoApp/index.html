@@ -73,23 +73,23 @@
     		<header data-role="header"> <!-- Begin Header -->
     			<img src="img/logo.png">
     		</header> <!-- End Header -->
-    		<section data-role="content" id="display"> <!-- Begin list section -->
-    			<form id="lookup">
-    					<div>
-							<label for="location">Location to search:</label>
-							<input type="text" id="location" placeholder="Paris, France" data-clear-btn="true" class="required">
-							<p>Enter the name or zip code for a location.</p>
-						</div>
-						<div>							
-							<input type="submit" id="getWeath" value="Lookup Weather"></input>	
-						</div>
-    			</form>  			
-    			<div data-role="content">
-    				<ul data-role="listview" data-inset="true" id="resultsWea">
-    				</ul>
-    				<input type="reset" id="reset" value="Search a New Location">
-    			</div>
-        	</section> <!-- End list section -->
+    		<section data-role="content" id="lookup"> <!-- Begin form section -->
+    			<form> <!-- Begin form -->
+    				<div> <!-- Begin location -->
+						<label for="location">Location to search:</label>
+						<input type="text" id="location" placeholder="Paris, France" data-clear-btn="true" class="required">
+						<p>Enter the name or zip code for a location.</p>
+					</div> <!-- End location -->
+					<div> <!-- Begin submit -->						
+						<input type="submit" id="getWeath" value="Lookup Weather"></input>	
+					</div> <!-- End submit -->
+    			</form> <!-- End form -->  			
+        	</section> <!-- End form section -->
+        	<section data-role="content"> <!-- Begin results section -->
+    			<ul data-role="listview" data-inset="true" id="resultsWea">
+    			</ul>
+   				<input type="reset" id="reset" value="Search a New Location">
+        	</section> <!-- End results section -->
     	</section>	<!-- End weather Page -->
     	
     	<section data-role="page" id="research" data-add-back-btn="true"> <!-- Begin Research Page -->

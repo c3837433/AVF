@@ -15,6 +15,7 @@
 		$("#instagram").on("pageinit", runInstagram);
 		$('#getImages').on('click', getImages);	
 		$('#getWeath').on('click', getDetails);
+		$('#reset').on('click', toggleView);
 	}; // end phonegap whenReady
 //});  // end home pageinit
 
@@ -22,31 +23,18 @@
 //Function to call when the weather API is clicked
 var runWeather = function() {
 	console.log("Weather API Page Loaded");
-	$('#resultsWea','#reset').hide();		
+	$('#reset').closest('.ui-btn').hide();
 }; // end runWeather
-/*
+var toggleView = function(){
+	$('#lookup').show();
+    $('#reset').closest('.ui-btn').hide();
+    $('#resultsWea').empty(); 
+};  // End reset toggle function
+
 var getDetails = function(){
+	$('#lookup').hide();
+    $('#reset').closest('.ui-btn').show();
 	var loc = $('#location').val();
-	console.log(loc);
-	// Open Weather requires a map APPID Key
-	var weaApi = "http://openweathermap.org/data/2.5/find?q=London&mode=json"
-	//var weaApi = "http://openweathermap.org/data/2.3/forecast/city/524901?type=json/callback=?APPID=APIKEY&APPID=0fcc58f268f4c29a6e524be5dd1e8fd7";
-	//var weaApi = "http://openweathermap.org/data/2.3/forecast/city?/id='" + loc + "'&callback=?type=json&APPID=APIKEY&APPID=0fcc58f268f4c29a6e524be5dd1e8fd7";
-	$.getJSON(weaApi, displayData);
-	return false;
-}; // end get details function 
-*/
-var getDetails = function(){
-	var loc = $('#location').val();
-	/*var a = isNaN(loc);
-	console.log(a);
-	if(a === false){
-		var weaApi = "http://openweathermap.org/data/2.5/weather?id='" + loc + "'&mode=json";
-		console.log(loc);
-	} else {
-		weaApi = "http://openweathermap.org/data/2.5/find?q='" + loc + "'&mode=json";
-		console.log(loc);
-	}; // end If statement */
 	var weaApi = "http://openweathermap.org/data/2.5/find?q='" + loc + "'&mode=json&units=imperial&APPID=APIKEY&callback=?&APPID=0fcc58f268f4c29a6e524be5dd1e8fd7";
 	$.ajax({
     	"url":weaApi,
@@ -69,9 +57,9 @@ var displayData = function(results){
 	// Prepend message to the top of content
 	$('#resultsWea').prepend(message);
 	var thisObj = {
-		temp : "Current Temperature: "+ city.main.temp,
+		temp : "Current Temperature: "+ city.main.temp + "&degF",
 		clouds : "Conditions: " + city.weather[0].description,
-		wind : "Wind speed: " + city.wind.speed 
+		wind : "Wind speed: " + city.wind.speed + " mps" 
 	}; // end thisObj object
 	console.log(thisObj);
 	$.each(thisObj, function(index, value){
@@ -80,9 +68,9 @@ var displayData = function(results){
 		$('#resultsWea').append(list);
 	});
 	$('#location').val("");	
-	$('#resultsWea').show();
+	//$('#resultsWea').show();
 	$('#resultsWea').listview('refresh');
-	$('#reset').show();
+	//$('#reset').show();
 	//refresh the listview			
 }; // end displayData function
 /* 
