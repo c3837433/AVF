@@ -16,8 +16,8 @@
     	<section data-role="page" id="home"> <!-- Begin Home Page -->
     		<header data-role="header"> <!-- Begin Header -->
     			<img src="img/logo.png">
-                    </header> <!-- End Header -->
-    		<section data-role="content"> <!-- Begin list section -->
+    		</header> <!-- End Header -->
+    		<section data-role="content"> <!-- Begin list section -->  			
     			<ul data-role="listview" data-inset="true">
                     <li>
     					<a href="#"><img src="img/geo.png"><p>GEOLOCATION</p></a>
@@ -50,19 +50,19 @@
     	<section data-role="page" id="instagram" data-add-back-btn="true"> <!-- Begin Instagram API page -->
     		<header data-role="header"> <!-- Begin Header -->
     			<img src="img/logo.png">
-                    </header> <!-- End Header -->
+    		</header> <!-- End Header -->
     		<section data-role="content"> <!-- Begin form and list section -->
     			<form>
-                    <div>
-                        <label for="location">Search by tag:</label>
-                        <input type="text" id="tag" placeholder="Dreams" data-clear-btn="true" class="required">
+    					<div>
+							<label for="location">Search by tag:</label>
+							<input type="text" id="tag" placeholder="Dreams" data-clear-btn="true" class="required">
 							<p>Enter the tag you would like to search by.</p>
-                            </div>
-                    <div>
-                        <input type="submit" id="getImages" value="Search Instagram"></input>
-                    </div>
-    			</form>
-    			<ul data-role="listview" data-inset="true" id="results">
+						</div>
+						<div>							
+							<input type="submit" id="getImages" value="Search Instagram"></input>	
+						</div>
+    			</form>  			
+    			<ul data-role="listview" data-inset="true" id="resultsInst">
                     <li>
     					
     				</li>
@@ -73,19 +73,19 @@
     	<section data-role="page" id="weather" data-add-back-btn="true"> <!-- Begin weather API page -->
     		<header data-role="header"> <!-- Begin Header -->
     			<img src="img/logo.png">
-                    </header> <!-- End Header -->
+    		</header> <!-- End Header -->
     		<section data-role="content"> <!-- Begin list section -->
     			<form>
-                    <div>
-                        <label for="location">Location to search:</label>
-                        <input type="text" id="location" placeholder="Paris, France" data-clear-btn="true" class="required">
+    					<div>
+							<label for="location">Location to search:</label>
+							<input type="text" id="location" placeholder="Paris, France" data-clear-btn="true" class="required">
 							<p>Enter the name or zip code for a location.</p>
-                            </div>
-                    <div>
-                        <input type="submit" id="getWeather" value="Lookup Weather"></input>
-                    </div>
-    			</form>
-    			<ul data-role="listview" data-inset="true" id="results">
+						</div>
+						<div>							
+							<input type="submit" id="getWeather" value="Lookup Weather"></input>	
+						</div>
+    			</form>  			
+    			<ul data-role="listview" data-inset="true" id="resultsWea">
                     <li>
     					
     				</li>
@@ -96,7 +96,7 @@
     	<section data-role="page" id="research" data-add-back-btn="true"> <!-- Begin Research Page -->
     		<header data-role="header"> <!-- Begin Header -->
     			<img src="img/logo.png">
-                    </header> <!-- End Header -->
+    		</header> <!-- End Header -->
             <section data-role="collapsible-set"> <!-- Begin Research Information -->
             	<h4>Research</h4>
                 <div data-role="collapsible" data-collapsed="false" data-inset="true"> <!-- Begin Collapsable  -->
@@ -112,11 +112,11 @@
 					<h4>5.	Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.</h4>
 					<p>Previously the area where I have had the most difficulty is when I try to see the end in the beginning. Due to this, I end up reworking my project repeatedly. I have learned that I need to develop a clear vision and lay out my project only after thorough research. While I don’t mind reworking my project, since I most likely learned something in the process, I would like to reduce unnecessary work.</p>
 				</div> <!-- End  1 -->
-                <div data-role="collapsible" data-collapsed="true"> <!-- Begin 2 -->
+                 <div data-role="collapsible" data-collapsed="true"> <!-- Begin 2 -->
 					<h3>2: Accessibility</h3>
 					<p></p>
 				</div> <!-- End  2 -->
-                <div data-role="collapsible" data-collapsed="true"> <!-- Begin 3 -->
+				 <div data-role="collapsible" data-collapsed="true"> <!-- Begin 3 -->
 					<h3>3: Industry Research</h3>
 					<p></p>
 				</div> <!-- End 3 -->
@@ -129,7 +129,7 @@
         <script type="text/javascript" src="js/jquery.mobile.js"></script>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
-        
+
     </body>
 </html>
 

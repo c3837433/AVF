@@ -31,14 +31,15 @@ Week 1
 	border-bottom: none;
 }
 header {
-	padding-top: 25px;
-}
-header img {
-    width: 250px;
-    height: auto;
+	padding-top: 10px;
 }
 /* Icon */
-img {
+#home img {
+	height: 40px;
+	padding-left: 8px;
+	padding-top: 3px;
+}
+header img {
 	height: 40px;
 	padding-left: 8px;
 	padding-top: 3px;

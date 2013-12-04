@@ -58,7 +58,7 @@ var displayImages = function(results){
 	// Sample HTML
 	//<img src="url" alt="user_fullname"/><h2>username</h2><p>caption<p/><p>filter</p>
 	$.each(results.data, function(index, value){
-		var image = "<li><img src='" + value.images.standard_resolution.url + "' alt='" + value.user.full_name + "'/><h2>" + value.user.username + "</h2><p>Current likes=" + value.likes.count + "</p></li>";
+		var image = "<li><img src='" + value.images.standard_resolution.url + "' alt='" + value.user.full_name + "'/><h2>" + value.user.username + "</h2><p>Current likes: " + value.likes.count + "</p></li>";
 	$('#resultsInst').append(image);	
 	}); // end loop through retrieved results
 };  // end displayImages function
