@@ -14,22 +14,36 @@
 		$("#weather").on("pageinit", runWeather);
 		$("#instagram").on("pageinit", runInstagram);
 		$('#getImages').on('click', getImages);	
+		$('#resultsWea').on('click', getDetails);
 	}; // end phonegap whenReady
 //});  // end home pageinit
 
 
 //Function to call when the weather API is clicked
 var runWeather = function() {
-	console.log("Weather API Page Loaded");
-		
+	console.log("Weather API Page Loaded");		
 }; // end runWeather
+var getDetails = function(){
+	var loc = $('#location').val();
+	console.log(loc);
+	// Open Weather requires a map APPID Key
+	var weaApi = "http://openweathermap.org/data/2.3/forecast/city?id='" + loc + "'&APPID=0fcc58f268f4c29a6e524be5dd1e8fd7";
+	$.getJSON(weaApi, displayData);
+	return false;
+}; // end get details function
+
+var displayData = function(results){
+	//Empty the Listview
+	$('#resultsWea').empty();
+		console.log(results);	
+}; // end displayData function
 /* 
 Open Weather Map APPID Key
 0fcc58f268f4c29a6e524be5dd1e8fd7
 
 Open Weather Instructions
 Add the following parameter to the GET request: APPID=APIKEY 
-Example: http://openweathermap.org/data/2.3/forecast/city?id=524901&APPID=1111111111
+Example: http://openweathermap.org/data/2.3/forecast/city?/callback=?id=524901&APPID=1111111111
 OR add the following line to http header of request to the server: x-api-key:APIKEY
 */
 
@@ -58,7 +72,7 @@ var displayImages = function(results){
 	// Sample HTML
 	//<img src="url" alt="user_fullname"/><h2>username</h2><p>caption<p/><p>filter</p>
 	$.each(results.data, function(index, value){
-		var image = "<li><img src='" + value.images.standard_resolution.url + "' alt='" + value.user.full_name + "'/><h2>" + value.user.username + "</h2><p>Current likes=" + value.likes.count + "</p></li>";
+		var image = "<li><img src='" + value.images.standard_resolution.url + "' alt='" + value.user.full_name + "'/><h2>" + value.user.username + "</h2><p>Current likes: " + value.likes.count + "</p></li>";
 	$('#resultsInst').append(image);	
 	}); // end loop through retrieved results
 };  // end displayImages function
