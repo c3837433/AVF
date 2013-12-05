@@ -20,6 +20,23 @@
 //});  // end home pageinit
 
 
+// Get research sections from Cloudant and place on research page
+$(document).on('pageinit', '#research', function(){
+	// set the prefix so couch can get the data
+	$.couch.urlPrefix = "https://angessmith:sakleijj@angessmith.cloudant.com";
+	$.couch.db("demo").view("app/research", {
+    	success: function(data) {  
+    		console.log(data);
+    		console.log("Research Page Loaded");
+    		$.each(data.rows, function(i, resItems){
+				console.log(resItems);
+			}); // End loop	
+		} // end success
+    }); // end couch plugin
+}); // end pageinit
+
+
+
 //Function to call when the weather API is clicked
 var runWeather = function() {
 	console.log("Weather API Page Loaded");
