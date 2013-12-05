@@ -86,7 +86,8 @@ OR add the following line to http header of request to the server: x-api-key:API
 
 //Function to call when the Instagram API is clicked
 var runInstagram = function() {
-	console.log("Instagram API Page Loaded");		
+	console.log("Instagram API Page Loaded");
+	$('#resultsInst').empty();		
 };// end runInstagram
 
 var getImages = function(){

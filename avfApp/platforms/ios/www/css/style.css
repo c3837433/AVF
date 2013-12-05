@@ -1,7 +1,7 @@
 /*
 Advanced Visual Frameworks 1312
 Angela Smith
-Week 1
+Week 2
  */
 
 /* Listview */
@@ -15,23 +15,52 @@ Week 1
 	color: #666666;
 }
 /* Background */
-#home, #research   {
-	background-image:url('../img/bg.jpg');
-	background-repeat:repeat;
+
+
+
+section[data-role="page"] {
+	/*background-image:url('../img/bg.jpg');
+	background-repeat:repeat;*/
+	background:
+	linear-gradient(200deg, #4c4c4c 2px, transparent 10px) 10px 0px,
+	linear-gradient(38deg, #4d4d4d 4px, transparent 9px),
+	linear-gradient(65deg, #4b4b4b 4px, transparent 9px),
+	linear-gradient(#666666 40%, #4b4b4b 50%, transparent 60%, #6c6c6c 70%, transparent 80%, #6a6a6a);
+	background-color: #666666;
+	background-size: 20px 20px;
 }
-#research div {
-	background:rgba(245,241,240,.4);
+
+section[data-role="content"]:not(#mainNav), [data-role="collapsible"] {
+	background:rgba(245,241,240,.8);
 }
 
 /* Header */
 .ui-bar-a {
 	text-align: center;
-	background: #ffffff;
-	padding-bottom: 4px;
-	border-bottom: none;
+	background: #fbb03b;
+	padding: 0 0 4px 0;
+	border-bottom: 1px solid #ffffff;
+}
+.ui-bar-a p {
+	margin: 0;
+	font-family: Myriad Pro;
+	text-shadow: 0 -1px 0 #666666;
+	font-weight: normal;
+	font-size: 14px;
 }
 header {
 	padding-top: 10px;
+}
+.ui-header .ui-title {
+	font-family: Gabriola;
+	font-size: 30px;
+	text-shadow: 0 -1px 0 #666666;
+	margin: 0;
+	font-weight: normal;
+}
+.ui-header .ui-title span {
+	color: #666666;
+	font-weight: normal;
 }
 /* Icon */
 #home img {
@@ -47,4 +76,19 @@ header img {
 .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit {
 	padding-left: 55px;
 	padding-top: 23px;
+}
+/* Instagram images */
+ img[alt] {
+ 	height: 100px;
+ }
+/* Media Queries */
+/* iPad landscape */
+@media all and (orientation: landscape) {
+
+}
+/* iPad portrait */
+@media all and (orientation: portrait) {
+    section[data-role="page"] {
+        background: #cccccc;
+    }
 }
