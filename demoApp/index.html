@@ -1,56 +1,88 @@
 <!DOCTYPE html>
 <!-- Advanced Visual Frameworks 1312 -->
 <!-- Angela Smith -->
-<!-- Week 1 -->
+<!-- Week 2 -->
 <html>
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        
-        <!-- Stylesheets -->
-        <link rel="stylesheet" type="text/css" href="css/jquery.theme.css" />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-        
-        <!-- javascript Files -->
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/jquery.mobile.js"></script>
-        <script type="text/javascript" src="js/jquery.couch.js"></script>
-    </head>
+            
+            <!-- Stylesheets -->
+            <link rel="stylesheet" type="text/css" href="css/jquery.theme.css" />
+            <link rel="stylesheet" type="text/css" href="css/style.css" />
+            
+            <!-- javascript Files -->
+            <script type="text/javascript" src="js/jquery.js"></script>
+            <script type="text/javascript" src="js/jquery.mobile.js"></script>
+            <script type="text/javascript" src="js/jquery.couch.js"></script>
+            </head>
     <body>
     	<section data-role="page" id="home"> <!-- Begin Home Page -->
     		<header data-role="header"> <!-- Begin Header -->
     			<h1>Demo <span>Application</span></h1>
     			<p>Angela Smith  |  AVF 1312</p>
     		</header> <!-- End Header -->
-    		<section data-role="content" id="mainNav"> <!-- Begin list section -->  			
-    			<ul data-role="listview" data-inset="true">
-                    <li>
-    					<a href="#"><img src="img/geo.png"><p>GEOLOCATION</p></a>
-    				</li>
-    				<li>
-    					<a href="#"><img src="img/compass.png"><p>COMPASS</p></a>
-    				</li>
-    				<li>
-    					<a href="#"><img src="img/contacts.png"><p>CONTACTS</p></a>
-    				</li>
-    				<li>
-    					<a href="#"><img src="img/accel.png"><p>ACCELEROMETER</p></a>
-    				</li>
-    				<li>
-    					<a href="#"><img src="img/camera.png"><p>CAMERA</p></a>
-    				</li>
-    				<li>
-	                    <a href="#instagram"><img src="img/instagram.png"><p>INSTAGRAM API</p></a>
-	                </li>
-	                <li>
-	                    <a href="#weather"><img src="img/weather.png"><p>WEATHER API</p></a>
-	                </li>
-    				<li>
-	                    <a href="#research"><img src="img/research.png"><p>RESEARCH</p></a>
-	                </li>
-    			</ul>
-        	</section> <!-- End list section -->
+    		<section data-role="content" id="mainNav"> <!-- Begin list section -->
+    			<div class="ui-grid-c my-breakpoint">
+					<div class="ui-block-a">
+						<a href="#geo">
+							<img src="img/geo.png">
+                                <p>GEOLOCATION</p>
+                                </a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#compass">
+							<img src="img/compass.png">
+                                <p>COMPASS</p>
+                                </a>
+					</div>
+					<div class="ui-block-c">
+						<a href="#contacts">
+							<img src="img/contacts.png">
+                                <p>CONTACTS</p>
+                                </a>
+					</div>
+					<div class="ui-block-d">
+						<a href="#accel">
+							<img src="img/accel.png">
+                                <p>ACCELEROMETER</p>
+                                </a>
+					</div>
+					<div class="ui-block-a">
+						<a href="#camera">
+							<img src="img/camera.png">
+                                <p>CAMERA</p>
+                                </a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#instagram">
+							<img src="img/instagram.png">
+                                <p>INSTAGRAM API</p>
+                                </a>
+					</div>
+					<div class="ui-block-c">
+						<a href="#weather">
+							<img src="img/weather.png">
+                                <p>WEATHER API</p>
+                                </a>
+					</div>
+					<div class="ui-block-d">
+						<a href="#research">
+							<img src="img/research.png">
+                                <p>RESEARCH</p>
+                                </a>
+					</div>
+				</div><!-- /grid-d -->
+        	</section> <!-- End main nav grid section -->
+        	<footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
+    			<nav data-role="navbar">
+    				<ul>
+    					<li><a href="#" class="ui-btn-active ui-btn-persist">Home</a></li>
+    					<li><a href="#info">Info</a></li>
+    				</ul>
+    			</nav>
+    		</footer> <!-- End footer -->
     	</section>	<!-- End Home Page -->
     	
     	<section data-role="page" id="instagram" data-add-back-btn="true"> <!-- Begin Instagram API page -->
@@ -60,20 +92,28 @@
     		</header> <!-- End Header -->
     		<section data-role="content"> <!-- Begin form and list section -->
     			<form>
-    					<div>
-							<label for="location">Search by tag:</label>
-							<input type="text" id="tag" placeholder="Dreams" data-clear-btn="true" class="required">
+                    <div>
+                        <label for="location">Search by tag:</label>
+                        <input type="text" id="tag" placeholder="Dreams" data-clear-btn="true" class="required">
 							<p>Enter the tag you would like to search by.</p>
-						</div>
-						<div>							
-							<input type="submit" id="getImages" value="Search Instagram"></input>	
-						</div>
-    			</form>  			
+                            </div>
+                    <div>
+                        <input type="submit" id="getImages" value="Search Instagram"></input>
+                    </div>
+    			</form>
     			<ul data-role="listview" data-inset="true" id="resultsInst">
                     <li>
     				</li>
     			</ul>
         	</section> <!-- End list section -->
+            <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
+    			<nav data-role="navbar">
+    				<ul>
+    					<li><a href="#home">Home</a></li>
+    					<li><a href="#info">Info</a></li>
+    				</ul>
+    			</nav>
+    		</footer> <!-- End footer -->
     	</section>	<!-- End Instagram Page -->
     	
     	<section data-role="page" id="weather" data-add-back-btn="true"> <!-- Begin weather API page -->
@@ -86,18 +126,26 @@
     				<div> <!-- Begin location -->
 						<label for="location">Location to search:</label>
 						<input type="text" id="location" placeholder="Paris, France" data-clear-btn="true" class="required">
-						<p>Enter the name or zip code for a location.</p>
-					</div> <!-- End location -->
-					<div> <!-- Begin submit -->						
-						<input type="submit" id="getWeath" value="Lookup Weather"></input>	
+                            <p>Enter the name or zip code for a location.</p>
+                            </div> <!-- End location -->
+					<div> <!-- Begin submit -->
+						<input type="submit" id="getWeath" value="Lookup Weather"></input>
 					</div> <!-- End submit -->
-    			</form> <!-- End form -->  			
+    			</form> <!-- End form -->
         	</section> <!-- End form section -->
         	<section data-role="content"> <!-- Begin results section -->
     			<ul data-role="listview" data-inset="true" id="resultsWea">
     			</ul>
    				<input type="reset" id="reset" value="Search a New Location">
-        	</section> <!-- End results section -->
+            </section> <!-- End results section -->
+            <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
+    			<nav data-role="navbar">
+    				<ul>
+    					<li><a href="#home">Home</a></li>
+    					<li><a href="#info">Info</a></li>
+    				</ul>
+    			</nav>
+    		</footer> <!-- End footer -->
     	</section>	<!-- End weather Page -->
     	
     	<section data-role="page" id="research" data-add-back-btn="true"> <!-- Begin Research Page -->
@@ -120,21 +168,135 @@
 					<h4>5.	Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.</h4>
 					<p>Previously the area where I have had the most difficulty is when I try to see the end in the beginning. Due to this, I end up reworking my project repeatedly. I have learned that I need to develop a clear vision and lay out my project only after thorough research. While I don’t mind reworking my project, since I most likely learned something in the process, I would like to reduce unnecessary work.</p>
 				</section> <!-- End  1 -->
-                 <section data-role="collapsible" data-collapsed="true"> <!-- Begin 2 -->
+                <section data-role="collapsible" data-collapsed="true"> <!-- Begin 2 -->
 					<h3>2: Accessibility</h3>
 					<p></p>
 				</section> <!-- End  2 -->
-				 <section data-role="collapsible" data-collapsed="true"> <!-- Begin 3 -->
+                <section data-role="collapsible" data-collapsed="true"> <!-- Begin 3 -->
 					<h3>3: Industry Research</h3>
 					<p></p>
 				</section> <!-- End 3 -->
     		</article> <!-- End collapsable article -->
+            <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
+    			<nav data-role="navbar">
+    				<ul>
+    					<li><a href="#home">Home</a></li>
+    					<li><a href="#info">Info</a></li>
+    				</ul>
+    			</nav>
+    		</footer> <!-- End footer -->
     	</section> <!-- End Research Page -->
+        <section data-role="page" id="info" data-add-back-btn="true"> <!-- Begin info page -->
+    		<header data-role="header"> <!-- Begin Header -->
+    			<h1>Demo <span>Application</span></h1>
+    			<p>Angela Smith  |  AVF 1312</p>
+    		</header> <!-- End Header -->
+    		<section data-role="content"> <!-- Begin  content -->
+                <h1>Demo App Information</h1>
+                <h2>Instagram</h2>
+                <p>All images and data on the Instagram page has been pulled from the <a href="http://instagram.com/developer">Instagram API</a>.<p>
+                <h2>Weather</h2>
+                <p>Weather data curtesy of <a href="http://openweathermap.org/API">Open Weather Map</a> and the API used will pull weather data for major world cities.</p>
+            </section> <!-- End content -->
+            <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
+    			<nav data-role="navbar">
+    				<ul>
+    					<li><a href="#home">Home</a></li>
+    					<li><a href="#" class="ui-btn-active ui-btn-persist">Info</a></li>
+    				</ul>
+    			</nav>
+    		</footer> <!-- End footer -->
+    	</section>	<!-- End info Page -->
+        <section data-role="page" id="geo" data-add-back-btn="true"> <!-- Begin geolocation page -->
+    		<header data-role="header"> <!-- Begin Header -->
+    			<h1>Demo <span>Application</span></h1>
+    			<p>Angela Smith  |  AVF 1312</p>
+    		</header> <!-- End Header -->
+    		<section data-role="content"> <!-- Begin  content -->
+                <h1>Geolocation</h1>
+            </section> <!-- End content -->
+            <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
+    			<nav data-role="navbar">
+    				<ul>
+    					<li><a href="#home">Home</a></li>
+    					<li><a href="#info">Info</a></li>
+    				</ul>
+    			</nav>
+    		</footer> <!-- End footer -->
+    	</section>	<!-- End geolocation Page -->
+        <section data-role="page" id="compass" data-add-back-btn="true"> <!-- Begin compass page -->
+    		<header data-role="header"> <!-- Begin Header -->
+    			<h1>Demo <span>Application</span></h1>
+    			<p>Angela Smith  |  AVF 1312</p>
+    		</header> <!-- End Header -->
+    		<section data-role="content"> <!-- Begin  content -->
+                <h1>Compass</h1>
+            </section> <!-- End content -->
+            <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
+    			<nav data-role="navbar">
+    				<ul>
+    					<li><a href="#home">Home</a></li>
+    					<li><a href="#info">Info</a></li>
+    				</ul>
+    			</nav>
+    		</footer> <!-- End footer -->
+    	</section>	<!-- End compass Page -->
+        <section data-role="page" id="contacts" data-add-back-btn="true"> <!-- Begin contacts page -->
+    		<header data-role="header"> <!-- Begin Header -->
+    			<h1>Demo <span>Application</span></h1>
+    			<p>Angela Smith  |  AVF 1312</p>
+    		</header> <!-- End Header -->
+    		<section data-role="content"> <!-- Begin  content -->
+                <h1>Contacts</h1>
+            </section> <!-- End content -->
+            <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
+    			<nav data-role="navbar">
+    				<ul>
+    					<li><a href="#home">Home</a></li>
+    					<li><a href="#info">Info</a></li>
+    				</ul>
+    			</nav>
+    		</footer> <!-- End footer -->
+    	</section>	<!-- End contacts Page -->
+        <section data-role="page" id="accel" data-add-back-btn="true"> <!-- Begin accelerometer page -->
+    		<header data-role="header"> <!-- Begin Header -->
+    			<h1>Demo <span>Application</span></h1>
+    			<p>Angela Smith  |  AVF 1312</p>
+    		</header> <!-- End Header -->
+    		<section data-role="content"> <!-- Begin  content -->
+                <h1>Accelerometer</h1>
+            </section> <!-- End content -->
+            <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
+    			<nav data-role="navbar">
+    				<ul>
+    					<li><a href="#home">Home</a></li>
+    					<li><a href="#info">Info</a></li>
+    				</ul>
+    			</nav>
+    		</footer> <!-- End footer -->
+    	</section>	<!-- End accelerometer Page -->
+        <section data-role="page" id="camera" data-add-back-btn="true"> <!-- Begin camera page -->
+    		<header data-role="header"> <!-- Begin Header -->
+    			<h1>Demo <span>Application</span></h1>
+    			<p>Angela Smith  |  AVF 1312</p>
+    		</header> <!-- End Header -->
+    		<section data-role="content"> <!-- Begin  content -->
+                <h1>Camera</h1>
+            </section> <!-- End content -->
+            <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
+    			<nav data-role="navbar">
+    				<ul>
+    					<li><a href="#home">Home</a></li>
+    					<li><a href="#info">Info</a></li>
+    				</ul>
+    			</nav>
+    		</footer> <!-- End footer -->
+    	</section>	<!-- End camera Page -->
     	
         <!-- javascript Files -->
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
-
+        
     </body>
 </html>
