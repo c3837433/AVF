@@ -3,7 +3,11 @@
 // Week 2
 
 document.addEventListener("deviceready", whenReady, false);
-// Listen for when the device is ready, and call functions when clicked
+// listen for any pages to change, then remove the history and refresh the page ensuring active states on nav
+$(document).on("pagehide", "section[data-role=page]", function(event){
+    $(event.target).remove();
+});
+//Listen for when the device is ready, and call functions when clicked
 function whenReady() {
     $("#weather").on("pageinit", runWeather);
     $("#instagram").on("pageinit", runInstagram);
