@@ -5,6 +5,9 @@ Week 2
  */
 
 /* Listview */
+#resultsInst p {
+	overflow-wrap: break-word;
+}
 .ui-li {
 	border-top: 1px solid #ffffff;
 	height: 50px;
@@ -14,20 +17,24 @@ Week 2
 .ui-li-desc {
 	color: #666666;
 }
+
+#resultsInst h2 {
+	color: #fbb03b;
+	text-shadow: 0 -1px 0 #666666;
+	font-weight: normal;
+}
+#resultsInst li {
+	border: 1px solid #ffffff;
+}
 /* Background */
-
-
 
 section[data-role="page"] {
 	/*background-image:url('../img/bg.jpg');
 	background-repeat:repeat;*/
 	background:
-	linear-gradient(200deg, #4c4c4c 2px, transparent 10px) 10px 0px,
-	linear-gradient(38deg, #4d4d4d 4px, transparent 9px),
-	linear-gradient(65deg, #4b4b4b 4px, transparent 9px),
-	linear-gradient(#666666 40%, #4b4b4b 50%, transparent 60%, #6c6c6c 70%, transparent 80%, #6a6a6a);
+	linear-gradient(#666666 30%, #4b4b4b 40%, transparent 50%, #6c6c6c 60%, transparent 80%, #6a6a6a);
 	background-color: #666666;
-	background-size: 20px 20px;
+	background-size: 105px 105px;
 }
 
 section[data-role="content"]:not(#mainNav), [data-role="collapsible"] {
@@ -77,18 +84,22 @@ header img {
 	padding-left: 55px;
 	padding-top: 23px;
 }
-/* Instagram images */
- img[alt] {
- 	height: 100px;
- }
+
 /* Media Queries */
 /* iPad landscape */
 @media all and (orientation: landscape) {
-
+    img[alt] {
+        width: 97%;
+        border: solid 15px #ffffff;
+    }
 }
 /* iPad portrait */
 @media all and (orientation: portrait) {
     section[data-role="page"] {
         background: #cccccc;
+    }
+    img[alt] {
+        width: 96%;
+        border: solid 15px #ffffff;
     }
 }
