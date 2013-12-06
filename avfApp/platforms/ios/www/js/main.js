@@ -5,8 +5,8 @@
 document.addEventListener("deviceready", whenReady, false);
 // listen for any pages to change, then remove the history and refresh the page ensuring active states on nav
 $(document).on("pagehide", "section[data-role=page]", function(event){
-    $(event.target).remove();
-});
+               $(event.target).remove();
+               });
 //Listen for when the device is ready, and call functions when clicked
 function whenReady() {
     $("#weather").on("pageinit", runWeather);
@@ -25,7 +25,7 @@ var runWeather = function() {
 var toggleView = function(){
 	$('#lookup').show();
     $('#reset').closest('.ui-btn').hide();
-    $('#resultsWea').empty(); 
+    $('#resultsWea').empty();
 };  // End reset toggle function
 
 var getDetails = function(){
@@ -34,13 +34,13 @@ var getDetails = function(){
 	var loc = $('#location').val();
 	var weaApi = "http://openweathermap.org/data/2.5/find?q='" + loc + "'&mode=json&units=imperial&APPID=APIKEY&callback=?&APPID=0fcc58f268f4c29a6e524be5dd1e8fd7";
 	$.ajax({
-    	"url":weaApi,
-        "dataType": "jsonp",
-        "success": function(data) {
-        	//console.log(data);
-        	displayData(data);       
-          } // end success
-	}); // end ajax call
+           "url":weaApi,
+           "dataType": "jsonp",
+           "success": function(data) {
+           //console.log(data);
+           displayData(data);
+           } // end success
+           }); // end ajax call
 	return false;
 }; // end get details function
 
@@ -53,17 +53,46 @@ var displayData = function(results){
 	var message = "<h4>Current conditions for " + city.name + ", " + city.sys.country + "</h4>";
 	// Prepend message to the top of content
 	$('#resultsWea').prepend(message);
-	var thisObj = {
-		temp : "Current Temperature: "+ city.main.temp + "&degF",
-		clouds : "Conditions: " + city.weather[0].description,
-		wind : "Wind speed: " + city.wind.speed + " mps" 
+	var pic;// create a vairable to hold dynamic picture
+	var thisObj = { // create object to hold selected weather info
+    all: [
+          {
+          desc : "Current Temperature: "+ city.main.temp + "&degF",
+          asideTop : "Max: " + city.main.temp_max + "&degF",
+          asideBot : "Min: " + city.main.temp_min + "&degF",
+          id : "temp"
+          },
+          {
+          desc : "Conditions: " + city.weather[0].description,
+          asideTop : "Humidity: " + city.main.humidity,
+          asideBot :"Pressure: " + city.main.pressure,
+          id : "clouds"
+          },
+          {
+          desc : "Wind speed: " + city.wind.speed + " mps",
+          asideTop : city.wind.deg + "&deg",
+          id : "wind"
+          }
+          ]
 	}; // end thisObj object
 	console.log(thisObj);
-	$.each(thisObj, function(index, value){
-		console.log(value);
-		var list = "<li>" + value + "</li>";
-		$('#resultsWea').append(list);
-	});
+	$.each(thisObj.all, function(i, value){ // loop through the selected info
+           console.log(thisObj.all);
+           if(value.id === "temp"){ // determine which picture to use
+           var pic = "temp.png";
+           } else if (value.id === "clouds"){
+           var pic = "weather.png";
+           } else if (value.id === "wind") {
+           var pic = "wind.png";
+           };// end conditional
+           console.log(value);
+           if(value.asideBot === undefined){
+           value.asideBot = ""; // clear out undefined variables
+           }
+           var list = "<li><img src='../www/img/"+ pic + "'/><h2>" + value.desc +"</h2><p class='ui-li-aside'>" + value.asideTop + "<br>" + value.asideBot + "</p></li>";
+           // create the line item and add it to the listview
+           $('#resultsWea').append(list);
+           });
 	$('#location').val("");
 	$('#resultsWea').listview('refresh'); //refresh the listview
 }; // end displayData function
@@ -71,15 +100,15 @@ var displayData = function(results){
 //Function to call when the Instagram API is clicked
 var runInstagram = function() {
 	console.log("Instagram API Page Loaded");
-	$('#resultsInst').empty();		
+	$('#resultsInst').empty();
 };// end runInstagram
 
 var getImages = function(){
 	// get the value from the search field
 	var tag = $('#tag').val();
 	console.log(tag);
-	// Instagram API Endpoints link for recent popular images. 
-	//https://api.instagram.com/v1/media/popular?client_id=CLIENT-ID. 
+	// Instagram API Endpoints link for recent popular images.
+	//https://api.instagram.com/v1/media/popular?client_id=CLIENT-ID.
 	//https://api.instagram.com/v1/tags/snow/media/recent?access_token=ACCESS-TOKEN
 	//Replace client with my data. Without callback=?&amp; will not receive results
 	var api = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?callback=?&amp;client_id=bf7a180389d34095a78d6f44b6660f73";
