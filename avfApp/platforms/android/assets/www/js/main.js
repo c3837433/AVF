@@ -53,15 +53,44 @@ var displayData = function(results){
 	var message = "<h4>Current conditions for " + city.name + ", " + city.sys.country + "</h4>";
 	// Prepend message to the top of content
 	$('#resultsWea').prepend(message);
-	var thisObj = {
-		temp : "Current Temperature: "+ city.main.temp + "&degF",
-		clouds : "Conditions: " + city.weather[0].description,
-		wind : "Wind speed: " + city.wind.speed + " mps" 
+	var pic;// create a vairable to hold dynamic picture
+	var thisObj = { // create object to hold selected weather info
+			all: [
+			{
+				desc : "Current Temperature: "+ city.main.temp + "&degF",
+				asideTop : "Max: " + city.main.temp_max + "&degF",
+				asideBot : "Min: " + city.main.temp_min + "&degF",
+				id : "temp"
+			},		
+			{
+				desc : "Conditions: " + city.weather[0].description,
+				asideTop : "Humidity: " + city.main.humidity,
+				asideBot :"Pressure: " + city.main.pressure,
+				id : "clouds"
+			},	
+			{
+				desc : "Wind speed: " + city.wind.speed + " mps",
+				asideTop : city.wind.deg + "&deg",
+				id : "wind"
+			}
+		]
 	}; // end thisObj object
 	console.log(thisObj);
-	$.each(thisObj, function(index, value){
+	$.each(thisObj.all, function(i, value){ // loop through the selected info
+		console.log(thisObj.all);
+		if(value.id === "temp"){ // determine which picture to use
+			var pic = "temp.png";
+		} else if (value.id === "clouds"){
+			var pic = "weather.png";
+		} else if (value.id === "wind") {
+			var pic = "wind.png";
+		};// end conditional
 		console.log(value);
-		var list = "<li>" + value + "</li>";
+		if(value.asideBot === undefined){
+			value.asideBot = "";
+		}
+		var list = "<li><img src='../www/img/"+ pic + "'/><h2>" + value.desc +"</h2><p class='ui-li-aside'>" + value.asideTop + "<br>" + value.asideBot + "</p></li>";
+		// create the line item and add it to the listview
 		$('#resultsWea').append(list);
 	});
 	$('#location').val("");
