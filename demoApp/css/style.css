@@ -1,7 +1,7 @@
 /*
 Advanced Visual Frameworks 1312
 Angela Smith
-Week 1
+Week 2
  */
 
 /* Listview */
@@ -15,8 +15,6 @@ Week 1
 	color: #666666;
 }
 /* Background */
-
-
 
 section[data-role="page"] {
 	/*background-image:url('../img/bg.jpg');
