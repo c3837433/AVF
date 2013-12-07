@@ -94,17 +94,11 @@ footer .ui-btn {
 	padding-bottom: .4em;
 	font-size: 1em;
 }
-/* Icon */
-img[alt] {
-	-webkit-padding-before: .2em;
-    width: 95%;
-    border: solid 15px #ffffff;
-}
 
 /* Media Queries */
 /* iPad landscape */
 @media all and (orientation: landscape) {
-	#inst img[alt] {
+	#inst {
         width: 97%;
         border: solid 1em #ffffff;
     }
@@ -120,7 +114,7 @@ img[alt] {
 }
 /* iPad portrait */
 @media all and (orientation: portrait) {
-    #inst img[alt] {
+    #inst {
         width: 87%;
         border: solid 1em #ffffff;
     }
@@ -132,7 +126,7 @@ img[alt] {
     #home img {
      	padding-left: 4em;
 	    text-align: center;
-        height: 4em;
+        height: 6em;
     }
 }
 

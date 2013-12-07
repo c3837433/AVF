@@ -47,6 +47,17 @@ section {
 }
 /* Background */
 section[data-role="page"] {
+        /*background-image:url('../img/bg.jpg');
+        background-repeat:repeat;*/
+        background:
+        linear-gradient(207deg, #4c4c4c 2px, transparent 10px) 10px 0px,
+        linear-gradient(38deg, #4d4d4d 4px, transparent 9px),
+        linear-gradient(65deg, #4b4b4b 4px, transparent 9px),
+        linear-gradient(#666666 30%, #4b4b4b 40%, transparent 50%, #6c6c6c 60%, transparent 80%, #6a6a6a);
+        background-color: #666666;
+        background-size: 10px 10px;
+}/*
+section[data-role="page"] {
         background:
         linear-gradient(207deg, #6c6c6c 2px, transparent 10px) 10px 0px,
         linear-gradient(38deg, #6d6d6d 4px, transparent 9px),
@@ -55,8 +66,9 @@ section[data-role="page"] {
         background-color: #666666;
         background-size: 10px 10px;
 }
+*/
 section[data-role="content"], article[data-role="collapsible-set"] {
-	background:rgba(245,241,240,.8);
+	background:rgba(245,241,240,.2);
 }
 
 /* Header */
