@@ -129,7 +129,6 @@ footer .ui-btn {
         height: 6em;
     }
 }
-
 @media all and (max-width: 28.75em) {
 	.my-breakpoint .ui-block-a { width: 50%; }
 	.my-breakpoint .ui-block-b { width: 50%; }
