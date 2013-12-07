@@ -20,9 +20,6 @@ section {
 h2 {
 	-webkit-margin-before: 0;
 }
-.ui-li-thumb {
-	padding-right: none;
-}
 .ui-li-aside {
 	display: inline;
 	padding-right: .5em;
@@ -107,9 +104,9 @@ img[alt] {
 /* Media Queries */
 /* iPad landscape */
 @media all and (orientation: landscape) {
-    img[alt] {
+	#inst img[alt] {
         width: 97%;
-        border: solid 1em; #ffffff;
+        border: solid 1em #ffffff;
     }
     #home .ui-link {
         font-size: .6em;
@@ -123,9 +120,9 @@ img[alt] {
 }
 /* iPad portrait */
 @media all and (orientation: portrait) {
-    img[alt] {
+    #inst img[alt] {
         width: 87%;
-        border: solid 1em; #ffffff;
+        border: solid 1em #ffffff;
     }
     #home .ui-link {
         padding: 0;
@@ -135,7 +132,7 @@ img[alt] {
     #home img {
      	padding-left: 4em;
 	    text-align: center;
-        height: 6em;
+        height: 4em;
     }
 }
 
