@@ -133,13 +133,27 @@ var getImages = function () {
     return false; // stop page from changing
 };
 
+// function to get current Geolocation Coordinates
+var getCoordinates = function (position) {
+    var lat = position.coords.latitude;
+    var long = position.coords.longitude;
+    console.log(lat);
+    console.log(long);
+};// end function to get coordinates
+
+var runGeo = function () {
+    navigator.geolocation.getCurrentPosition(getCoordinates);
+}; // end get device api
+
 var whenReady = function () {
     $("#weather").on("pageinit", runWeather);
     $("#instagram").on("pageinit", runInstagram);
     $('#getImages').on('click', getImages);
     $('#getWeath').on('click', getDetails);
     $('#reset').on('click', toggleView);
+    $('#geo').on('click', runGeo);
 }; // end phonegap whenReady
+
 
 document.addEventListener("deviceready", whenReady, false);
 //Listen for when the device is ready, and call functions when clicked
