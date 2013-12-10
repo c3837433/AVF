@@ -250,14 +250,20 @@
     			</nav>
     		</footer> <!-- End footer -->
     	</section>	<!-- End geolocation Page -->
-        <section data-role="page" id="compass" data-add-back-btn="true"> <!-- Begin compass page -->
+        <!-- Begin compass page -->
+        <section data-role="page" id="compass" data-add-back-btn="true">
     		<header data-role="header"> <!-- Begin Header -->
     			<h1>Demo <span>Application</span></h1>
     			<p>Angela Smith  |  AVF 1312</p>
     		</header> <!-- End Header -->
     		<section data-role="content"> <!-- Begin  content -->
                 <h1>Compass</h1>
+                <input type="submit" id="getDir" value="Get Current Direction">
+                    <h2 id="direction"></h2>
             </section> <!-- End content -->
+            <section id="headResults">
+            </section>
+                
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
     			<nav data-role="navbar">
     				<ul>

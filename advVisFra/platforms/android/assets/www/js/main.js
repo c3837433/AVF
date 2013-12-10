@@ -1,4 +1,4 @@
-// Advanced Visual Frameworks 1312
+ // Advanced Visual Frameworks 1312
 // Angela Smith
 // Week 3
 
@@ -112,7 +112,7 @@ var getDetails = function () {
     return false;
 }; // end get details function
 
-// Function to get and display Geolocation coordinates
+// Function to get and display Geolocation coordinates for weather
 var findLoc = function (position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
@@ -202,17 +202,33 @@ var runGeo = function () {
 }; // end get device api
 
 // Function to get the directional coordinates
-var getDirection = function (heading) {
+var onSuccess = function (heading) {
     var head = heading.magneticHeading;
     console.log(head);
 	// Take the heading and pass it to the h2 tag
 	$('#headResults').html("<h2>The current direction is: " + head + "</h2>");
 };// end get compass coordinates
 
+var compError = function() {
+	console.log('CompassError: ' + error.code);
+};
+
 // Call the Compass Method when clicked on Compass Page
 var runCompass = function () {
-    navigator.compass.getCurrentHeading(getDirection);
+console.log("loading navigator");
+    navigator.compass.getCurrentHeading(onSuccess, compError);
 }; // end get device api
+
+var takePhoto = function (imageInfo) {
+	console.log("loading Camera");
+	var image = $('#shot');
+    image.src = "data:image/jpeg;base64," + imageData;
+};
+var openCamera = function () {
+	console.log("Camera page loaded.");
+	navigator.camera.getPicture(takePhoto);
+};
+
 
 // Functions to wait for when device is ready
 var whenReady = function () {
@@ -224,6 +240,7 @@ var whenReady = function () {
     $('#getGeo').on('click', runGeo);
     $('#getLocation').on('click', runLoc);
     $('#getDir').on('click', runCompass);
+    $('#getPhoto').on('click', openCamera);
 }; // end phonegap whenReady
 
 //Listen for when the device is ready, and call functions when clicked

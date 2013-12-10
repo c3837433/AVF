@@ -21,6 +21,7 @@ var displayData = function (results) {
     $('#resultsWea').empty();
 	// set the variable state to either the state or country
     var state;
+    var hour;
     if(results.location.state === ""){
     	state = results.location.country_name;
     } else {
@@ -30,7 +31,7 @@ var displayData = function (results) {
     var forecast = results.forecast.simpleforecast.forecastday[0];
     // Get the non military hour
     if (results.sun_phase.sunset.hour > 12) {
-    	var hour = results.sun_phase.sunset.hour - 12;
+    	hour = results.sun_phase.sunset.hour - 12;
     }
     // Create a title message
     var message = "<h4>Current conditions for " + results.location.city + ", " +
