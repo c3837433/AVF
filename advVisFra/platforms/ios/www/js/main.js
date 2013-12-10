@@ -19,19 +19,19 @@ var toggleView = function () {
 var displayData = function (results) {
     //Empty the Listview;
     $('#resultsWea').empty();
-	// set the variable state to either the state or country
+    // set the variable state to either the state or country
     var state;
     var hour;
     if(results.location.state === ""){
-    	state = results.location.country_name;
+        state = results.location.country_name;
     } else {
-    	state = results.location.state;
+        state = results.location.state;
     }
     var observ = results.current_observation;
     var forecast = results.forecast.simpleforecast.forecastday[0];
     // Get the non military hour
     if (results.sun_phase.sunset.hour > 12) {
-    	hour = results.sun_phase.sunset.hour - 12;
+        hour = results.sun_phase.sunset.hour - 12;
     }
     // Create a title message
     var message = "<h4>Current conditions for " + results.location.city + ", " +
@@ -112,7 +112,7 @@ var getDetails = function () {
     return false;
 }; // end get details function
 
-// Function to get and display Geolocation coordinates
+// Function to get and display Geolocation coordinates for weather
 var findLoc = function (position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
@@ -201,18 +201,70 @@ var runGeo = function () {
     navigator.geolocation.getCurrentPosition(getCoordinates);
 }; // end get device api
 
-// Function to get the directional coordinates
-var getDirection = function (heading) {
-    var head = heading.magneticHeading;
-    console.log(head);
-	// Take the heading and pass it to the h2 tag
-	$('#headResults').html("<h2>The current direction is: " + head + "</h2>");
-};// end get compass coordinates
-
+/*
+ // Function to get the directional coordinates
+ var onSuccess = function (heading) {
+ var head = heading.magneticHeading;
+ console.log(head);
+ // Take the heading and pass it to the h2 tag
+ $('#headResults').html("<h2>The current direction is: " + head + "</h2>");
+ };// end get compass coordinates
+ 
+ var compError = function() {
+ console.log('CompassError: ' + error.code);
+ };
+ */
 // Call the Compass Method when clicked on Compass Page
 var runCompass = function () {
-    navigator.compass.getCurrentHeading(getDirection);
+    console.log("loading navigator");
+    //navigator.compass.getCurrentHeading(onSuccess, compassError);
 }; // end get device api
+
+var takePhoto = function (imageInfo) {
+    console.log("loading Camera");
+    var image = $('#shot');
+    image.src = "data:image/jpeg;base64," + imageInfo;
+};
+var openCamera = function () {
+    console.log("Camera page loaded.");
+    navigator.camera.getPicture(takePhoto);
+};
+// The watch id references the current `watchHeading`
+var watchID = null;
+// onSuccess: Get the current heading
+//
+var onSuccess = function (heading) {
+    console.log("Recieving direction");
+    console.log(heading);
+    // Take the heading and pass it to the h2 tag
+    $('#headResults').html("<h2>The current direction is: " + heading + "</h2>");
+};// end get compass coordinates
+
+// onError: Failed to get the heading
+var onError = function () {
+    console.log('onError!');
+};
+// Start watching the compass
+//
+var startWatch = function () {
+    console.log("compass starting");
+    // Update compass every 3 seconds
+    var options = { frequency: 3000 };
+    
+    watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+};
+
+// Stop watching the compass
+//
+var stopWatch = function() {
+    console.log("compass ending");
+    if (watchID) {
+        navigator.compass.clearWatch(watchID);
+        watchID = null;
+    }
+};
+
+
 
 // Functions to wait for when device is ready
 var whenReady = function () {
@@ -223,7 +275,10 @@ var whenReady = function () {
     $('#reset').on('click', toggleView);
     $('#getGeo').on('click', runGeo);
     $('#getLocation').on('click', runLoc);
-    $('#getDir').on('click', runCompass);
+    //$('#getDir').on('click', runCompass);
+    $('#getDir').on('click', startWatch);
+    $('#getPhoto').on('click', openCamera);
+    $('#stopDir').on('click', stopWatch);
 }; // end phonegap whenReady
 
 //Listen for when the device is ready, and call functions when clicked
