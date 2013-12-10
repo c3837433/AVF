@@ -220,6 +220,7 @@ var runCompass = function () {
     //navigator.compass.getCurrentHeading(onSuccess, compassError);
 }; // end get device api
 
+// Camera Page
 var takePhoto = function (imageInfo) {
     console.log("loading Camera");
     var image = $('#shot');
@@ -229,6 +230,8 @@ var openCamera = function () {
     console.log("Camera page loaded.");
     navigator.camera.getPicture(takePhoto);
 };
+
+// Compass page
 // The watch id references the current `watchHeading`
 var watchID = null;
 // onSuccess: Get the current heading
@@ -240,12 +243,11 @@ var onSuccess = function (heading) {
     $('#headResults').html("<h2>The current direction is: " + heading + "</h2>");
 };// end get compass coordinates
 
-// onError: Failed to get the heading
+// If compass can't get the heading
 var onError = function () {
     console.log('onError!');
 };
 // Start watching the compass
-//
 var startWatch = function () {
     console.log("compass starting");
     // Update compass every 3 seconds
