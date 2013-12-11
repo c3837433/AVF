@@ -220,7 +220,7 @@ var runCompass = function () {
 
 var loadDynRes =  function(){
 // When research page loads, get data from database
-	var couchApi = "https://angessmith:sakleijj@angessmith.cloudant.com/inmydreams/_view/app/research";
+	var couchApi = "https://angessmith:sakleijj@angessmith.cloudant.com/inmydreams/f57b65aceebe92236e88dce2c50e47e9";
     $.ajax({
            "url": couchApi,
            "dataType": "jsonp",
