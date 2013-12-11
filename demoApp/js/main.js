@@ -273,17 +273,17 @@ var displayResDetail = function () {
 // Display the research options on the research page dynamically
 var displayResearch = function (data) {
 	$.each(data.research, function (i, reVal){
-			console.log(reVal);	
+			console.log(reVal);
 		$("#dynaList").append(
 				$('<section></section')
 					.attr("data-role", "collapsible")
 					.html(
 						$('<h4>' + reVal.title + '<h4>' + 
-						'<h5>' + reVal.a[0] + '</h5><p>'+ reVal.a[1]+ '<p>' + 
-						'<h5>' + reVal.b[0] + '</h5><p>'+ reVal.b[1]+ '<p>' +
-						'<h5>' + reVal.c[0] + '</h5><p>'+ reVal.c[1]+ '<p>' +
-						'<h5>' + reVal.d[0] + '</h5><p>'+ reVal.d[1]+ '<p>' +
-						'<h5>' + reVal.e[0] + '</h5><p>'+ reVal.e[1]+ '<p>'
+						'<h5>' + reVal.a[0] + '</h5><p>'+ reVal.a[1]+ '</p>' + 
+						'<h5>' + reVal.b[0] + '</h5><p>'+ reVal.b[1]+ '</p>' +
+						'<h5>' + reVal.c[0] + '</h5><p>'+ reVal.c[1]+ '</p>' +
+						'<h5>' + reVal.d[0] + '</h5><p>'+ reVal.d[1]+ '</p>' +
+						'<h5>' + reVal.e[0] + '</h5><p>'+ reVal.e[1]+ '</p>'
 						) // end section add
 				) // end html
 			); // end collapsible append	
