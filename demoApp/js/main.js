@@ -236,14 +236,23 @@ var getCode = function (url) {
 		return(values); // return code/id
 };
 
-var displayDetail = function (data, Id) {
+var displayDetail = function (data, code) {
 	console.log(data);
-	console.log(id);
+	console.log(code);
+	var item;
+	if (code === "one") {
+		item = data.research[0];	
+	} else if (code === "two") {
+		item = data.research[1];
+	} else if (code === "thr") {
+		item = data.research[2];
+	}; // end code conditional
+	console.log(item);
 };
 
 var displayResDetail = function () {
 	var urlData = $(this).data('url'); // get this url 
-	var dreamId = linkVariables(urlData); // send the url to the LinkVariables function to get this id
+	var dreamId = linkVariables(urlData)['research']; // send the link to get what comes after "research"
 	console.log(dreamId);
 	var couchApi = "https://angessmith:sakleijj@angessmith.cloudant.com/inmydreams/f57b65aceebe92236e88dce2c50e47e9";
     $.ajax({
