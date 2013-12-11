@@ -221,11 +221,14 @@ var runCompass = function () {
 var displayResearch = function (data) {
 	console.log(data);
 	$.each(data.research, function (i, reVal){
+		console.log(reVal.title);
+		console.log(reVal.code);
+		
 		$("#dynaResOpt").append(
 				$('<li>').append(
 					$('<a>')
-						.attr("href", "index.html?research=" + reVal.value.code)
-						.text(reVal.value.title)	
+						.attr("href", "index.html?research=" + reVal.code)
+						.text(reVal.title)	
 				) // end anchor append
 			); // end li append	
 	});// end loop through research
