@@ -218,12 +218,34 @@ var runCompass = function () {
 }; // end get device api
 
 //Research Functions
+// Get the link code from the research link for detailed research page
+var getCode = function (url) {
+	// split the url
+	var splitLink = urlData.split('?');
+	// Get the key and value pairs
+	var keVaPairs = splitLink[1].split('&');
+	// separate keys and values
+	var values = {};
+	for (var pair in keVaPairs){
+		var keyValue = keVaPairs[pair].split('=');
+		var key = decodeURIComponent(keyValue[0]);
+		var value = decodeURIComponent(keyValue[1]);
+		values[key] = value; 
+	}
+		//console.log(values);
+		return(values); // return code/id
+};
+
+var displayResDetail = function () {
+	var urlData = $(this).data('url'); // get this url 
+	var dreamId = linkVariables(urlData); // send the url to the LinkVariables function to get this id
+	console.log(dreamId);
+};
+
+// Display the research options on the research page dynamically
 var displayResearch = function (data) {
-	console.log(data);
 	$.each(data.research, function (i, reVal){
-		console.log(reVal.title);
-		console.log(reVal.code);
-		
+			console.log(reVal);	
 		$("#dynaResOpt").append(
 				$('<li>').append(
 					$('<a>')
@@ -254,6 +276,7 @@ var whenReady = function () {
     $("#weather").on("pageinit", runWeather);
     $("#instagram").on("pageinit", runInstagram);
     $("#research").on("pageinit", loadDynRes);
+    $("#resDet").on("pageinit", displayResDetail);
     $('#getImages').on('click', getImages);
     $('#getWeath').on('click', getDetails);
     $('#reset').on('click', toggleView);
