@@ -217,6 +217,20 @@ var runCompass = function () {
     navigator.compass.watchHeading(getDirection, compOption);
 }; // end get device api
 
+//Research Functions
+var displayResearch = function (data) {
+	console.log(data);
+	$.each(data.research, function (i, reVal){
+		$("#dynaResOpt").append(
+				$('<li>').append(
+					$('<a>')
+						.attr("href", "index.html?research=" + reVal.value.code)
+						.text(reVal.value.title)	
+				) // end anchor append
+			); // end li append	
+	});// end loop through research
+	$("#dynaResOpt").listview('refresh'); // refresh JQM
+}; // end display research data
 
 var loadDynRes =  function(){
 // When research page loads, get data from database
@@ -231,20 +245,6 @@ var loadDynRes =  function(){
     }); // end ajax call
     return false;
 }; // end research pageinit
-
-var displayResearch = function (data) {
-	console.log(data);
-	$.each(data.research, function (i reVal){
-		$("#dynaResOpt").append(
-				$('<li>').append(
-					$('<a>')
-						.attr("href", "research.html?research=" + reVal.value.code)
-						.text(reVal.value.title)	
-				) // end anchor append
-			); // end li append	
-	})// end loop through research
-	$("#dynaResOpt").listview('refresh'); // refresh JQM
-}; // end display research data
 
 // Functions to wait for when device is ready
 var whenReady = function () {
