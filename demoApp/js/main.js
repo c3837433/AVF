@@ -236,10 +236,25 @@ var getCode = function (url) {
 		return(values); // return code/id
 };
 
+var displayDetail = function (data, Id) {
+	console.log(data);
+	console.log(id);
+};
+
 var displayResDetail = function () {
 	var urlData = $(this).data('url'); // get this url 
 	var dreamId = linkVariables(urlData); // send the url to the LinkVariables function to get this id
 	console.log(dreamId);
+	var couchApi = "https://angessmith:sakleijj@angessmith.cloudant.com/inmydreams/f57b65aceebe92236e88dce2c50e47e9";
+    $.ajax({
+           "url": couchApi,
+           "dataType": "jsonp",
+           "success": function (data) {
+           		console.log(data);
+           		displayDetail(data, dreamId);
+           } // end success
+    }); // end ajax call
+    return false;
 };
 
 // Display the research options on the research page dynamically
@@ -249,7 +264,7 @@ var displayResearch = function (data) {
 		$("#dynaResOpt").append(
 				$('<li>').append(
 					$('<a>')
-						.attr("href", "index.html?research=" + reVal.code)
+						.attr("href", "details.html?research=" + reVal.code)
 						.text(reVal.title)	
 				) // end anchor append
 			); // end li append	
