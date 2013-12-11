@@ -57,7 +57,7 @@
                     <div class="ui-block-a">
                         <a href="#camera">
                             <img src="img/camera.png" alt="camera">
-                                <p>CAPTURE</p>
+                                <p>CAMERA</p>
                                 </a>
                     </div>
                     <div class="ui-block-b">
@@ -178,15 +178,15 @@
                 <section data-role="collapsible" data-collapsed="false" data-inset="true"> <!-- Begin Collapsable  -->
                     <h4>Data Research and Project Intent</h4>
                     <h4>1. Less obvious perks of using 'live' data resources include logins and payments. How could Twitter be used in these two scenarios?</h4>
-                    <p>The average user today can have quite an extensive list of logins and passwords. This can be simplified by integrating optional automatic sign-ins from companies that users already have. Sign in with Twitter is available on websites and mobile and desktop applications. Not only does this provide the user with a two-click sign-in, the users now the ability to integrate Twitter APIﾃ不 through the app. American Express has teamed up with Twitter to offer payments through the use of a hashtag tweet. Although for this to be used the user need a compatible American Express card and a cooperating product.</p>
+                    <p>The average user today can have quite an extensive list of logins and passwords. This can be simplified by integrating optional automatic sign-ins from companies that users already have. Sign in with Twitter is available on websites and mobile and desktop applications. Not only does this provide the user with a two-click sign-in, the users now the ability to integrate Twitter APIﾍs through the app. American Express has teamed up with Twitter to offer payments through the use of a hashtag tweet. Although for this to be used the user need a compatible American Express card and a cooperating product.</p>
                     <h4>2. Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</h4>
-                    <p>JSON is a simple data-interchange format, it is bounded by the same-origin policy. The policy essentially prevents the pages from getting data from any page that does not  reside within itﾃ不 main domain name as a way to protect users from unwanted or obtrusive acts. JSON-P, while still being a JSON format, works around the same-origin policy by using JavaScript to pull specific data.</p>
+                    <p>JSON is a simple data-interchange format, it is bounded by the same-origin policy. The policy essentially prevents the pages from getting data from any page that does not  reside within itﾍs main domain name as a way to protect users from unwanted or obtrusive acts. JSON-P, while still being a JSON format, works around the same-origin policy by using JavaScript to pull specific data.</p>
                     <h4>3.        Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device features?</h4>
-                    <p>There are some Native device features that work great with specific APIﾃ不. A mapping API like Google Maps would probably pair best with Geolocation, Flicker would work well with the camera and social APIﾃ不 like Twitter and Facebook would pair well with the camera.</p>
+                    <p>There are some Native device features that work great with specific APIﾍs. A mapping API like Google Maps would probably pair best with Geolocation, Flicker would work well with the camera and social APIﾍs like Twitter and Facebook would pair well with the camera.</p>
                     <h4>4. Please describe any design and functionality intentions you may have for your Demo app components this month.</h4>
                     <p>One of my previous apps was a biking app. With that theme I was able to come up with many possible ways to combine for my demo app. I could use Geolocation and maps to track rides, post those times and distances to twitter, post camera images to twitter, or pull latest tweets or Instagram images to compare with. I could also pull weather data to determine specific trail conditions.</p>
                     <h4>5.        Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.</h4>
-                    <p>Previously the area where I have had the most difficulty is when I try to see the end in the beginning. Due to this, I end up reworking my project repeatedly. I have learned that I need to develop a clear vision and lay out my project only after thorough research. While I donﾃ付 mind reworking my project, since I most likely learned something in the process, I would like to reduce unnecessary work.</p>
+                    <p>Previously the area where I have had the most difficulty is when I try to see the end in the beginning. Due to this, I end up reworking my project repeatedly. I have learned that I need to develop a clear vision and lay out my project only after thorough research. While I donﾍt mind reworking my project, since I most likely learned something in the process, I would like to reduce unnecessary work.</p>
                 </section> <!-- End  1 -->
                 <section data-role="collapsible" data-collapsed="true"> <!-- Begin 2 -->
                     <h3>Accessibility</h3>
@@ -257,8 +257,10 @@
             </header> <!-- End Header -->
             <section data-role="content"> <!-- Begin  content -->
                 <h1>Compass</h1>
-                <input type="submit" id="getDir" value="Get Heading">
-            </section> <!-- End content -->
+                <input type="submit" id="getDir" value="Start">
+                    <input type="submit" id="stopDir" value="Stop">
+                    <h2 id="direction"></h2>
+                    </section> <!-- End content -->
             <section id="headResults">
             </section>
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
@@ -296,7 +298,6 @@
             </header> <!-- End Header -->
             <section data-role="content"> <!-- Begin  content -->
                 <h1>Accelerometer</h1>
-                <input type="submit" id="getMovement" value="Get Device Movement">
             </section> <!-- End content -->
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
                 <nav data-role="navbar">
@@ -315,8 +316,8 @@
                 <p>Angela Smith  |  AVF 1312</p>
             </header> <!-- End Header -->
             <section data-role="content"> <!-- Begin  content -->
-                <h1>Capture</h1>
-                <input type="submit" id="getPhoto" value="Capture Photo">
+                <h1>Camera</h1>
+                <input type="submit" id="getPhoto" value="Load Camera">
                     </section> <!-- End content -->
             <div id="shot">
                 
