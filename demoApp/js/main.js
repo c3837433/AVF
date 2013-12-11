@@ -217,10 +217,35 @@ var runCompass = function () {
     navigator.compass.watchHeading(getDirection, compOption);
 }; // end get device api
 
+
+// Function to run when research page loads
+var loadDynRes =  function(){
+// When research page loads, get data from database
+	$.couch.urlPrefix = "https://angessmith:sakleijj@angessmith.cloudant.com";
+	$.couch.db("inmydreams").view("app/research", {
+    	success: function(info) { // if view is pulled, get the data
+    		console.log(info);
+    		console.log("Research Page Loaded");
+    		$.each(info.rows, function(i, reVal){
+			$("#dynaResOpt").append(
+				$('<li>').append(
+					$('<a>')
+						.attr("href", "research.html?research=" + reVal.value.code)
+						.text(reVal.value.title)	
+				) // end anchor append
+			); // end li append							
+			}); // End loop
+		$("#dynaResOpt").listview('refresh'); // refresh JQM
+		} // end if data succeeded
+    }); // end couch plugin
+}; // end research pageinit
+
+
 // Functions to wait for when device is ready
 var whenReady = function () {
     $("#weather").on("pageinit", runWeather);
     $("#instagram").on("pageinit", runInstagram);
+    $("#research").on("pageinit", loadDynRes);
     $('#getImages').on('click', getImages);
     $('#getWeath').on('click', getDetails);
     $('#reset').on('click', toggleView);
@@ -228,6 +253,7 @@ var whenReady = function () {
     $('#getLocation').on('click', runLoc);
     $('#getDir').on('click', runCompass);
 }; // end phonegap whenReady
+
 
 //Listen for when the device is ready, and call functions when clicked
 document.addEventListener("deviceready", whenReady, false);

@@ -17,7 +17,7 @@
             <script type="text/javascript" src="js/jquery.js"></script>
             <script type="text/javascript" src="js/jquery.mobile.js"></script>
             <script type="text/javascript" src="js/jquery.couch.js"></script>
-            </head>
+    </head>
     <body>
         <!-- Begin Home Page -->
     	<section data-role="page" id="home">
@@ -174,6 +174,10 @@
     			<h1>Demo <span>Application</span></h1>
     			<p>Angela Smith  |  AVF 1312</p>
     		</header> <!-- End Header -->
+    		<section data-role="content"> <!-- Begin dynamic research selection -->
+				<ul id="dynaResOpt" data-role="listview">
+				</ul>
+			</section> <!-- End selection -->
             <article data-role="collapsible-set"> <!-- Begin Research Information -->
             	<h4>Research</h4>
                 <section data-role="collapsible" data-collapsed="false" data-inset="true"> <!-- Begin Collapsable  -->
