@@ -221,7 +221,7 @@ var runCompass = function () {
 // Get the link code from the research link for detailed research page
 var getCode = function (url) {
 	// split the url
-	var splitLink = urlData.split('?');
+	var splitLink = url.split('?');
 	// Get the key and value pairs
 	var keVaPairs = splitLink[1].split('&');
 	// separate keys and values
@@ -252,7 +252,7 @@ var displayDetail = function (data, code) {
 
 var displayResDetail = function () {
 	var urlData = $(this).data('url'); // get this url 
-	var dreamId = linkVariables(urlData)['research']; // send the link to get what comes after "research"
+	var dreamId = getCode(urlData)['research']; // send the link to get what comes after "research"
 	console.log(dreamId);
 	var couchApi = "https://angessmith:sakleijj@angessmith.cloudant.com/inmydreams/f57b65aceebe92236e88dce2c50e47e9";
     $.ajax({
