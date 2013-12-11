@@ -220,6 +220,7 @@ var runCompass = function () {
 //Research Functions
 // Get the link code from the research link for detailed research page
 var getCode = function (url) {
+	console.log(url);
 	// split the url
 	var splitLink = url.split('?');
 	// Get the key and value pairs
@@ -231,6 +232,7 @@ var getCode = function (url) {
 		var key = decodeURIComponent(keyValue[0]);
 		var value = decodeURIComponent(keyValue[1]);
 		values[key] = value; 
+		console.log(values)
 	}
 		//console.log(values);
 		return(values); // return code/id
