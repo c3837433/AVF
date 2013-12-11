@@ -218,10 +218,20 @@ var runCompass = function () {
 }; // end get device api
 
 
-// Function to run when research page loads
 var loadDynRes =  function(){
 // When research page loads, get data from database
-	$.couch.urlPrefix = "https://angessmith:sakleijj@angessmith.cloudant.com";
+	var couchApi = "https://angessmith:sakleijj@angessmith.cloudant.com/inmydreams/_view/app/research";
+    $.ajax({
+           "url": couchApi,
+           "dataType": "jsonp",
+           "success": function (data) {
+           console.log(data);
+           //displayData(data);
+           } // end success
+           }); // end ajax call
+    return false;
+
+	/*$.couch.urlPrefix = "https://angessmith:sakleijj@angessmith.cloudant.com";
 	$.couch.db("inmydreams").view("app/research", {
     	success: function(info) { // if view is pulled, get the data
     		console.log(info);
@@ -238,6 +248,7 @@ var loadDynRes =  function(){
 		$("#dynaResOpt").listview('refresh'); // refresh JQM
 		} // end if data succeeded
     }); // end couch plugin
+    */
 }; // end research pageinit
 
 
