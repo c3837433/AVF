@@ -253,7 +253,9 @@ var displayDetail = function (data, code) {
 };
 
 var displayResDetail = function () {
-	var urlData = $(this).data('url'); // get this url 
+	console.log('research Detail Page Loaded');
+	var urlData = $(this).data('url'); // get this url
+	console.log(urlData); 
 	var dreamId = getCode(urlData)['research']; // send the link to get what comes after "research"
 	console.log(dreamId);
 	var couchApi = "https://angessmith:sakleijj@angessmith.cloudant.com/inmydreams/f57b65aceebe92236e88dce2c50e47e9";
@@ -272,16 +274,24 @@ var displayResDetail = function () {
 var displayResearch = function (data) {
 	$.each(data.research, function (i, reVal){
 			console.log(reVal);	
-		$("#dynaResOpt").append(
-				$('<li>').append(
-					$('<a>')
-						.attr("href", "details.html?research=" + reVal.code)
-						.text(reVal.title)	
-				) // end anchor append
-			); // end li append	
+		$("#dynaList").append(
+				$('<section></section')
+					.attr("data-role", "collapsible")
+					.html(
+						$('<h4>' + reVal.title + '<h4>' + 
+						'<h5>' + reVal.a[0] + '</h5><p>'+ reVal.a[1]+ '<p>' + 
+						'<h5>' + reVal.b[0] + '</h5><p>'+ reVal.b[1]+ '<p>' +
+						'<h5>' + reVal.c[0] + '</h5><p>'+ reVal.c[1]+ '<p>' +
+						'<h5>' + reVal.d[0] + '</h5><p>'+ reVal.d[1]+ '<p>' +
+						'<h5>' + reVal.e[0] + '</h5><p>'+ reVal.e[1]+ '<p>'
+						) // end section add
+				) // end html
+			); // end collapsible append	
 	});// end loop through research
-	$("#dynaResOpt").listview('refresh'); // refresh JQM
+	$('#dynaList').collapsibleset('refresh'); //refresh the set
 }; // end display research data
+
+
 
 var loadDynRes =  function(){
 // When research page loads, get data from database
