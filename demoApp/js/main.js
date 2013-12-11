@@ -225,32 +225,26 @@ var loadDynRes =  function(){
            "url": couchApi,
            "dataType": "jsonp",
            "success": function (data) {
-           console.log(data);
-           //displayData(data);
+           		console.log(data);
+           		displayResearch(data);
            } // end success
-           }); // end ajax call
+    }); // end ajax call
     return false;
+}; // end research pageinit
 
-	/*$.couch.urlPrefix = "https://angessmith:sakleijj@angessmith.cloudant.com";
-	$.couch.db("inmydreams").view("app/research", {
-    	success: function(info) { // if view is pulled, get the data
-    		console.log(info);
-    		console.log("Research Page Loaded");
-    		$.each(info.rows, function(i, reVal){
-			$("#dynaResOpt").append(
+var displayResearch = function (data) {
+	console.log(data);
+	$.each(data.research, function (i reVal){
+		$("#dynaResOpt").append(
 				$('<li>').append(
 					$('<a>')
 						.attr("href", "research.html?research=" + reVal.value.code)
 						.text(reVal.value.title)	
 				) // end anchor append
-			); // end li append							
-			}); // End loop
-		$("#dynaResOpt").listview('refresh'); // refresh JQM
-		} // end if data succeeded
-    }); // end couch plugin
-    */
-}; // end research pageinit
-
+			); // end li append	
+	})// end loop through research
+	$("#dynaResOpt").listview('refresh'); // refresh JQM
+}; // end display research data
 
 // Functions to wait for when device is ready
 var whenReady = function () {
