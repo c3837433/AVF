@@ -59,7 +59,7 @@ section[data-role="page"] {
     background-size: 10px 10px;
 }
 
-section[data-role="content"], article[data-role="collapsible-set"] {
+section[data-role="content"], section[data-role="collapsible-set"] {
     background: rgba(245,241,240,.8);
 }
 
