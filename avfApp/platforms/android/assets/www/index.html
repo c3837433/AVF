@@ -49,15 +49,15 @@
                                 </a>
                     </div>
                     <div class="ui-block-d">
-                        <a href="#accel">
+                        <a href="accel.html" data-ajax="false">
                             <img src="img/accel.png" alt="accelerometer">
                                 <p>ACCELEROMETER</p>
                                 </a>
                     </div>
                     <div class="ui-block-a">
-                        <a href="#camera">
+                        <a href="camera.html" data-ajax="false">
                             <img src="img/camera.png" alt="camera">
-                                <p>CAMERA</p>
+                                <p>CAPTURE</p>
                                 </a>
                     </div>
                     <div class="ui-block-b">
@@ -167,43 +167,24 @@
             </footer> <!-- End footer -->
         </section>
         <!-- End weather Page -->
-        <!-- Begin Research Page -->
-        <section data-role="page" id="research" data-add-back-btn="true">
-            <header data-role="header"> <!-- Begin Header -->
-                <h1>Demo <span>Application</span></h1>
-                <p>Angela Smith  |  AVF 1312</p>
-            </header> <!-- End Header -->
-            <article data-role="collapsible-set"> <!-- Begin Research Information -->
-                <h4>Research</h4>
-                <section data-role="collapsible" data-collapsed="false" data-inset="true"> <!-- Begin Collapsable  -->
-                    <h4>Data Research and Project Intent</h4>
-                    <h4>1. Less obvious perks of using 'live' data resources include logins and payments. How could Twitter be used in these two scenarios?</h4>
-                    <p>The average user today can have quite an extensive list of logins and passwords. This can be simplified by integrating optional automatic sign-ins from companies that users already have. Sign in with Twitter is available on websites and mobile and desktop applications. Not only does this provide the user with a two-click sign-in, the users now the ability to integrate Twitter APIÍs through the app. American Express has teamed up with Twitter to offer payments through the use of a hashtag tweet. Although for this to be used the user need a compatible American Express card and a cooperating product.</p>
-                    <h4>2. Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</h4>
-                    <p>JSON is a simple data-interchange format, it is bounded by the same-origin policy. The policy essentially prevents the pages from getting data from any page that does not  reside within itÍs main domain name as a way to protect users from unwanted or obtrusive acts. JSON-P, while still being a JSON format, works around the same-origin policy by using JavaScript to pull specific data.</p>
-                    <h4>3.        Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device features?</h4>
-                    <p>There are some Native device features that work great with specific APIÍs. A mapping API like Google Maps would probably pair best with Geolocation, Flicker would work well with the camera and social APIÍs like Twitter and Facebook would pair well with the camera.</p>
-                    <h4>4. Please describe any design and functionality intentions you may have for your Demo app components this month.</h4>
-                    <p>One of my previous apps was a biking app. With that theme I was able to come up with many possible ways to combine for my demo app. I could use Geolocation and maps to track rides, post those times and distances to twitter, post camera images to twitter, or pull latest tweets or Instagram images to compare with. I could also pull weather data to determine specific trail conditions.</p>
-                    <h4>5.        Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.</h4>
-                    <p>Previously the area where I have had the most difficulty is when I try to see the end in the beginning. Due to this, I end up reworking my project repeatedly. I have learned that I need to develop a clear vision and lay out my project only after thorough research. While I donÍt mind reworking my project, since I most likely learned something in the process, I would like to reduce unnecessary work.</p>
-                </section> <!-- End  1 -->
-                <section data-role="collapsible" data-collapsed="true"> <!-- Begin 2 -->
-                    <h3>Accessibility</h3>
-                </section> <!-- End  2 -->
-                <section data-role="collapsible" data-collapsed="true"> <!-- Begin 3 -->
-                    <h3>Industry Research</h3>
-                </section> <!-- End 3 -->
-            </article> <!-- End collapsable article -->
+    	<!-- Begin Research Page -->
+    	<section data-role="page" id="research" data-add-back-btn="true">
+    		<header data-role="header"> <!-- Begin Header -->
+    			<h1>Demo <span>Application</span></h1>
+    			<p>Angela Smith  |  AVF 1312</p>
+    		</header> <!-- End Header -->
+            <section data-role="collapsible-set" id="dynaList"> <!-- Begin Research Information -->
+            	<h4>Research</h4>
+    		</section> <!-- End collapsable article -->
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
-                <nav data-role="navbar">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#info">Info</a></li>
-                    </ul>
-                </nav>
-            </footer> <!-- End footer -->
-        </section>
+    			<nav data-role="navbar">
+    				<ul>
+    					<li><a href="#home">Home</a></li>
+    					<li><a href="#info">Info</a></li>
+    				</ul>
+    			</nav>
+    		</footer> <!-- End footer -->
+    	</section>
         <!-- End Research Page -->
         <!-- Begin info page -->
         <section data-role="page" id="info" data-add-back-btn="true">
@@ -257,9 +238,7 @@
             </header> <!-- End Header -->
             <section data-role="content"> <!-- Begin  content -->
                 <h1>Compass</h1>
-                <input type="submit" id="getDir" value="Start">
-                    <input type="submit" id="stopDir" value="Stop">
-                    <h2 id="direction"></h2>
+                <input type="submit" id="getDir" value="Get Heading">
                     </section> <!-- End content -->
             <section id="headResults">
             </section>
@@ -298,7 +277,8 @@
             </header> <!-- End Header -->
             <section data-role="content"> <!-- Begin  content -->
                 <h1>Accelerometer</h1>
-            </section> <!-- End content -->
+                <input type="submit" id="getMovement" value="Get Device Movement">
+                    </section> <!-- End content -->
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
                 <nav data-role="navbar">
                     <ul>
@@ -316,8 +296,8 @@
                 <p>Angela Smith  |  AVF 1312</p>
             </header> <!-- End Header -->
             <section data-role="content"> <!-- Begin  content -->
-                <h1>Camera</h1>
-                <input type="submit" id="getPhoto" value="Load Camera">
+                <h1>Capture</h1>
+                <input type="submit" id="getPhoto" value="Capture Photo">
                     </section> <!-- End content -->
             <div id="shot">
                 

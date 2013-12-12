@@ -35,7 +35,7 @@ var displayData = function (results) {
     }
     // Create a title message
     var message = "<h4>Current conditions for " + results.location.city + ", " +
-    state + "</h4>";
+    results.location.country + "</h4>";
     // Prepend message to the top of content
     $('#resultsWea').prepend(message);
     var pic; // create a vairable to hold dynamic picture
@@ -49,7 +49,7 @@ var displayData = function (results) {
           }, {
           desc: "Conditions: " + observ.weather,
           asideTop: "Humidity: " + observ.relative_humidity,
-          asideBot: "Pressure: " + observ.pressure_in + " in",
+          asideBot: "Pressure: " + observ.pressure_in,
           id: "clouds"
           },
           {
@@ -112,14 +112,14 @@ var getDetails = function () {
     return false;
 }; // end get details function
 
-// Function to get and display Geolocation coordinates for weather
+// Function to get and display Geolocation coordinates
 var findLoc = function (position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
     console.log("Latitude=" + lat + " Longitude=" + lon);
     $('#lookup').hide();
     $('#reset').closest('.ui-btn').show();
-    var weaApi = "http://api.wunderground.com/api/3d402f1818f340e0/geolookup/conditions/forecast/almanac/astronomy/q/" + lat + "," + lon + ".json";
+    var weaApi = "http://api.wunderground.com/api/3d402f1818f340e0/geolookup/q/" + lat + "," + lon + ".json";
     $.ajax({
            "url": weaApi,
            "dataType": "jsonp",
@@ -191,7 +191,7 @@ var getCoordinates = function (position) {
     $('#locPoints').html("<p>Latitude: " + lat + "<br> Longitude: " + long + "</p>");
 };// end function to get coordinates
 
-// Call the Geolocation Method when clicked on Weather Page
+// Geolocation/ Weather Mashup
 var runLoc = function () {
     navigator.geolocation.getCurrentPosition(findLoc);
 };
@@ -201,25 +201,59 @@ var runGeo = function () {
     navigator.geolocation.getCurrentPosition(getCoordinates);
 }; // end get device api
 
-/*
- // Function to get the directional coordinates
- var onSuccess = function (heading) {
- var head = heading.magneticHeading;
- console.log(head);
- // Take the heading and pass it to the h2 tag
- $('#headResults').html("<h2>The current direction is: " + head + "</h2>");
- };// end get compass coordinates
- 
- var compError = function() {
- console.log('CompassError: ' + error.code);
- };
- */
+// Function to get the directional coordinates
+var getDirection = function (currHeading) {
+    // Take the heading and pass it to the h2 tag
+    $('#getDir').html(currHeading.magneticHeading);
+};// end get compass coordinates
+
+// Set the time interval to check heading
+var compOption =  {
+frequency: 2000
+}; // end set compass to 2 seconds
+
 // Call the Compass Method when clicked on Compass Page
 var runCompass = function () {
-    console.log("loading navigator");
-    //navigator.compass.getCurrentHeading(onSuccess, compassError);
+    navigator.compass.watchHeading(getDirection, compOption);
 }; // end get device api
 
+//Research Functions
+// Display the research options on the research page dynamically
+var displayResearch = function (data) {
+    $.each(data.research, function (i, reVal){
+           console.log(reVal);
+           $("#dynaList").append(
+                $('<article></article')
+                    .attr("data-role", "collapsible")
+                    .html(
+                    $('<h4>' + reVal.title + '<h4>' +
+                        '<h5>' + reVal.a[0] + '</h5><p>'+ reVal.a[1]+ '</p>' +
+                        '<h5>' + reVal.b[0] + '</h5><p>'+ reVal.b[1]+ '</p>' +
+                        '<h5>' + reVal.c[0] + '</h5><p>'+ reVal.c[1]+ '</p>' +
+                        '<h5>' + reVal.d[0] + '</h5><p>'+ reVal.d[1]+ '</p>' +
+                        '<h5>' + reVal.e[0] + '</h5><p>'+ reVal.e[1]+ '</p>'
+                    ) // end section add
+                ) // end html
+            ); // end collapsible append
+        });// end loop through research
+    $('#dynaList').collapsibleset('refresh'); //refresh the set
+}; // end display research data
+
+var loadDynRes =  function(){
+    // When research page loads, get data from database
+    var couchApi = "https://angessmith:sakleijj@angessmith.cloudant.com/inmydreams/f57b65aceebe92236e88dce2c50e47e9";
+    $.ajax({
+           "url": couchApi,
+           "dataType": "jsonp",
+           "success": function (data) {
+           console.log(data);
+           displayResearch(data);
+           } // end success
+           }); // end ajax call
+    return false;
+}; // end research pageinit
+
+// Camera Functions
 var takePhoto = function (imageInfo) {
     console.log("loading Camera");
     var image = $('#shot');
@@ -229,56 +263,27 @@ var openCamera = function () {
     console.log("Camera page loaded.");
     navigator.camera.getPicture(takePhoto);
 };
-// The watch id references the current `watchHeading`
-var watchID = null;
-// onSuccess: Get the current heading
-//
-var onSuccess = function (heading) {
-    console.log("Recieving direction");
-    console.log(heading);
-    // Take the heading and pass it to the h2 tag
-    $('#headResults').html("<h2>The current direction is: " + heading + "</h2>");
-};// end get compass coordinates
-
-// onError: Failed to get the heading
-var onError = function () {
-    console.log('onError!');
-};
-// Start watching the compass
-//
-var startWatch = function () {
-    console.log("compass starting");
-    // Update compass every 3 seconds
-    var options = { frequency: 3000 };
-    
-    watchID = navigator.compass.watchHeading(onSuccess, onError, options);
-};
-
-// Stop watching the compass
-//
-var stopWatch = function() {
-    console.log("compass ending");
-    if (watchID) {
-        navigator.compass.clearWatch(watchID);
-        watchID = null;
-    }
-};
-
-
 
 // Functions to wait for when device is ready
 var whenReady = function () {
+    // Weather functions
     $("#weather").on("pageinit", runWeather);
-    $("#instagram").on("pageinit", runInstagram);
-    $('#getImages').on('click', getImages);
     $('#getWeath').on('click', getDetails);
     $('#reset').on('click', toggleView);
+    // Instagram
+    $("#instagram").on("pageinit", runInstagram);
+    $('#getImages').on('click', getImages);
+    // Research
+    $("#research").on("pageinit", loadDynRes);
+    // Geolocation
     $('#getGeo').on('click', runGeo);
+    // Geolocation/ Weather Mashup
     $('#getLocation').on('click', runLoc);
-    //$('#getDir').on('click', runCompass);
-    $('#getDir').on('click', startWatch);
+    // Compass
+    $('#getDir').on('click', runCompass);
+    // Camera Function
     $('#getPhoto').on('click', openCamera);
-    $('#stopDir').on('click', stopWatch);
+    
 }; // end phonegap whenReady
 
 //Listen for when the device is ready, and call functions when clicked
