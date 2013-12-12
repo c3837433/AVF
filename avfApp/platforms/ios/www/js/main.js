@@ -261,7 +261,28 @@ var takePhoto = function (imageInfo) {
 };
 var openCamera = function () {
     console.log("Camera page loaded.");
-    navigator.camera.getPicture(takePhoto);
+    navigator.device.capture(takePhoto);
+};
+
+// Accelerometer Functions
+var devicMoving = function (accel) {
+    console.log("X = " + accel.x + " Y = " + accel.y + " Z = " + accel.z);
+};
+
+var getAccel = function () {
+    navigator.accelerometer.getCurrentAcceleration(devicMoving);
+};
+
+// Contact Function
+var findContact = function (contact) {
+    $.each(contact.length, function (i, val){
+    console.log(contact);
+    });// end loop through contacts
+};
+
+var whatFind = ["displayName", "phoneNumbers"];
+var getContacts = function () {
+    navigator.contacts.find(whatFind, findContact);
 };
 
 // Functions to wait for when device is ready
@@ -283,6 +304,10 @@ var whenReady = function () {
     $('#getDir').on('click', runCompass);
     // Camera Function
     $('#getPhoto').on('click', openCamera);
+    // Accelerometer
+    $('#getMovement').on('click', getAccel);
+    // Contacts
+    $('#searchContacts').on('click', getContacts);
     
 }; // end phonegap whenReady
 
