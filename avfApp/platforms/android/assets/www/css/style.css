@@ -112,41 +112,40 @@ footer .ui-btn {
 /* Media Queries */
 /* iPad landscape */
 @media all and (orientation: landscape) {
-    #inst {
+        #inst {
         width: 97%;
         border: solid 1em #ffffff;
     }
-
     #home .ui-link {
-        padding-left: 4em;
+        font-size: .6em;
+        padding: 0;
+        text-align: center;
+    }
+    #home img {
+        height: 6em;
+        padding-left: 3.6em;
     }
 }
 /* iPad portrait */
 @media all and (orientation: portrait) {
     #inst {
-        width: 96%;
+        width: 87%;
         border: solid 1em #ffffff;
     }
-
     #home .ui-link {
-        padding-left: 7.9em;
+        padding: 0;
+        font-size: .6em;
+        text-align: center;
+    }
+    #home img {
+             padding-left: 5.5em;
+            text-align: center;
+        height: 6em;
     }
 }
-
-@media all and (max-width: 50em) {
-    .my-breakpoint .ui-block-a {
-        width: 50%;
-    }
-
-    .my-breakpoint .ui-block-b {
-        width: 50%;
-    }
-
-    .my-breakpoint .ui-block-c {
-        width: 50%;
-    }
-
-    .my-breakpoint .ui-block-d {
-        width: 50%;
-    }
+@media all and (max-width: 28.75em) {
+        .my-breakpoint .ui-block-a { width: 50%; }
+        .my-breakpoint .ui-block-b { width: 50%; }
+        .my-breakpoint .ui-block-c { width: 50%; }
+        .my-breakpoint .ui-block-d { width: 50%; }
 }
