@@ -32,50 +32,50 @@
                     <div class="ui-block-a">
                         <a href="#geo">
                             <img src="img/geo.png" alt="geolocation">
-                                <p>GEOLOCATION</p>
-                                </a>
+                            <p>GEOLOCATION</p>
+                        </a>
                     </div>
                     <div class="ui-block-b">
-                        <a href="#compass">
+                        <a href="#notify">
                             <img src="img/compass.png" alt="compass">
-                                <p>COMPASS</p>
-                                </a>
+                            <p>NOTIFICATION</p>
+                        </a>
                     </div>
                     <div class="ui-block-c">
                         <a href="#contacts">
                             <img src="img/contacts.png" alt="contacts">
-                                <p>CONTACTS</p>
-                                </a>
+                            <p>CONTACTS</p>
+                        </a>
                     </div>
                     <div class="ui-block-d">
-                        <a href="accel.html" data-ajax="false">
+                        <a href="#accel" data-ajax="false">
                             <img src="img/accel.png" alt="accelerometer">
-                                <p>ACCELEROMETER</p>
-                                </a>
+                            <p>ACCELEROMETER</p>
+                        </a>
                     </div>
                     <div class="ui-block-a">
                         <a href="#camera" data-ajax="false">
                             <img src="img/camera.png" alt="camera">
-                                <p>CAPTURE</p>
-                                </a>
+                            <p>CAPTURE</p>
+                        </a>
                     </div>
                     <div class="ui-block-b">
                         <a href="#instagram">
                             <img src="img/instagram.png" alt="instagram">
-                                <p>INSTAGRAM API</p>
-                                </a>
+                            <p>INSTAGRAM API</p>
+                        </a>
                     </div>
                     <div class="ui-block-c">
                         <a href="#weather">
                             <img src="img/weather.png" alt="weather">
-                                <p>WEATHER API</p>
-                                </a>
+                            <p>WEATHER API</p>
+                        </a>
                     </div>
                     <div class="ui-block-d">
                         <a href="#research">
                             <img src="img/research.png" alt="research">
-                                <p>RESEARCH</p>
-                                </a>
+                            <p>RESEARCH</p>
+                        </a>
                     </div>
                 </div><!-- End grid-d -->
             </section>
@@ -139,7 +139,7 @@
                             <p>Enter the name or a major city to search.</p>
                             <div> <!-- Begin submit -->
                                 <input type="submit" id="getWeath" value="Lookup Weather">
-                                    </div> <!-- End submit -->
+                            </div> <!-- End submit -->
                             </section> <!-- End location -->
                     <section>
                         <h3>OR</h3>
@@ -196,7 +196,7 @@
                 <h2>Instagram</h2>
                 <p>All images and data on the Instagram page has been pulled from the <a href="http://instagram.com/developer">Instagram API</a>.<p>
                 <h2>Weather</h2>
-                <p>Weather data curtesy of <a href="http://openweathermap.org/API">Open Weather Map</a> and the API used will pull weather data for major world cities.</p>
+                <p>Weather data curtesy of <a href="http://www.wunderground.com/weather/api/">Weather Underground</a> and the API used will pull weather data by location or through the use of GPS.</p>
             </section> <!-- End content -->
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
                 <nav data-role="navbar">
@@ -217,9 +217,9 @@
             <section data-role="content"> <!-- Begin  content -->
                 <h1>Geolocation</h1>
                 <input type="submit" id="getGeo" value="Get Coordinates">
-                    <section id="locPoints">
-                    </section>
-                    </section> <!-- End content -->
+            <section id="locPoints">
+            </section>
+            </section> <!-- End content -->
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
                 <nav data-role="navbar">
                     <ul>
@@ -230,15 +230,15 @@
             </footer> <!-- End footer -->
         </section>        <!-- End geolocation Page -->
         <!-- Begin compass page -->
-        <section data-role="page" id="compass" data-add-back-btn="true">
+        <section data-role="page" id="notify" data-add-back-btn="true">
             <header data-role="header"> <!-- Begin Header -->
                 <h1>Demo <span>Application</span></h1>
                 <p>Angela Smith  |  AVF 1312</p>
             </header> <!-- End Header -->
             <section data-role="content"> <!-- Begin  content -->
-                <h1>Compass</h1>
-                <input type="submit" id="getDir" value="Get Heading">
-                    </section> <!-- End content -->
+                <h1>Notification</h1>
+                <input type="submit" id="notAlert" value="Get Notifcation">
+            </section> <!-- End content -->
             <section id="headResults">
             </section>
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
@@ -259,6 +259,7 @@
             </header> <!-- End Header -->
             <section data-role="content"> <!-- Begin  content -->
                 <h1>Contacts</h1>
+                <input type="submit" id="searchContacts" value="Search Contacts">
             </section> <!-- End content -->
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
                 <nav data-role="navbar">
@@ -276,8 +277,11 @@
             </header> <!-- End Header -->
             <section data-role="content"> <!-- Begin  content -->
                 <h1>Accelerometer</h1>
-                <input type="submit" id="getMovement" value="Get Device Movement">
-                    </section> <!-- End content -->
+                <input type="submit" id="getMovement" value="Start Device Movement">
+                <input type="submit" id="stopMove" value="Stop Device Movement">
+            </section> <!-- End content -->
+            <section id="currMovement">
+            </section>
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
                 <nav data-role="navbar">
                     <ul>

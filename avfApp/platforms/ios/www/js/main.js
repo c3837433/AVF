@@ -2,19 +2,18 @@
 // Angela Smith
 // Week 3
 
+// WEATHER
 //Function to call when the weather API is clicked
 var runWeather = function () {
     console.log("Weather API Page Loaded");
     $('#reset').closest('.ui-btn').hide();
 }; // end runWeather
-
 // Toggle between links shown on weather page
 var toggleView = function () {
     $('#lookup').show();
     $('#reset').closest('.ui-btn').hide();
     $('#resultsWea').empty();
 }; // End reset toggle function
-
 // Display Weather API Data from either the Name field or Geolocation
 var displayData = function (results) {
     //Empty the Listview;
@@ -111,7 +110,6 @@ var getDetails = function () {
            }); // end ajax call
     return false;
 }; // end get details function
-
 // Function to get and display Geolocation coordinates
 var findLoc = function (position) {
     var lat = position.coords.latitude;
@@ -131,12 +129,13 @@ var findLoc = function (position) {
     return false;
 }; // end findLoc function
 
+
+// INSTAGRAM
 //Function to call when the Instagram API is clicked
 var runInstagram = function () {
     console.log("Instagram API Page Loaded");
     $('#resultsInst').empty();
 }; // end runInstagram
-
 // Function to display Instagram Data
 var displayImages = function (results) {
     //Empty the Listview
@@ -166,8 +165,7 @@ var displayImages = function (results) {
            $('#resultsInst').append(image);
            }); // end loop through retrieved results
 }; // end displayImages function
-
-// Function to get Instagram API Data
+// INSTAGRAM API
 var getImages = function () {
     // get the value from the search field
     var tag = $('#tag').val();
@@ -182,7 +180,8 @@ var getImages = function () {
     return false; // stop page from changing
 };
 
-// function to get current Geolocation Coordinates
+
+// GEOLOCATION
 var getCoordinates = function (position) {
     var lat = position.coords.latitude;
     var long = position.coords.longitude;
@@ -191,33 +190,36 @@ var getCoordinates = function (position) {
     $('#locPoints').html("<p>Latitude: " + lat + "<br> Longitude: " + long + "</p>");
 };// end function to get coordinates
 
-// Geolocation/ Weather Mashup
+// GEOLOCATION / WEATHER MASHUP
 var runLoc = function () {
     navigator.geolocation.getCurrentPosition(findLoc);
 };
-
 // Call the Geolocation Method when clicked on Geolocation Page
 var runGeo = function () {
     navigator.geolocation.getCurrentPosition(getCoordinates);
 }; // end get device api
 
-// Function to get the directional coordinates
+
+// COMPASS
 var getDirection = function (currHeading) {
     // Take the heading and pass it to the h2 tag
-    $('#getDir').html(currHeading.magneticHeading);
+    var head = currHeading.magneticHeading;
+    $('#headResults').html("<p>Heading is: " + head + "</p>");
 };// end get compass coordinates
-
 // Set the time interval to check heading
 var compOption =  {
-frequency: 2000
+    frequency: 2000
 }; // end set compass to 2 seconds
-
+var compError = function (error) {
+    console.log("Error is: " + error.code);
+};
 // Call the Compass Method when clicked on Compass Page
 var runCompass = function () {
-    navigator.compass.watchHeading(getDirection, compOption);
+    navigator.compass.watchHeading(getDirection, compError, compOption);
 }; // end get device api
 
-//Research Functions
+
+//  RESEARCH
 // Display the research options on the research page dynamically
 var displayResearch = function (data) {
     $.each(data.research, function (i, reVal){
@@ -238,7 +240,6 @@ var displayResearch = function (data) {
         });// end loop through research
     $('#dynaList').collapsibleset('refresh'); //refresh the set
 }; // end display research data
-
 var loadDynRes =  function(){
     // When research page loads, get data from database
     var couchApi = "https://angessmith:sakleijj@angessmith.cloudant.com/inmydreams/f57b65aceebe92236e88dce2c50e47e9";
@@ -253,7 +254,8 @@ var loadDynRes =  function(){
     return false;
 }; // end research pageinit
 
-// Camera Functions
+
+// CAMERA
 var takePhoto = function (imageInfo) {
     console.log("loading Camera");
     var image = $('#shot');
@@ -261,31 +263,64 @@ var takePhoto = function (imageInfo) {
 };
 var openCamera = function () {
     console.log("Camera page loaded.");
-    navigator.device.capture(takePhoto);
+    navigator.device.capture.captureImage(takePhoto);
 };
 
-// Accelerometer Functions
+
+// ACCELEROMETER
+// Global variabl to moniter the accelerometer movements
+var watch = null;
+var endAcccel = function () {
+    // stop the monitering when "stop" is pressed
+    if(watch){
+        navigator.accelerometer.clearWatch(watch);
+        watch = null;
+    }
+};
+// Find the current position and display on page
 var devicMoving = function (accel) {
-    console.log("X = " + accel.x + " Y = " + accel.y + " Z = " + accel.z);
+    var x = accel.x;
+    var y = accel.y;
+    var z = accel.z;
+    console.log("X = " + x + " Y = " + y + " Z = " + z);
+    $('#currMovement').html("<p>X = : " + x + "<br> Y = : " + y + "<br> Z = : " + z + "</p>");
 };
 
+var accError = function (error) {
+    console.log("Error=: " + error.code);
+};
 var getAccel = function () {
-    navigator.accelerometer.getCurrentAcceleration(devicMoving);
+    //Stop timing after 5 seconds
+    var time = {frequency: 5000};
+    watch = navigator.accelerometer.watchAcceleration(devicMoving, accError, time);
 };
 
-// Contact Function
+
+// CONTACT
 var findContact = function (contact) {
     $.each(contact.length, function (i, val){
     console.log(contact);
     });// end loop through contacts
 };
-
 var whatFind = ["displayName", "phoneNumbers"];
 var getContacts = function () {
     navigator.contacts.find(whatFind, findContact);
 };
 
-// Functions to wait for when device is ready
+// NOTIFICATION
+var endAlert = function () {
+    console.log("Notification has ended");
+};
+var runNotify = function () {
+    navigator.notification.alert(
+    "Notifications are working.",   // alert message
+    endAlert,                       // end alert
+    "Notification Demo",            // notification title
+    "Return to App"                         // End button name
+    );
+};
+
+// DEVICE READY
 var whenReady = function () {
     // Weather functions
     $("#weather").on("pageinit", runWeather);
@@ -306,9 +341,11 @@ var whenReady = function () {
     $('#getPhoto').on('click', openCamera);
     // Accelerometer
     $('#getMovement').on('click', getAccel);
+    $('#stopMove').on('click', endAcccel);
     // Contacts
     $('#searchContacts').on('click', getContacts);
-    
+    // Notification
+    $('#notAlert').on('click', runNotify);
 }; // end phonegap whenReady
 
 //Listen for when the device is ready, and call functions when clicked

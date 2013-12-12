@@ -7,6 +7,13 @@
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
     </author>
+    <plugin name="Notification" value="CDVNotification" />
+    <plugin name="Capture" value="CDVCapture" />
+    <plugin name="Console" value="CDVLogger" />
+    <plugin name="Contacts" value="CDVContacts" />
+    <plugin name="Compass" value="CDVLocation" />
+    <plugin name="Accelerometer" value="CDVAccelerometer" />
+    <plugin name="Camera" value="CDVCamera" />
     <feature name="http://api.phonegap.com/1.0/device" />
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
@@ -32,8 +39,9 @@
     <feature name="Console">
         <param name="ios-package" value="CDVLogger"/>
     </feature>
-    <plugin name="Capture" value="CDVCapture" />
-    <plugin name="Console" value="CDVLogger" />
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
