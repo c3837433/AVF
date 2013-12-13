@@ -16,6 +16,7 @@ var toggleView = function () {
 }; // End reset toggle function
 // Display Weather API Data from either the Name field or Geolocation
 var displayData = function (results) {
+	$.mobile.changePage($('#weather'));
     //Empty the Listview;
     $('#resultsWea').empty();
     // set the variable state to either the state or country
@@ -104,11 +105,11 @@ var getDetails = function () {
            "url": weaApi,
            "dataType": "jsonp",
            "success": function (data) {
-           console.log(data);
-           displayData(data);
+	           console.log(data);
+	           displayData(data);
+	           return false;
            } // end success
-           }); // end ajax call
-    return false;
+    }); // end ajax call
 }; // end get details function
 // Function to get and display Geolocation coordinates
 var findLoc = function (position) {
@@ -117,15 +118,15 @@ var findLoc = function (position) {
     console.log("Latitude=" + lat + " Longitude=" + lon);
     $('#lookup').hide();
     $('#reset').closest('.ui-btn').show();
-    var weaApi = "http://api.wunderground.com/api/3d402f1818f340e0/geolookup/q/" + lat + "," + lon + ".json";
+    var weaApi = "http://api.wunderground.com/api/3d402f1818f340e0/geolookup/conditions/forecast/almanac/astronomy/q/" + lat + "," + lon + ".json";
     $.ajax({
            "url": weaApi,
            "dataType": "jsonp",
            "success": function (data) {
-           console.log(data);
-           displayData(data);
+	           console.log(data);
+	           displayData(data);
            } // end success
-           }); // end ajax call
+    }); // end ajax call
     return false;
 }; // end findLoc function
 
@@ -269,7 +270,7 @@ var openCamera = function () {
 
 // ACCELEROMETER
 // Global variabl to moniter the accelerometer movements
-var watch = null;
+var watch = 0;
 var endAcccel = function () {
     // stop the monitering when "stop" is pressed
     if(watch){
@@ -282,8 +283,9 @@ var devicMoving = function (accel) {
     var x = accel.x;
     var y = accel.y;
     var z = accel.z;
-    console.log("X = " + x + " Y = " + y + " Z = " + z);
-    $('#currMovement').html("<p>X = : " + x + "<br> Y = : " + y + "<br> Z = : " + z + "</p>");
+    $('#x').val(x);
+    $('#y').val(y);
+    $('#z').val(z);
 };
 
 var accError = function (error) {
@@ -292,7 +294,7 @@ var accError = function (error) {
 var getAccel = function () {
     //Stop timing after 5 seconds
     var time = {frequency: 5000};
-    watch = navigator.accelerometer.watchAcceleration(devicMoving, accError, time);
+    navigator.accelerometer.watchAcceleration(devicMoving, accError, time);
 };
 
 
@@ -304,9 +306,36 @@ var findContact = function (contact) {
 };
 var whatFind = ["displayName", "phoneNumbers"];
 var getContacts = function () {
+	console.log("Looking for contacts.");
     navigator.contacts.find(whatFind, findContact);
 };
 
+// NOTIFICATION
+var endAlert = function () {
+    console.log("Notification has ended");
+};
+var runNotify = function () {
+    navigator.notification.alert(
+    "Notifications are working.",   // alert message
+    endAlert,                       // end alert
+    "Notification Demo",            // notification title
+    "Return to App"                         // End button name
+    );
+};
+/*
+//CONNECTION
+var runConnect = function () {
+    var networkState = navigator.connection.type;    
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL]     = 'Cell generic connection';
+    states[Connection.NONE]     = 'No network connection';
+    
+    $('#addCon').html("<p>Connection type: " + states[networkState] + ".</p>");
+};
+*/
 // DEVICE READY
 var whenReady = function () {
     // Weather functions
@@ -331,6 +360,10 @@ var whenReady = function () {
     $('#stopMove').on('click', endAcccel);
     // Contacts
     $('#searchContacts').on('click', getContacts);
+    // Notification
+    $('#notAlert').on('click', runNotify);
+    //Conection
+    //$('#getConType').on('click', runConnect);
 }; // end phonegap whenReady
 
 //Listen for when the device is ready, and call functions when clicked
