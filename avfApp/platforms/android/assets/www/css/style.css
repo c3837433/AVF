@@ -12,6 +12,9 @@ section {
     border: 1px solid #ccc;
 }
 /* Listview */
+
+ul { list-style: none; }
+
 #home .ui-link p {
     padding-left: .1em;
     text-align: center;
