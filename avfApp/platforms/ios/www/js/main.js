@@ -331,7 +331,6 @@ var runConnect = function () {
     states[Connection.NONE]     = 'No network connection';
     
     $('#addCon').html("<p>Connection type: " + states[networkState] + ".</p>");
-}
 };
 
 // DEVICE READY
