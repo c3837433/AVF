@@ -320,6 +320,20 @@ var runNotify = function () {
     );
 };
 
+//CONNECTION
+var runConnect = function () {
+    var networkState = navigator.connection.type;    
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL]     = 'Cell generic connection';
+    states[Connection.NONE]     = 'No network connection';
+    
+    $('#addCon').html("<p>Connection type: " + states[networkState] + ".</p>");
+}
+};
+
 // DEVICE READY
 var whenReady = function () {
     // Weather functions
@@ -346,6 +360,8 @@ var whenReady = function () {
     $('#searchContacts').on('click', getContacts);
     // Notification
     $('#notAlert').on('click', runNotify);
+    //Conection
+    $('#getConType').on('click', runConnect);
 }; // end phonegap whenReady
 
 //Listen for when the device is ready, and call functions when clicked
