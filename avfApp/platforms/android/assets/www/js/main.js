@@ -16,7 +16,7 @@ var toggleView = function () {
 }; // End reset toggle function
 // Display Weather API Data from either the Name field or Geolocation
 var displayData = function (results) {
-	$.mobile.changePage($('#weather'));
+    $.mobile.changePage($('#weather'));
     //Empty the Listview;
     $('#resultsWea').empty();
     // set the variable state to either the state or country
@@ -105,11 +105,11 @@ var getDetails = function () {
            "url": weaApi,
            "dataType": "jsonp",
            "success": function (data) {
-	           console.log(data);
-	           displayData(data);
-	           return false;
+           console.log(data);
+           displayData(data);
+           return false;
            } // end success
-    }); // end ajax call
+           }); // end ajax call
 }; // end get details function
 // Function to get and display Geolocation coordinates
 var findLoc = function (position) {
@@ -123,10 +123,10 @@ var findLoc = function (position) {
            "url": weaApi,
            "dataType": "jsonp",
            "success": function (data) {
-	           console.log(data);
-	           displayData(data);
+           console.log(data);
+           displayData(data);
            } // end success
-    }); // end ajax call
+           }); // end ajax call
     return false;
 }; // end findLoc function
 
@@ -202,23 +202,34 @@ var runGeo = function () {
 
 
 // COMPASS
+var head = 0;
 var getDirection = function (currHeading) {
     // Take the heading and pass it to the h2 tag
-    var head = currHeading.magneticHeading;
-    $('#headResults').html("<p>Heading is: " + head + "</p>");
+    var display = currHeading.magneticHeading;
+    $('#headResults').val(display);
 };// end get compass coordinates
 // Set the time interval to check heading
 var compOption =  {
-    frequency: 2000
+frequency: 2000
 }; // end set compass to 2 seconds
 var compError = function (error) {
     console.log("Error is: " + error.code);
 };
 // Call the Compass Method when clicked on Compass Page
 var runCompass = function () {
-    navigator.compass.watchHeading(getDirection, compError, compOption);
+    // set the head to current direction
+    head = navigator.compass.watchHeading(getDirection, compError, compOption);
 }; // end get device api
 
+var endCompass = function() {
+    // if compass is movilg
+    if (head) {
+        navigator.compass.clearWatch(head);
+        head = 0;
+        // stop compass and reset it
+        console.log("Compass has closed");
+    }
+};
 
 //  RESEARCH
 // Display the research options on the research page dynamically
@@ -227,19 +238,19 @@ var displayResearch = function (data) {
            console.log(reVal);
            $("#dynaList").append(
                 $('<article></article')
-                    .attr("data-role", "collapsible")
-                    .html(
-                    $('<h4>' + reVal.title + '<h4>' +
-                        '<h5>' + reVal.a[0] + '</h5><p>'+ reVal.a[1]+ '</p>' +
-                        '<h5>' + reVal.b[0] + '</h5><p>'+ reVal.b[1]+ '</p>' +
-                        '<h5>' + reVal.c[0] + '</h5><p>'+ reVal.c[1]+ '</p>' +
-                        '<h5>' + reVal.d[0] + '</h5><p>'+ reVal.d[1]+ '</p>' +
-                        '<h5>' + reVal.e[0] + '</h5><p>'+ reVal.e[1]+ '</p>'
-                    ) // end section add
-                ) // end html
-            ); // end collapsible append
-        });// end loop through research
-    $('#dynaList').collapsibleset('refresh'); //refresh the set
+                     .attr("data-role", "collapsible")
+                     .html(
+                          $('<h4>' + reVal.title + '<h4>' +
+                          '<h5>' + reVal.a[0] + '</h5><p>'+ reVal.a[1]+ '</p>' +
+                          '<h5>' + reVal.b[0] + '</h5><p>'+ reVal.b[1]+ '</p>' +
+                          '<h5>' + reVal.c[0] + '</h5><p>'+ reVal.c[1]+ '</p>' +
+                          '<h5>' + reVal.d[0] + '</h5><p>'+ reVal.d[1]+ '</p>' +
+                          '<h5>' + reVal.e[0] + '</h5><p>'+ reVal.e[1]+ '</p>'
+                           ) // end section add
+                     ) // end html
+           ); // end collapsible append
+     });// end loop through research
+     $('#dynaList').collapsibleset('refresh'); //refresh the set
 }; // end display research data
 var loadDynRes =  function(){
     // When research page loads, get data from database
@@ -270,45 +281,71 @@ var openCamera = function () {
 
 // ACCELEROMETER
 // Global variabl to moniter the accelerometer movements
-var watch = 0;
-var endAcccel = function () {
+var movement = 0;
+var endAccel = function () {
     // stop the monitering when "stop" is pressed
-    if(watch){
-        navigator.accelerometer.clearWatch(watch);
-        watch = null;
+    if(movement){
+        navigator.accelerometer.clearWatch(movement);
+        movement = null;
+        console.log("Acceleromoter stopped");
     }
 };
 // Find the current position and display on page
-var devicMoving = function (accel) {
-    var x = accel.x;
-    var y = accel.y;
-    var z = accel.z;
-    $('#x').val(x);
-    $('#y').val(y);
-    $('#z').val(z);
+var startAccel = function (accel) {
+    // when the acceleromoter starts, set the variables to the current position
+    console.log("x = " + accel.x + " y = " + accel.y + " z = " + accel.z);
+    $('#x').val(accel.x);
+    $('#y').val(accel.y);
+    $('#z').val(accel.z);
 };
 
 var accError = function (error) {
     console.log("Error=: " + error.code);
 };
 var getAccel = function () {
-    //Stop timing after 5 seconds
-    var time = {frequency: 5000};
-    navigator.accelerometer.watchAcceleration(devicMoving, accError, time);
+    //Stop timing after 2 seconds
+    var time = {frequency: 2000};
+    movement = navigator.accelerometer.watchAcceleration(startAccel, accError, time);
 };
 
 
 // CONTACT
-var findContact = function (contact) {
-    $.each(contact.length, function (i, val){
-    console.log(contact);
-    });// end loop through contacts
+var makeContact = function () {
+    // Call the navigator function to create a new contact and set to var newContact
+    // Get the variables from the input fields
+    var fName = $('#fName').val();
+    var lName = $('#lName').val();
+    var pNum = $('#pNum').val();
+    var createContact = navigator.contacts.create();
+    // set the names
+    createContact.displayName = fName + " " + lName;
+    createContact.nickname = fName + " " + lName;
+    // Set the contact's first and last names
+    var newContact = new ContactName();
+    newContact.givenName = fName;
+    newContact.familyName = lName;
+    // Set th new contact's name to the new variables
+    createContact.name = newContact;
+    // create an array to hold contactField's phone numbers
+    // true specifies which number is preferred
+    var pNums = [];
+    pNums[0] = new ContactField('mobile', pNum, true);
+    // Add the phoneNumber to the contact
+    createContact.phoneNumbers = pNums;
+    // save the contact to the device's contact list;
+    createContact.save();
+    var endAlert = function () {
+        console.log("Notification has ended");
+    };
+    navigator.notification.alert(
+    	"Contact has been saved.",   // alert messaage
+    	 endAlert,
+         "Add Contact",           	 // notification title
+         "Return to App"             // End button name
+         );
+    location.reload();
 };
-var whatFind = ["displayName", "phoneNumbers"];
-var getContacts = function () {
-	console.log("Looking for contacts.");
-    navigator.contacts.find(whatFind, findContact);
-};
+
 
 // NOTIFICATION
 var endAlert = function () {
@@ -316,26 +353,13 @@ var endAlert = function () {
 };
 var runNotify = function () {
     navigator.notification.alert(
-    "Notifications are working.",   // alert message
-    endAlert,                       // end alert
-    "Notification Demo",            // notification title
-    "Return to App"                         // End button name
-    );
+         "Notifications are working.",   // alert message
+         endAlert,                       // end alert
+         "Notification Demo",            // notification title
+         "Return to App"                 // End button name
+         );
 };
-/*
-//CONNECTION
-var runConnect = function () {
-    var networkState = navigator.connection.type;    
-    var states = {};
-    states[Connection.UNKNOWN]  = 'Unknown connection';
-    states[Connection.ETHERNET] = 'Ethernet connection';
-    states[Connection.WIFI]     = 'WiFi connection';
-    states[Connection.CELL]     = 'Cell generic connection';
-    states[Connection.NONE]     = 'No network connection';
-    
-    $('#addCon').html("<p>Connection type: " + states[networkState] + ".</p>");
-};
-*/
+
 // DEVICE READY
 var whenReady = function () {
     // Weather functions
@@ -353,17 +377,17 @@ var whenReady = function () {
     $('#getLocation').on('click', runLoc);
     // Compass
     $('#getDir').on('click', runCompass);
+    $('#stopHead').on('click', endCompass);
     // Camera Function
     $('#getPhoto').on('click', openCamera);
     // Accelerometer
     $('#getMovement').on('click', getAccel);
-    $('#stopMove').on('click', endAcccel);
+    $('#stopMove').on('click', endAccel);
     // Contacts
-    $('#searchContacts').on('click', getContacts);
+    $('#createContact').on('click', makeContact);
     // Notification
     $('#notAlert').on('click', runNotify);
-    //Conection
-    //$('#getConType').on('click', runConnect);
+    
 }; // end phonegap whenReady
 
 //Listen for when the device is ready, and call functions when clicked
