@@ -36,9 +36,9 @@
                         </a>
                     </div>
                     <div class="ui-block-b">
-                        <a href="#notify">
+                        <a href="#compass">
                             <img src="img/compass.png" alt="compass">
-                            <p>NOTIFICATIONS</p>
+                            <p>COMPASS</p>
                         </a>
                     </div>
                     <div class="ui-block-c">
@@ -48,9 +48,9 @@
                         </a>
                     </div>
                     <div class="ui-block-d">
-                        <a href="#accel" data-ajax="false">
+                        <a href="#accel">
                             <img src="img/accel.png" alt="accelerometer">
-                            <p>ACCELEROMETER</p>
+                            <p>ACCELEROMOTER</p>
                         </a>
                     </div>
                     <div class="ui-block-a">
@@ -230,28 +230,6 @@
             </footer> <!-- End footer -->
         </section>
         <!-- End geolocation Page -->
-        <!-- Begin Connection page -->
-        <section data-role="page" id="connect" data-add-back-btn="true">
-            <header data-role="header"> <!-- Begin Header -->
-                <h1>Demo <span>Application</span></h1>
-                <p>Angela Smith  |  AVF 1312</p>
-            </header> <!-- End Header -->
-            <section data-role="content"> <!-- Begin  content -->
-                <h1>Connection</h1>
-                <input type="submit" id="getConType" value="Discover Device's Connection">
-                    <section id="addCon">
-                    </section>
-                    </section> <!-- End content -->
-            <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
-                <nav data-role="navbar">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#info">Info</a></li>
-                    </ul>
-                </nav>
-            </footer> <!-- End footer -->
-        </section>
-        <!-- End Connection Page -->
         <!-- Begin Notification page -->
         <section data-role="page" id="notify" data-add-back-btn="true">
             <header data-role="header"> <!-- Begin Header -->
@@ -280,10 +258,13 @@
             </header> <!-- End Header -->
             <section data-role="content"> <!-- Begin  content -->
                 <h1>Compass</h1>
-                <input type="submit" id="getDir" value="Get Heading">
-                    </section> <!-- End content -->
-            <section id="headResults">
-            </section>
+                <ul>
+                    <li><input type="submit" id="getDir" value="Get Heading"></li>
+                    <li><label for="headResults">Current Heading: </label></li>
+                    <li><input type="number" id="headResults"><li>
+                    <li><input type="submit" id="stopHead" value="Stop Compass"></li>
+                </ul>
+            </section> <!-- End content -->
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
                 <nav data-role="navbar">
                     <ul>
@@ -302,7 +283,16 @@
             </header> <!-- End Header -->
             <section data-role="content"> <!-- Begin  content -->
                 <h1>Contacts</h1>
-                <input type="submit" id="searchContacts" value="Search Contacts">
+                <ul>
+                    <li><label for="fName">First Name: </label></li>
+                    <li><input type="text" id="fName"><li>
+                    <li><label for="lName">Last Name: </label></li>
+                    <li><input type="text" id="lName"><li>
+                    <li><label for="pNum">Phone Number: </label></li>
+                    <li><input type="number" id="pNum"><li>
+                    <li><input type="submit" id="createContact" value="Create New Contact">
+</li>
+                </ul>
             </section> <!-- End content -->
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
                 <nav data-role="navbar">
@@ -312,23 +302,26 @@
                     </ul>
                 </nav>
             </footer> <!-- End footer -->
-        </section>        <!-- End contacts Page -->
-        <section data-role="page" id="accel" data-add-back-btn="true"> <!-- Begin accelerometer page -->
+        </section>
+        <!-- End contacts Page -->
+        <!-- Begin accelerometer page -->
+        <section data-role="page" id="accel" data-add-back-btn="true">
             <header data-role="header"> <!-- Begin Header -->
                 <h1>Demo <span>Application</span></h1>
                 <p>Angela Smith  |  AVF 1312</p>
             </header> <!-- End Header -->
             <section data-role="content"> <!-- Begin  content -->
                 <h1>Accelerometer</h1>
-                <label for="x">Accelerometer X Position: </label>
-                <input type="number" value="" id="x">
-                <label for="y">Accelerometer Y Position: </label>
-                <input type="number" value="" id="y"> 
-                <label for="z">Accelerometer Z Position: </label>
-                <input type="number" value="" id="z"> 
-				
-                <input type="submit" id="getMovement" value="Start Device Movement">
-                <input type="submit" id="stopMove" value="Stop Device Movement">
+                <ul>
+                    <li><label for="x">Accelerometer X Position: </label></li>
+                    <li><input type="number" id="x"><li>
+                    <li><label for="y">Accelerometer Y Position: </label></li>
+                    <li><input type="text" id="y"><li>
+                    <li><label for="z">Accelerometer Z Position: </label></li>
+                    <li><input type="number" id="z"><li>
+                    <li><input type="submit" id="getMovement" value="Start Device Movement"></li>
+                    <li><input type="submit" id="stopMove" value="Stop Device Movement"></li>
+                </ul>
             </section> <!-- End content -->
             <section id="currMovement">
             </section>
@@ -368,7 +361,6 @@
         
         <!-- javascript Files -->
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="cordova_plugins.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
         
     </body>
