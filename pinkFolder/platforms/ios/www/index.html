@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- Advanced Visual Frameworks 1312 -->
 <!-- Angela Smith -->
-<!-- Week 3 -->
+<!-- Week 4 -->
 <html>
     <head>
         <meta charset="utf-8" />
@@ -148,7 +148,7 @@
                         <label for="location">Search this Location:</label>
                         <input type="submit" id="getLocation" value="Get Current Location">
                             <p>Search will use your current GPS coordinates.</p>
-                            </section>
+                    </section>
                 </form> <!-- End form -->
             </section> <!-- End form section -->
             <section data-role="content">  <!-- Begin results section -->
@@ -256,7 +256,7 @@
                 <h1>Demo <span>Application</span></h1>
                 <p>Angela Smith  |  AVF 1312</p>
             </header> <!-- End Header -->
-            <section data-role="content"> <!-- Begin  content -->
+            <section data-role="content" id="dirDisplay"> <!-- Begin  content -->
                 <h1>Compass</h1>
                 <ul>
                     <li><input type="submit" id="getDir" value="Get Heading"></li>
@@ -264,6 +264,7 @@
                     <li><input type="number" id="headResults"><li>
                     <li><input type="submit" id="stopHead" value="Stop Compass"></li>
                 </ul>
+                <img src="img/point.png" alt="compassDirection" id="compDir">
             </section> <!-- End content -->
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
                 <nav data-role="navbar">
