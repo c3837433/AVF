@@ -1,12 +1,68 @@
 // Advanced Visual Frameworks 1312
 // Angela Smith
-// Week 3
+// Week 4
+
+// NOTIFICATIONS
+var endAlert = function () {
+    console.log("Notification has ended");
+};
+var runNotify = function () {
+    navigator.notification.alert(
+        "Notifications are working.",   // alert message
+        endAlert,                       // end alert
+        "Notification Demo",            // notification title
+        "Return to App"                 // End button name
+    );
+};
+// Alert for NO network connection
+var noConnect = function (pageCall) {
+    navigator.notification.alert(
+        "This page needs a network connection to run.",   // alert message
+        endAlert,                       // end alert
+        "No Network Connection",            // notification title
+        "Return to App"                 // End button name
+    );
+};
+
+//CONNECTION (iOS version)
+// When Weather or Instagram page load, check connection. If none, display no connection. If cell, change instagram to smaller images.
+var runConnect = function () {
+    var connect = navigator.connection.type;
+    var type = {};
+    type[Connection.UNKNOWN]  = 'unknown';
+    type[Connection.ETHERNET] = 'ethernet';
+    type[Connection.WIFI]     = 'WiFi';
+    type[Connection.CELL_2G]  = 'Cellular 2G ';
+    type[Connection.CELL_3G]  = 'Cellular 3G ';
+    type[Connection.CELL_4G]  = 'Cellular 4G ';
+    type[Connection.NONE]     = 'no';
+    console.log("Device has " + type[connect] + " connection." );
+    // return the type of connection back to the function
+    return type[connect];
+};
+// Check device connection
+var checkConn = function () {
+    // check the connection type
+    var type = runConnect();
+    //console.log(type);
+    // return the connection
+    return type;
+};
 
 // WEATHER
-//Function to call when the weather API is clicked
+//Function to call when the weather API page is first loaded
 var runWeather = function () {
     console.log("Weather API Page Loaded");
     $('#reset').closest('.ui-btn').hide();
+    // set the info for the alert if page has no network
+    // check the connection type
+    var type = runConnect();
+    //console.log(type);
+    // if there is no connection, alert that data is unavailable.
+    if (type === "no") {
+        // if there is no connection, alert the user
+        noConnect();
+    };
 }; // end runWeather
 // Toggle between links shown on weather page
 var toggleView = function () {
@@ -60,8 +116,8 @@ var displayData = function (results) {
           },
           {
           desc: "Skies are " + forecast.icon + " and " + forecast.skyicon,
-          asideTop:  "Sunrise " + results.sun_phase.sunrise.hour + ":" + results.sun_phase.sunrise.minute + "AM",
-          asideBot: "Sunset " + hour + ":" + results.sun_phase.sunset.minute + "PM",
+          asideTop:  "Sunrise " + results.sun_phase.sunrise.hour + ":" + results.sun_phase.sunrise.minute + " AM",
+          asideBot: "Sunset " + hour + ":" + results.sun_phase.sunset.minute + " PM",
           id: "sun"
           }]
     }; // end thisObj object
@@ -92,24 +148,31 @@ var displayData = function (results) {
     $('#location').val("");
     $('#resultsWea').listview('refresh'); //refresh the listview
 }; // end display weather data function
-
 // Function to get API data from Geolocation
 var getDetails = function () {
-    $('#lookup').hide();
-    $('#reset').closest('.ui-btn').show();
-    var location = $('#location').val();
-    // Separate the string
-    var loc = location.split(',');
-    var weaApi = "http://api.wunderground.com/api/3d402f1818f340e0/geolookup/conditions/forecast/almanac/astronomy/q/" + loc[1] + "/" + loc[0] + ".json";
-    $.ajax({
-           "url": weaApi,
-           "dataType": "jsonp",
-           "success": function (data) {
-           console.log(data);
-           displayData(data);
-           return false;
-           } // end success
-           }); // end ajax call
+    // lookup connection
+    var conn = checkConn();
+    // if there is no connection, set up alert
+    if (conn === "no") {
+        noConnect();
+    } else {
+        // if there is a connection, run function
+        $('#lookup').hide();
+        $('#reset').closest('.ui-btn').show();
+        var location = $('#location').val();
+        // Separate the string
+        var loc = location.split(',');
+        var weaApi = "http://api.wunderground.com/api/3d402f1818f340e0/geolookup/conditions/forecast/almanac/astronomy/q/" + loc[1] + "/" + loc[0] + ".json";
+        $.ajax({
+               "url": weaApi,
+               "dataType": "jsonp",
+               "success": function (data) {
+               console.log(data);
+               displayData(data);
+               return false;
+               } // end success
+               }); // end ajax call
+    };// end connection conditional
 }; // end get details function
 // Function to get and display Geolocation coordinates
 var findLoc = function (position) {
@@ -126,48 +189,79 @@ var findLoc = function (position) {
            console.log(data);
            displayData(data);
            } // end success
-           }); // end ajax call
+        }); // end ajax call
     return false;
 }; // end findLoc function
 
 
 // INSTAGRAM
-//Function to call when the Instagram API is clicked
+//Function to call when the Instagram pag is first loaded
 var runInstagram = function () {
     console.log("Instagram API Page Loaded");
     $('#resultsInst').empty();
+    // set the info for the alert if page has no network
+    // check the connection type
+    var type = runConnect();
+    //console.log(type);
+    // if there is no connection, alert that data is unavailable.
+    if (type === "no") {
+        // if there is no connection, alert the user
+        noConnect();
+    };
 }; // end runInstagram
 // Function to display Instagram Data
 var displayImages = function (results) {
+    // check the connection type
+    var type = runConnect();
+    console.log(type);
+    var imageRes;
+    // run the function to get data
     //Empty the Listview
     $('#resultsInst').empty();
-    console.log(results);
+    //console.log(results);
     // Sample HTML
     //<img src="url" alt="user_fullname"/><h2>username</h2><p>caption<p/><p>filter</p>
     $.each(results.data, function (index, value) {
-           var loc;
-           if (value.location !== null) { // if the location is not empty
-           console.log(value.location);
+        var loc;
+        if (value.location !== null) { // if the location is not empty
+           //console.log(value.location);
            if (value.location.name !== null) { // and if the name is not empty use it
-           console.log(value.location.name);
-           loc = value.location.name;
+                //console.log(value.location.name);
+                loc = value.location.name;
            }
-           } else { // otherwise skip it
+        } else { // otherwise skip it
            loc = "";
-           }
-           if (loc === undefined) { // if the location is still undefined (had geo without a name) set to blank
+        }
+        if (loc === undefined) { // if the location is still undefined (had geo without a name) set to blank
            loc = " ";
-           }
-           var image = "<li><h2>" + value.user.username +
+        }
+        // See if device is not on cellular service, if it is load low resolution images
+        if (type.substring(0,8) === "Cellular"){
+           imageRes = value.images.low_resolution;
+           console.log("Pulling low resolution image.");
+        } else {
+           imageRes = value.images.standard_resolution;
+           console.log("Pulling standard resolution image.");
+        };
+        // run the function to get data
+
+        var image = "<li><h2>" + value.user.username +
            "</h2><h3 class='ui-li-aside'>Likes &hearts; " +
-           value.likes.count + "<h3><img src='" + value.images.standard_resolution
+           value.likes.count + "<h3><img src='" + imageRes
            .url + "' id='inst' alt='" + value.user.full_name + "'/><p>" +
            loc + "</p><p>" + value.tags + "</p></li>";
-           $('#resultsInst').append(image);
-           }); // end loop through retrieved results
+        $('#resultsInst').append(image);
+    }); // end loop through retrieved results
 }; // end displayImages function
 // INSTAGRAM API
 var getImages = function () {
+    var type = runConnect();
+    //console.log(type);
+    // if there is no connection, alert that data is unavailable.
+    if (type === "no") {
+        // if there is no connection, alert the user
+        noConnect();
+    };
     // get the value from the search field
     var tag = $('#tag').val();
     console.log(tag);
@@ -179,7 +273,7 @@ var getImages = function () {
     "/media/recent?callback=?&amp;client_id=bf7a180389d34095a78d6f44b6660f73";
     $.getJSON(api, displayImages);
     return false; // stop page from changing
-};
+}; // end getImages and load to the page
 
 
 // GEOLOCATION
@@ -193,7 +287,15 @@ var getCoordinates = function (position) {
 
 // GEOLOCATION / WEATHER MASHUP
 var runLoc = function () {
-    navigator.geolocation.getCurrentPosition(findLoc);
+    // lookup connection
+    var conn = checkConn();
+    // if there is no connection, set up alert
+    if (conn === "no") {
+        noConnect();
+    } else {
+        // if there is a connection, check geolocation for data
+        navigator.geolocation.getCurrentPosition(findLoc);
+    };
 };
 // Call the Geolocation Method when clicked on Geolocation Page
 var runGeo = function () {
@@ -206,7 +308,10 @@ var head = 0;
 var getDirection = function (currHeading) {
     // Take the heading and pass it to the h2 tag
     var display = currHeading.magneticHeading;
+    // take the direction and display the heading
     $('#headResults').val(display);
+    // grab the point and rotate it the number of degrees
+    $('#compDir').css('-webkitTransform', 'rotate(' + display + 'deg)');
 };// end get compass coordinates
 // Set the time interval to check heading
 var compOption =  {
@@ -237,20 +342,20 @@ var displayResearch = function (data) {
     $.each(data.research, function (i, reVal){
            console.log(reVal);
            $("#dynaList").append(
-                $('<article></article')
-                     .attr("data-role", "collapsible")
-                     .html(
-                          $('<h4>' + reVal.title + '<h4>' +
-                          '<h5>' + reVal.a[0] + '</h5><p>'+ reVal.a[1]+ '</p>' +
-                          '<h5>' + reVal.b[0] + '</h5><p>'+ reVal.b[1]+ '</p>' +
-                          '<h5>' + reVal.c[0] + '</h5><p>'+ reVal.c[1]+ '</p>' +
-                          '<h5>' + reVal.d[0] + '</h5><p>'+ reVal.d[1]+ '</p>' +
-                          '<h5>' + reVal.e[0] + '</h5><p>'+ reVal.e[1]+ '</p>'
-                           ) // end section add
-                     ) // end html
-           ); // end collapsible append
-     });// end loop through research
-     $('#dynaList').collapsibleset('refresh'); //refresh the set
+                                 $('<article></article')
+                                 .attr("data-role", "collapsible")
+                                 .html(
+                                       $('<h2>' + reVal.title + '<h2>' +
+                                         '<h3>' + reVal.a[0] + '</h3><p>'+ reVal.a[1]+ '</p>' +
+                                         '<h3>' + reVal.b[0] + '</h3><p>'+ reVal.b[1]+ '</p>' +
+                                         '<h3>' + reVal.c[0] + '</h3><p>'+ reVal.c[1]+ '</p>' +
+                                         '<h3>' + reVal.d[0] + '</h3><p>'+ reVal.d[1]+ '</p>' +
+                                         '<h3>' + reVal.e[0] + '</h3><p>'+ reVal.e[1]+ '</p>'
+                                         ) // end section add
+                                       ) // end html
+                                 ); // end collapsible append
+           });// end loop through research
+    $('#dynaList').collapsibleset('refresh'); //refresh the set
 }; // end display research data
 var loadDynRes =  function(){
     // When research page loads, get data from database
@@ -259,10 +364,10 @@ var loadDynRes =  function(){
            "url": couchApi,
            "dataType": "jsonp",
            "success": function (data) {
-           console.log(data);
-           displayResearch(data);
+                console.log(data);
+                displayResearch(data);
            } // end success
-           }); // end ajax call
+    }); // end ajax call
     return false;
 }; // end research pageinit
 
@@ -338,30 +443,17 @@ var makeContact = function () {
         console.log("Notification has ended");
     };
     navigator.notification.alert(
-    	"Contact has been saved.",   // alert messaage
-    	 endAlert,
-         "Add Contact",           	 // notification title
-         "Return to App"             // End button name
-         );
+                                 "Contact has been saved.",   // alert message
+                                 endAlert,
+                                 "Add Contact",            // notification title
+                                 "Return to App"                 // End button name
+                                 );
     location.reload();
-};
-
-
-// NOTIFICATION
-var endAlert = function () {
-    console.log("Notification has ended");
-};
-var runNotify = function () {
-    navigator.notification.alert(
-         "Notifications are working.",   // alert message
-         endAlert,                       // end alert
-         "Notification Demo",            // notification title
-         "Return to App"                 // End button name
-         );
 };
 
 // DEVICE READY
 var whenReady = function () {
+    console.log('Device is ready');
     // Weather functions
     $("#weather").on("pageinit", runWeather);
     $('#getWeath').on('click', getDetails);
@@ -387,7 +479,6 @@ var whenReady = function () {
     $('#createContact').on('click', makeContact);
     // Notification
     $('#notAlert').on('click', runNotify);
-    
 }; // end phonegap whenReady
 
 //Listen for when the device is ready, and call functions when clicked
