@@ -48,13 +48,14 @@ var runWeather = function () {
     $('#reset').closest('.ui-btn').hide();
     // set the info for the alert if page has no network
     // check the connection type
-    var type = runConnect();
+  /*  var type = runConnect();
     //console.log(type);
     // if there is no connection, alert that data is unavailable.
     if (type === "no") {
         // if there is no connection, alert the user
         noConnect();
     };
+    */
 }; // end runWeather
 // Toggle between links shown on weather page
 var toggleView = function () {
@@ -89,25 +90,25 @@ var displayData = function (results) {
     var pic; // create a vairable to hold dynamic picture
     var thisObj = { // create object to hold selected weather info
     all: [{
-          desc: "Currently: " + observ.temp_f +
-          "&degF (" + observ.temp_c + "&degC)",
+          desc: ["Currently: ", observ.temp_f +
+          "&degF (" + observ.temp_c + "&degC)"],
           asideTop: "High: " + forecast.high.fahrenheit + "&degF (" + forecast.high.celsius + "&degC)",
           asideBot: "Low: " + forecast.low.fahrenheit + "&degF (" + forecast.low.celsius + "&degC)",
           id: "temp"
           }, {
-          desc: observ.weather + " skies",
+          desc: [observ.weather + " skies", " "],
           asideTop: "Humidity: " + observ.relative_humidity,
           asideBot: "Pressure: " + observ.pressure_in,
           id: "clouds"
           },
           {
-          desc: observ.wind_dir + " winds at " + observ.wind_mph + " mph",
+          desc: [observ.wind_dir + " winds", " at " + observ.wind_mph + " mph"],
           asideTop:  "Gusting to " + observ.wind_gust_mph + " mph",
           asideBot: "Feels like " + observ.feelslike_f + "&degF",
           id: "wind"
           },
           {
-          desc: "Today will be " + forecast.icon,
+          desc: ["Today will be ", forecast.icon],
           asideTop:  "Sunrise " + results.sun_phase.sunrise.hour + ":" + results.sun_phase.sunrise.minute + " AM",
           asideBot: "Sunset " + hour + ":" + results.sun_phase.sunset.minute + " PM",
           id: "sun"
@@ -131,8 +132,8 @@ var displayData = function (results) {
            if (value.asideBot === undefined) {
            value.asideBot = "";
            }
-           var list = "<li><img src='../www/img/" + pic + "'/><p>" +
-           value.desc + "</p><p class='ui-li-aside'>" + value.asideTop +
+           var list = "<li><img src='../www/img/" + pic + "'/><h5>" +
+           value.desc[0]+ "<br>" + value.desc[1] + "</h5><p class='ui-li-aside'>" + value.asideTop +
            "<br>" + value.asideBot + "</p></li>";
            // create the line item and add it to the listview
            $('#resultsWea').append(list);
@@ -143,13 +144,13 @@ var displayData = function (results) {
 // Function to get API data from Geolocation
 var getDetails = function () {
     // lookup connection
-    var conn = checkConn();
+ /*   var conn = checkConn();
     // if there is no connection, set up alert
     if (conn === "no") {
         noConnect();
     } else {
         // if there is a connection, run function
-        $('#lookup').hide();
+ /*       $('#lookup').hide();
         $('#reset').closest('.ui-btn').show();
         var location = $('#location').val();
         // Separate the string
@@ -164,7 +165,7 @@ var getDetails = function () {
                return false;
                } // end success
                }); // end ajax call
-    };// end connection conditional
+   // };// end connection conditional
 }; // end get details function
 // Function to get and display Geolocation coordinates
 var findLoc = function (position) {
