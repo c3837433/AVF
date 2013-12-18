@@ -17,17 +17,13 @@
        under the License.
 */
 
-package org.apache.cordova.geolocation;
+package org.apache.cordova.file;
 
+@SuppressWarnings("serial")
+public class NoModificationAllowedException extends Exception {
 
-import android.location.LocationManager;
-
-/**
- * This class handles requests for GPS location services.
- *
- */
-public class NetworkListener extends CordovaLocationListener {
-    public NetworkListener(LocationManager locationManager, GeoBroker m) {
-        super(locationManager, m, "[Cordova NetworkListener]");
+    public NoModificationAllowedException(String message) {
+        super(message);
     }
+
 }

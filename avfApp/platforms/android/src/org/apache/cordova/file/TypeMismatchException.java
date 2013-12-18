@@ -17,17 +17,14 @@
        under the License.
 */
 
-package org.apache.cordova.geolocation;
 
+package org.apache.cordova.file;
 
-import android.location.LocationManager;
+@SuppressWarnings("serial")
+public class TypeMismatchException extends Exception {
 
-/**
- * This class handles requests for GPS location services.
- *
- */
-public class NetworkListener extends CordovaLocationListener {
-    public NetworkListener(LocationManager locationManager, GeoBroker m) {
-        super(locationManager, m, "[Cordova NetworkListener]");
+    public TypeMismatchException(String message) {
+        super(message);
     }
+
 }

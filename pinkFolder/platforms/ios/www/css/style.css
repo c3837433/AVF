@@ -33,13 +33,8 @@ ul {
 #weather h2 {
     font-size: 1.2em;
 }
-
 #dirDisplay {
-    background-image: url('../img/rose.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-#compDir {
+    background-image: url('../img/point.png'), url('../img/rose.png');
     background-repeat: no-repeat;
     background-position: center center;
 }
