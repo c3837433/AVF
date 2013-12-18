@@ -48,14 +48,14 @@ var runWeather = function () {
     $('#reset').closest('.ui-btn').hide();
     // set the info for the alert if page has no network
     // check the connection type
-  /*  var type = runConnect();
+    var type = runConnect();
     //console.log(type);
     // if there is no connection, alert that data is unavailable.
     if (type === "no") {
         // if there is no connection, alert the user
         noConnect();
     };
-    */
+    
 }; // end runWeather
 // Toggle between links shown on weather page
 var toggleView = function () {
@@ -144,13 +144,13 @@ var displayData = function (results) {
 // Function to get API data from Geolocation
 var getDetails = function () {
     // lookup connection
- /*   var conn = checkConn();
+    var conn = checkConn();
     // if there is no connection, set up alert
     if (conn === "no") {
         noConnect();
     } else {
         // if there is a connection, run function
- */       $('#lookup').hide();
+        $('#lookup').hide();
         $('#reset').closest('.ui-btn').show();
         var location = $('#location').val();
         // Separate the string
@@ -165,7 +165,7 @@ var getDetails = function () {
                return false;
                } // end success
                }); // end ajax call
-   // };// end connection conditional
+    };// end connection conditional
 }; // end get details function
 // Function to get and display Geolocation coordinates
 var findLoc = function (position) {
