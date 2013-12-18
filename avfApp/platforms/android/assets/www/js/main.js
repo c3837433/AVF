@@ -139,8 +139,8 @@ var displayData = function (results) {
            if (value.asideBot === undefined) {
            value.asideBot = "";
            }
-           var list = "<li><img src='../www/img/" + pic + "'/><h2>" +
-           value.desc + "</h2><p class='ui-li-aside'>" + value.asideTop +
+           var list = "<li><img src='../www/img/" + pic + "'/><h3><br>" +
+           value.desc + "</h3><p class='ui-li-aside'>" + value.asideTop +
            "<br>" + value.asideBot + "</p></li>";
            // create the line item and add it to the listview
            $('#resultsWea').append(list);
