@@ -89,25 +89,25 @@ var displayData = function (results) {
     var pic; // create a vairable to hold dynamic picture
     var thisObj = { // create object to hold selected weather info
     all: [{
-          desc: "Current Temperature: " + observ.temp_f +
+          desc: "Currently: " + observ.temp_f +
           "&degF (" + observ.temp_c + "&degC)",
           asideTop: "High: " + forecast.high.fahrenheit + "&degF (" + forecast.high.celsius + "&degC)",
           asideBot: "Low: " + forecast.low.fahrenheit + "&degF (" + forecast.low.celsius + "&degC)",
           id: "temp"
           }, {
-          desc: "Conditions: " + observ.weather,
+          desc: observ.weather + " skies",
           asideTop: "Humidity: " + observ.relative_humidity,
           asideBot: "Pressure: " + observ.pressure_in,
           id: "clouds"
           },
           {
-          desc: "Wind is traveling from the " + observ.wind_dir + " at " + observ.wind_mph + " mph",
+          desc: observ.wind_dir + " winds at " + observ.wind_mph + " mph",
           asideTop:  "Gusting to " + observ.wind_gust_mph + " mph",
           asideBot: "Feels like " + observ.feelslike_f + "&degF",
           id: "wind"
           },
           {
-          desc: "Skies are " + forecast.icon + " and " + forecast.skyicon,
+          desc: "Today will be " + forecast.icon,
           asideTop:  "Sunrise " + results.sun_phase.sunrise.hour + ":" + results.sun_phase.sunrise.minute + " AM",
           asideBot: "Sunset " + hour + ":" + results.sun_phase.sunset.minute + " PM",
           id: "sun"
@@ -131,8 +131,8 @@ var displayData = function (results) {
            if (value.asideBot === undefined) {
            value.asideBot = "";
            }
-           var list = "<li><img src='../www/img/" + pic + "'/><h3><br>" +
-           value.desc + "</h3><p class='ui-li-aside'>" + value.asideTop +
+           var list = "<li><img src='../www/img/" + pic + "'/><p>" +
+           value.desc + "</p><p class='ui-li-aside'>" + value.asideTop +
            "<br>" + value.asideBot + "</p></li>";
            // create the line item and add it to the listview
            $('#resultsWea').append(list);
