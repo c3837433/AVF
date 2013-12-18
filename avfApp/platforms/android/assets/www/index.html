@@ -30,21 +30,21 @@
             <section data-role="content" id="mainNav">
                 <div class="ui-grid-c my-breakpoint">
                     <div class="ui-block-a">
-                        <a href="#geo">
+                        <a href="#notify">
                             <img src="img/geo.png" alt="geolocation">
-                            <p>GEOLOCATION</p>
+                            <p>NOTIFICATION</p>
                         </a>
                     </div>
                     <div class="ui-block-b">
-                        <a href="#compass">
-                            <img src="img/compass.png" alt="compass">
-                            <p>COMPASS</p>
+                    	<a href="#connection">
+                            <img src="img/contacts.png" alt="contacts">
+                            <p>CONNECTION</p>
                         </a>
                     </div>
                     <div class="ui-block-c">
-                        <a href="#contacts">
-                            <img src="img/contacts.png" alt="contacts">
-                            <p>CONTACTS</p>
+                        <a href="#compass">
+                            <img src="img/compass.png" alt="compass">
+                            <p>COMPASS</p>
                         </a>
                     </div>
                     <div class="ui-block-d">
@@ -275,22 +275,17 @@
             </footer> <!-- End footer -->
         </section>
         <!-- End compass Page -->
-        <!-- Begin contacts page -->
-        <section data-role="page" id="contacts" data-add-back-btn="true">
+        <!-- Begin connection page -->
+        <section data-role="page" id="connection" data-add-back-btn="true">
             <header data-role="header"> <!-- Begin Header -->
                 <h1>Demo <span>Application</span></h1>
                 <p>Angela Smith  |  AVF 1312</p>
             </header> <!-- End Header -->
             <section data-role="content"> <!-- Begin  content -->
-                <h1>Contacts</h1>
+                <h1>Connection</h1>
                 <ul>
-                    <li><label for="fName">First Name: </label></li>
-                    <li><input type="text" id="fName"><li>
-                    <li><label for="lName">Last Name: </label></li>
-                    <li><input type="text" id="lName"><li>
-                    <li><label for="pNum">Phone Number: </label></li>
-                    <li><input type="number" id="pNum"><li>
-                    <li><input type="submit" id="createContact" value="Create New Contact">
+                    <li><input type="submit" id="getConnect" value="Get Device Connection">
+                    <li><input type="text" id="connType"><li>
 </li>
                 </ul>
             </section> <!-- End content -->

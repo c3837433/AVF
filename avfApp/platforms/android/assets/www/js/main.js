@@ -2,9 +2,17 @@
 // Angela Smith
 // Week 4
 
-// NOTIFICATIONS
+// NOTIFICATION
 var endAlert = function () {
     console.log("Notification has ended");
+};
+var runNotify = function () {
+    navigator.notification.alert(
+         "Notifications are working.",   // alert message
+         endAlert,                       // end alert
+         "Notification Demo",            // notification title
+         "Return to App"                 // End button name
+         );
 };
 // Alert for NO network connection
 var noConnect = function (pageCall) {
@@ -16,7 +24,7 @@ var noConnect = function (pageCall) {
     );
 };
 
-//CONNECTION (iOS version)
+//CONNECTION (Android version)
 // When Weather or Instagram page load, check connection. If none, display no connection. If cell, change instagram to smaller images.
 var runConnect = function () {
     var connect = navigator.connection.type;
@@ -39,6 +47,12 @@ var checkConn = function () {
     //console.log(type);
     // return the connection
     return type;
+};
+var getConnection = function () {
+	// get the connection type
+	var type = runConnect();
+	// pass the type into the field
+	$('#connType').val(type);
 };
 
 // WEATHER
@@ -456,13 +470,14 @@ var whenReady = function () {
     // Research
     $("#research").on("pageinit", loadDynRes);
     // Geolocation
-    $("a[href='#geo']").on('click', function(e){  
+   /* $("a[href='#geo']").on('click', function(e){  
         e.preventDefault();
         console.log("Loading Geoloaction Page");
        	$.mobile.changePage("#geo", {
            	//reloadPage:true
         });
-	});
+	});*/
+	
     $('#getGeo').on('click', runGeo);
     // Geolocation/ Weather Mashup
     $('#getLocation').on('click', runLoc);
@@ -477,7 +492,9 @@ var whenReady = function () {
     // Contacts
     $('#createContact').on('click', makeContact);
     // Notification
-   // $('#notAlert').on('click', runNotify);
+    $('#notAlert').on('click', runNotify);
+    // Connection
+    $('#getConnect').on('click', getConnection);
 }; // end phonegap whenReady
 
 //Listen for when the device is ready, and call functions when clicked
