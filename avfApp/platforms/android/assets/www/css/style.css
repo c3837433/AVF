@@ -122,11 +122,6 @@ footer .ui-btn {
     font-size: 1.2em;
 }
 
-.ui-li-has-thumb .ui-btn-inner a.ui-link-inherit {
-    padding-left: 55px;
-    padding-top: 23px;
-}
-
 /* Media Queries */
 /* Android landscape */
 @media all and (orientation: landscape) {
