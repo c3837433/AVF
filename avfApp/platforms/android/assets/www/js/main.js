@@ -150,7 +150,7 @@ var getDetails = function () {
         noConnect();
     } else {
         // if there is a connection, run function
- /*       $('#lookup').hide();
+ */       $('#lookup').hide();
         $('#reset').closest('.ui-btn').show();
         var location = $('#location').val();
         // Separate the string
