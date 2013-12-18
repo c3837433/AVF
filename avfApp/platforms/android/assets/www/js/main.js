@@ -6,14 +6,6 @@
 var endAlert = function () {
     console.log("Notification has ended");
 };
-var runNotify = function () {
-    navigator.notification.alert(
-        "Notifications are working.",   // alert message
-        endAlert,                       // end alert
-        "Notification Demo",            // notification title
-        "Return to App"                 // End button name
-    );
-};
 // Alert for NO network connection
 var noConnect = function (pageCall) {
     navigator.notification.alert(
@@ -308,10 +300,7 @@ var head = 0;
 var getDirection = function (currHeading) {
     // Take the heading and pass it to the h2 tag
     var display = currHeading.magneticHeading;
-    // take the direction and display the heading
     $('#headResults').val(display);
-    // grab the point and rotate it the number of degrees
-    $('#compDir').css('-webkitTransform', 'rotate(' + display + 'deg)');
 };// end get compass coordinates
 // Set the time interval to check heading
 var compOption =  {
@@ -335,6 +324,7 @@ var endCompass = function() {
         console.log("Compass has closed");
     }
 };
+
 
 //  RESEARCH
 // Display the research options on the research page dynamically
@@ -452,6 +442,7 @@ var makeContact = function () {
 };
 
 // DEVICE READY
+        
 var whenReady = function () {
     console.log('Device is ready');
     // Weather functions
@@ -464,6 +455,13 @@ var whenReady = function () {
     // Research
     $("#research").on("pageinit", loadDynRes);
     // Geolocation
+    $("a[href='#geo']").on('click', function(e){  
+        e.preventDefault();
+        console.log("Loading Geoloaction Page");
+       	$.mobile.changePage("#geo", {
+           	//reloadPage:true
+        });
+	});
     $('#getGeo').on('click', runGeo);
     // Geolocation/ Weather Mashup
     $('#getLocation').on('click', runLoc);
@@ -478,7 +476,7 @@ var whenReady = function () {
     // Contacts
     $('#createContact').on('click', makeContact);
     // Notification
-    $('#notAlert').on('click', runNotify);
+   // $('#notAlert').on('click', runNotify);
 }; // end phonegap whenReady
 
 //Listen for when the device is ready, and call functions when clicked
