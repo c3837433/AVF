@@ -35,8 +35,8 @@ ul { list-style: none; }
 .ui-li-aside {
     display: inline;
     text-align: left;
-    font-size: .4em;
-    width: 4em;
+    font-size: .8em;
+    width: 6em;
 }
 
 #resultsInst p {
@@ -64,6 +64,10 @@ ul { list-style: none; }
 
 #resultsInst li {
     border: 4px solid #ffffff;
+}
+
+#weather img {
+	width: 4em;
 }
 
 /* Header */

@@ -8,20 +8,20 @@ var endAlert = function () {
 };
 var runNotify = function () {
     navigator.notification.alert(
-        "Notifications are working.",   // alert message
-        endAlert,                       // end alert
-        "Notification Demo",            // notification title
-        "Return to App"                 // End button name
-    );
+                                 "Notifications are working.",   // alert message
+                                 endAlert,                       // end alert
+                                 "Notification Demo",            // notification title
+                                 "Return to App"                 // End button name
+                                 );
 };
 // Alert for NO network connection
 var noConnect = function (pageCall) {
     navigator.notification.alert(
-        "This page needs a network connection to run.",   // alert message
-        endAlert,                       // end alert
-        "No Network Connection",            // notification title
-        "Return to App"                 // End button name
-    );
+                                 "This page needs a network connection to run.",   // alert message
+                                 endAlert,                       // end alert
+                                 "No Network Connection",            // notification title
+                                 "Return to App"                 // End button name
+                                 );
 };
 
 //CONNECTION (iOS version)
@@ -147,8 +147,7 @@ var displayData = function (results) {
     $('#resultsWea').listview('refresh'); //refresh the listview
 }; // end display weather data function
 // Function to get API data from Geolocation
-var getDetails = function (e) {
-    e.preventDefault();
+var getDetails = function () {
     // lookup connection
     var conn = checkConn();
     // if there is no connection, set up alert
@@ -167,7 +166,7 @@ var getDetails = function (e) {
                "dataType": "jsonp",
                "success": function (data) {
                console.log(data);
-               displayData(e, data);
+               displayData(data);
                return false;
                } // end success
                }); // end ajax call
@@ -188,7 +187,7 @@ var findLoc = function (position) {
            console.log(data);
            displayData(data);
            } // end success
-        }); // end ajax call
+           }); // end ajax call
     return false;
 }; // end findLoc function
 
@@ -211,15 +210,8 @@ var runInstagram = function () {
 // Function to display Instagram Data
 var displayImages = function (results, type) {
     // check the connection type
-    //var type = runConnect();
     //console.log(type);
-    // if there is no connection, alert that data is unavailable.
     var imageRes;
-    //if (type === "no") {
-        // if there is no connection, alert the user
-      //  noConnect();
-        //return false;
-    //};
     // run the function to get data
     //Empty the Listview
     $('#resultsInst').empty();
@@ -227,34 +219,34 @@ var displayImages = function (results, type) {
     // Sample HTML
     //<img src="url" alt="user_fullname"/><h2>username</h2><p>caption<p/><p>filter</p>
     $.each(results.data, function (index, value) {
-        var loc;
-        if (value.location !== null) { // if the location is not empty
+           var loc;
+           if (value.location !== null) { // if the location is not empty
            console.log(value.location);
            if (value.location.name !== null) { // and if the name is not empty use it
-                console.log(value.location.name);
-                loc = value.location.name;
+           console.log(value.location.name);
+           loc = value.location.name;
            }
-        } else { // otherwise skip it
+           } else { // otherwise skip it
            loc = "";
-        }
-        if (loc === undefined) { // if the location is still undefined (had geo without a name) set to blank
+           }
+           if (loc === undefined) { // if the location is still undefined (had geo without a name) set to blank
            loc = " ";
-        }
-        if (type === "cellular"){
+           }
+           if (type === "cellular"){
            imageRes = value.images.low_resolution;
            $('#resultsInst').addClass("lowRes");
-        } else {
+           } else {
            imageRes = value.images.standard_resolution;
-        };
+           };
            console.log(imageRes);
-        // run the function to get data
-        var image = "<li><h2>" + value.user.username +
+           // run the function to get data
+           var image = "<li><h2>" + value.user.username +
            "</h2><h3 class='ui-li-aside'>Likes &hearts; " +
            value.likes.count + "<h3><img src='" + imageRes
            .url + "' id='inst' alt='" + value.user.full_name + "'/><p>" +
            loc + "</p><p>" + value.tags + "</p></li>";
-        $('#resultsInst').append(image);
-    }); // end loop through retrieved results
+           $('#resultsInst').append(image);
+           }); // end loop through retrieved results
 }; // end displayImages function
 // INSTAGRAM API
 var getImages = function () {
@@ -367,10 +359,10 @@ var loadDynRes =  function(){
            "url": couchApi,
            "dataType": "jsonp",
            "success": function (data) {
-                console.log(data);
-                displayResearch(data);
+           console.log(data);
+           displayResearch(data);
            } // end success
-    }); // end ajax call
+           }); // end ajax call
     return false;
 }; // end research pageinit
 
@@ -456,6 +448,7 @@ var makeContact = function () {
 
 // DEVICE READY
 var whenReady = function () {
+    console.log('Device is ready');
     // Weather functions
     $("#weather").on("pageinit", runWeather);
     $('#getWeath').on('click', getDetails);
@@ -481,7 +474,6 @@ var whenReady = function () {
     $('#createContact').on('click', makeContact);
     // Notification
     $('#notAlert').on('click', runNotify);
-    
 }; // end phonegap whenReady
 
 //Listen for when the device is ready, and call functions when clicked
