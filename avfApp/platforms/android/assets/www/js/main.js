@@ -169,7 +169,7 @@ var getDetails = function () {
         var location = $('#location').val();
         // Separate the string
         var loc = location.split(',');
-        var weaApi = "http://api.wunderground.com/api/3d402f1818f340e0/geolookup/conditions/forecast/almanac/astronomy/q/" + loc[1] + "/" + loc[0] + ".json";
+        var weaApi = "http://api.wunderground.com/api/3d402f1818f340e0/geolookup/conditions/forecast/alerts/almanac/astronomy/q/" + loc[1] + "/" + loc[0] + ".json";
         $.ajax({
                "url": weaApi,
                "dataType": "jsonp",
@@ -188,7 +188,7 @@ var findLoc = function (position) {
     console.log("Latitude=" + lat + " Longitude=" + lon);
     $('#lookup').hide();
     $('#reset').closest('.ui-btn').show();
-    var weaApi = "http://api.wunderground.com/api/3d402f1818f340e0/geolookup/conditions/forecast/almanac/astronomy/q/" + lat + "," + lon + ".json";
+    var weaApi = "http://api.wunderground.com/api/3d402f1818f340e0/geolookup/conditions/forecast/alerts/almanac/astronomy/q/" + lat + "," + lon + ".json";
     $.ajax({
            "url": weaApi,
            "dataType": "jsonp",
