@@ -27,7 +27,9 @@ section {
     display: block;
     border: 2px solid #666666;
 }
-
+#mainNav p {
+	margin-top: 0;
+}
 /* Listview */
 
 ul { list-style: none; }
@@ -79,6 +81,10 @@ ul { list-style: none; }
 
 #resultsInst li {
     border: 4px solid #ffffff;
+}
+#weaAlert {
+	border: 2px solid #fbb03b;
+	text-align: center;
 }
 
 /* Header */

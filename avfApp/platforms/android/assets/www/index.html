@@ -32,49 +32,49 @@
                     <div class="ui-block-a">
                         <a href="#notify">
                             <img src="img/alert.png" alt="notification">
-                            <p>NOTIFICATION</p>
+                            <p><br>NOTIFICATION</p>
                         </a>
                     </div>
                     <div class="ui-block-b">
                     	<a href="#connection">
                             <img src="img/connect.png" alt="wifi">
-                            <p>CONNECTION</p>
+                            <p><br>CONNECTION</p>
                         </a>
                     </div>
                     <div class="ui-block-c">
-                        <a href="#compass">
-                            <img src="img/compass.png" alt="compass">
-                            <p>COMPASS</p>
+                        <a href="#geo">
+                            <img src="img/geo.png" alt="gps">
+                            <p><br>GEOLOCATION</p>
                         </a>
                     </div>
                     <div class="ui-block-d">
-                        <a href="#accel">
-                            <img src="img/accel.png" alt="accelerometer">
-                            <p>ACCELEROMOTER</p>
+                        <a href="#compass">
+                            <img src="img/compass.png" alt="compass">
+                            <p><br>COMPASS</p>
                         </a>
                     </div>
                     <div class="ui-block-a">
                         <a href="#camera" data-ajax="false">
                             <img src="img/camera.png" alt="camera">
-                            <p>CAPTURE</p>
+                            <p><br>CAPTURE</p>
                         </a>
                     </div>
                     <div class="ui-block-b">
-                        <a href="#instagram">
-                            <img src="img/instagram.png" alt="instagram">
-                            <p>INSTAGRAM API</p>
+                        <a href="#research">
+                            <img src="img/research.png" alt="research">
+                            <p><br>RESEARCH</p>
                         </a>
                     </div>
                     <div class="ui-block-c">
                         <a href="#weather">
                             <img src="img/weather.png" alt="weather">
-                            <p>WEATHER API</p>
+                            <p>WEATHER API<br>Geo, Notification &amp;<br>Connection Mashup</p>
                         </a>
                     </div>
                     <div class="ui-block-d">
-                        <a href="#research">
-                            <img src="img/research.png" alt="research">
-                            <p>RESEARCH</p>
+                        <a href="#instagram">
+                            <img src="img/instagram.png" alt="instagram">
+                            <p>INSTAGRAM API<br>Notification &amp;,<br>Connection Mashup</p>
                         </a>
                     </div>
                 </div><!-- End grid-d -->
@@ -136,29 +136,28 @@
                     <section> <!-- Begin location -->
                         <label for="location">Search by City:</label>
                         <input type="text" id="location" placeholder="Paris, France" data-clear-btn="true" class="required">
-                            <p>Enter the name or a major city to search.</p>
-                            <div> <!-- Begin submit -->
-                                <input type="submit" id="getWeath" value="Lookup Weather">
-                            </div> <!-- End submit -->
-                            </section> <!-- End location -->
+                        <p>Enter the name or a major city to search.</p>
+                        <div> <!-- Begin submit -->
+                              <input type="submit" id="getWeath" value="Lookup Weather">
+                        </div> <!-- End submit -->
+                    </section> <!-- End location -->
                     <section>
                         <h3>OR</h3>
                     </section>
                     <section>
                         <label for="location">Search this Location:</label>
                         <input type="submit" id="getLocation" value="Get Current Location">
-                            <p>Search will use your current GPS coordinates.</p>
-                            </section>
+                        <p>Search will use your current GPS coordinates.</p>
+                    </section>
                 </form> <!-- End form -->
             </section> <!-- End form section -->
             <section data-role="content">  <!-- Begin results section -->
-            	
+            	<ul data-role="listview" data-inset="true" id="weaAlert">
+                </ul>
                 <ul data-role="listview" data-inset="true" id="resultsWea">
-                	<li><input type="hidden" id="viewAlert" value="View Weather Alert!" /></li>
-                	<li id="weaAlert"></li>
                 </ul>
                 <input type="reset" id="reset" value="Search a New Location">
-                    </section> <!-- End results section -->
+            </section> <!-- End results section -->
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
                 <nav data-role="navbar">
                     <ul>
