@@ -2,9 +2,17 @@
 // Angela Smith
 // Week 4
 
-// NOTIFICATIONS
+// NOTIFICATION
 var endAlert = function () {
     console.log("Notification has ended");
+};
+var runNotify = function () {
+    navigator.notification.alert(
+                                 "Notifications are working.",   // alert message
+                                 endAlert,                       // end alert
+                                 "Notification Demo",            // notification title
+                                 "Return to App"                 // End button name
+                                 );
 };
 // Alert for NO network connection
 var noConnect = function (pageCall) {
@@ -38,6 +46,12 @@ var checkConn = function () {
     // return the connection
     return type;
 };
+var getConnection = function () {
+	// get the connection type
+	var type = runConnect();
+	// pass the type into the field
+	$('#connType').val(type);
+};
 
 // WEATHER
 //Function to call when the weather API page is first loaded
@@ -46,13 +60,14 @@ var runWeather = function () {
     $('#reset').closest('.ui-btn').hide();
     // set the info for the alert if page has no network
     // check the connection type
-    var type = runConnect();
-    //console.log(type);
-    // if there is no connection, alert that data is unavailable.
-    if (type === "no") {
-        // if there is no connection, alert the user
-        noConnect();
-    };
+    /*   var type = runConnect();
+     //console.log(type);
+     // if there is no connection, alert that data is unavailable.
+     if (type === "no") {
+     // if there is no connection, alert the user
+     noConnect();
+     };
+     */
 }; // end runWeather
 // Toggle between links shown on weather page
 var toggleView = function () {
@@ -63,8 +78,9 @@ var toggleView = function () {
 // Display Weather API Data from either the Name field or Geolocation
 var displayData = function (results) {
     $.mobile.changePage($('#weather'));
-    //Empty the Listview;
+    //Empty the Listviews;
     $('#resultsWea').empty();
+    $('#weaAlert').empty();
     // set the variable state to either the state or country
     var state;
     var hour;
@@ -79,33 +95,50 @@ var displayData = function (results) {
     if (results.sun_phase.sunset.hour > 12) {
         hour = results.sun_phase.sunset.hour - 12;
     }
+    // Check for alerts
+    console.log(results.alerts);
+    if (results.alerts.length === 0) {
+    	console.log("There are no alerts!");
+    } else {
+    	// create a notification
+    	navigator.notification.alert(
+                                     results.alerts[0].description,  // alert message
+                                     endAlert,                       // end alert
+                                     "Weather Alert",            	// notification title
+                                     "View Weather Detail"           // End button name
+                                     );
+    	// create a tag with message
+    	var alertMessage = "<li><h4>Weather Alert<br>" + results.alerts[0].description + " in effect untill " + results.alerts[0].expires + ".</h4></li>";
+    	// add message to the page
+    	$('#weaAlert').prepend(alertMessage);
+    }; // end conditional
     // Create a title message
     var message = "<h4>Current conditions for " + results.location.city + ", " +
     results.location.country + "</h4>";
     // Prepend message to the top of content
     $('#resultsWea').prepend(message);
-    var pic; // create a vairable to hold dynamic picture
+    var pic; // create a variable to hold dynamic picture
     var thisObj = { // create object to hold selected weather info
     all: [{
-          desc: "Current Temperature: " + observ.temp_f +
-          "&degF (" + observ.temp_c + "&degC)",
+          desc: ["Currently: ", observ.temp_f +
+                 "&degF (" + observ.temp_c + "&degC)"],
           asideTop: "High: " + forecast.high.fahrenheit + "&degF (" + forecast.high.celsius + "&degC)",
           asideBot: "Low: " + forecast.low.fahrenheit + "&degF (" + forecast.low.celsius + "&degC)",
           id: "temp"
           }, {
-          desc: "Conditions: " + observ.weather,
+          desc: [observ.weather + " skies", " "],
           asideTop: "Humidity: " + observ.relative_humidity,
           asideBot: "Pressure: " + observ.pressure_in,
           id: "clouds"
           },
           {
-          desc: "Wind is traveling from the " + observ.wind_dir + " at " + observ.wind_mph + " mph",
+          desc: [observ.wind_dir + " winds", " at " + observ.wind_mph + " mph"],
           asideTop:  "Gusting to " + observ.wind_gust_mph + " mph",
           asideBot: "Feels like " + observ.feelslike_f + "&degF",
           id: "wind"
           },
           {
-          desc: "Skies are " + forecast.icon + " and " + forecast.skyicon,
+          desc: ["Today will be ", forecast.icon],
           asideTop:  "Sunrise " + results.sun_phase.sunrise.hour + ":" + results.sun_phase.sunrise.minute + " AM",
           asideBot: "Sunset " + hour + ":" + results.sun_phase.sunset.minute + " PM",
           id: "sun"
@@ -129,8 +162,8 @@ var displayData = function (results) {
            if (value.asideBot === undefined) {
            value.asideBot = "";
            }
-           var list = "<li><img src='../www/img/" + pic + "'/><h2>" +
-           value.desc + "</h2><p class='ui-li-aside'>" + value.asideTop +
+           var list = "<li><img src='../www/img/" + pic + "'/><h5>" +
+           value.desc[0]+ "<br>" + value.desc[1] + "</h5><p class='ui-li-aside'>" + value.asideTop +
            "<br>" + value.asideBot + "</p></li>";
            // create the line item and add it to the listview
            $('#resultsWea').append(list);
@@ -141,28 +174,28 @@ var displayData = function (results) {
 // Function to get API data from Geolocation
 var getDetails = function () {
     // lookup connection
-    var conn = checkConn();
-    // if there is no connection, set up alert
-    if (conn === "no") {
-        noConnect();
-    } else {
-        // if there is a connection, run function
-        $('#lookup').hide();
-        $('#reset').closest('.ui-btn').show();
-        var location = $('#location').val();
-        // Separate the string
-        var loc = location.split(',');
-        var weaApi = "http://api.wunderground.com/api/3d402f1818f340e0/geolookup/conditions/forecast/almanac/astronomy/q/" + loc[1] + "/" + loc[0] + ".json";
-        $.ajax({
-               "url": weaApi,
-               "dataType": "jsonp",
-               "success": function (data) {
-               console.log(data);
-               displayData(data);
-               return false;
-               } // end success
-               }); // end ajax call
-    };// end connection conditional
+    /*   var conn = checkConn();
+     // if there is no connection, set up alert
+     if (conn === "no") {
+     noConnect();
+     } else {
+     */        // if there is a connection, run function
+    $('#lookup').hide();
+    $('#reset').closest('.ui-btn').show();
+    var location = $('#location').val();
+    // Separate the string
+    var loc = location.split(',');
+    var weaApi = "http://api.wunderground.com/api/3d402f1818f340e0/geolookup/conditions/forecast/alerts/almanac/astronomy/q/" + loc[1] + "/" + loc[0] + ".json";
+    $.ajax({
+           "url": weaApi,
+           "dataType": "jsonp",
+           "success": function (data) {
+           console.log(data);
+           displayData(data);
+           return false;
+           } // end success
+           }); // end ajax call
+    /*   };// end connection conditional */
 }; // end get details function
 // Function to get and display Geolocation coordinates
 var findLoc = function (position) {
@@ -171,7 +204,7 @@ var findLoc = function (position) {
     console.log("Latitude=" + lat + " Longitude=" + lon);
     $('#lookup').hide();
     $('#reset').closest('.ui-btn').show();
-    var weaApi = "http://api.wunderground.com/api/3d402f1818f340e0/geolookup/conditions/forecast/almanac/astronomy/q/" + lat + "," + lon + ".json";
+    var weaApi = "http://api.wunderground.com/api/3d402f1818f340e0/geolookup/conditions/forecast/alerts/almanac/astronomy/q/" + lat + "," + lon + ".json";
     $.ajax({
            "url": weaApi,
            "dataType": "jsonp",
@@ -200,22 +233,23 @@ var runInstagram = function () {
     };
 }; // end runInstagram
 // Function to display Instagram Data
-var displayImages = function (results, type) {
+var displayImages = function (results) {
     // check the connection type
-    //console.log(type);
+    var type = runConnect();
+    console.log(type);
     var imageRes;
     // run the function to get data
     //Empty the Listview
     $('#resultsInst').empty();
-    console.log(results);
+    //console.log(results);
     // Sample HTML
     //<img src="url" alt="user_fullname"/><h2>username</h2><p>caption<p/><p>filter</p>
     $.each(results.data, function (index, value) {
            var loc;
            if (value.location !== null) { // if the location is not empty
-           console.log(value.location);
+           //console.log(value.location);
            if (value.location.name !== null) { // and if the name is not empty use it
-           console.log(value.location.name);
+           //console.log(value.location.name);
            loc = value.location.name;
            }
            } else { // otherwise skip it
@@ -224,14 +258,16 @@ var displayImages = function (results, type) {
            if (loc === undefined) { // if the location is still undefined (had geo without a name) set to blank
            loc = " ";
            }
+           // See if device is not on cellular service, if it is load low resolution images
            if (type === "cellular"){
            imageRes = value.images.low_resolution;
-           $('#resultsInst').addClass("lowRes");
+           console.log("Pulling low resolution image.");
            } else {
            imageRes = value.images.standard_resolution;
+           console.log("Pulling standard resolution image.");
            };
-           console.log(imageRes);
            // run the function to get data
+           
            var image = "<li><h2>" + value.user.username +
            "</h2><h3 class='ui-li-aside'>Likes &hearts; " +
            value.likes.count + "<h3><img src='" + imageRes
@@ -258,7 +294,7 @@ var getImages = function () {
     //Replace client with my data. Without callback=?&amp; will not receive results
     var api = "https://api.instagram.com/v1/tags/" + tag +
     "/media/recent?callback=?&amp;client_id=bf7a180389d34095a78d6f44b6660f73";
-    $.getJSON(api, type, displayImages);
+    $.getJSON(api, displayImages);
     return false; // stop page from changing
 }; // end getImages and load to the page
 
@@ -330,12 +366,12 @@ var displayResearch = function (data) {
                                  $('<article></article')
                                  .attr("data-role", "collapsible")
                                  .html(
-                                       $('<h4>' + reVal.title + '<h4>' +
-                                         '<h5>' + reVal.a[0] + '</h5><p>'+ reVal.a[1]+ '</p>' +
-                                         '<h5>' + reVal.b[0] + '</h5><p>'+ reVal.b[1]+ '</p>' +
-                                         '<h5>' + reVal.c[0] + '</h5><p>'+ reVal.c[1]+ '</p>' +
-                                         '<h5>' + reVal.d[0] + '</h5><p>'+ reVal.d[1]+ '</p>' +
-                                         '<h5>' + reVal.e[0] + '</h5><p>'+ reVal.e[1]+ '</p>'
+                                       $('<h2>' + reVal.title + '<h2>' +
+                                         '<h3>' + reVal.a[0] + '</h3><p>'+ reVal.a[1]+ '</p>' +
+                                         '<h3>' + reVal.b[0] + '</h3><p>'+ reVal.b[1]+ '</p>' +
+                                         '<h3>' + reVal.c[0] + '</h3><p>'+ reVal.c[1]+ '</p>' +
+                                         '<h3>' + reVal.d[0] + '</h3><p>'+ reVal.d[1]+ '</p>' +
+                                         '<h3>' + reVal.e[0] + '</h3><p>'+ reVal.e[1]+ '</p>'
                                          ) // end section add
                                        ) // end html
                                  ); // end collapsible append
@@ -437,6 +473,7 @@ var makeContact = function () {
 };
 
 // DEVICE READY
+
 var whenReady = function () {
     console.log('Device is ready');
     // Weather functions
@@ -448,7 +485,7 @@ var whenReady = function () {
     $('#getImages').on('click', getImages);
     // Research
     $("#research").on("pageinit", loadDynRes);
-    // Geolocation
+    // Geolocation	
     $('#getGeo').on('click', runGeo);
     // Geolocation/ Weather Mashup
     $('#getLocation').on('click', runLoc);
@@ -462,6 +499,10 @@ var whenReady = function () {
     $('#stopMove').on('click', endAccel);
     // Contacts
     $('#createContact').on('click', makeContact);
+    // Notification
+    $('#notAlert').on('click', runNotify);
+    // Connection
+    $('#getConnect').on('click', getConnection);
 }; // end phonegap whenReady
 
 //Listen for when the device is ready, and call functions when clicked
