@@ -96,6 +96,14 @@ var displayData = function (results) {
     if (results.sun_phase.sunset.hour > 12) {
         hour = results.sun_phase.sunset.hour - 12;
     }
+    // Check for alerts
+    if (results.alerts !== undefined) {
+    	console.log("There are alerts!");
+    	// create a tag with message
+    	var alertMessage = "<li><h2>" + results.alerts[0].description + " is in effect untill " + results.alerts[0].expires + ".</h2></li>";
+    	// add message to the page
+    	$('#resultsWea').prepend(alertMessage);
+    };
     // Create a title message
     var message = "<h4>Current conditions for " + results.location.city + ", " +
     results.location.country + "</h4>";
