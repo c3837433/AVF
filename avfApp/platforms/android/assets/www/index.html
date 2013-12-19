@@ -31,13 +31,13 @@
                 <div class="ui-grid-c my-breakpoint">
                     <div class="ui-block-a">
                         <a href="#notify">
-                            <img src="img/alert.png" alt="notification">
+                            <img src="img/notify.png" alt="notification">
                             <p><br>NOTIFICATION</p>
                         </a>
                     </div>
                     <div class="ui-block-b">
                     	<a href="#connection">
-                            <img src="img/connect.png" alt="wifi">
+                            <img src="img/conn.png" alt="wifi">
                             <p><br>CONNECTION</p>
                         </a>
                     </div>
@@ -68,13 +68,13 @@
                     <div class="ui-block-c">
                         <a href="#weather">
                             <img src="img/weather.png" alt="weather">
-                            <p>WEATHER API<br>Geo, Notification &amp;<br>Connection Mashup</p>
+                            <p>WEATHER API MASHUP<br>Geo, Alert &amp; Connection</p>
                         </a>
                     </div>
                     <div class="ui-block-d">
                         <a href="#instagram">
                             <img src="img/instagram.png" alt="instagram">
-                            <p>INSTAGRAM API<br>Notification &amp;,<br>Connection Mashup</p>
+                            <p>INSTAGRAM API MASHUP<br>Geo, Alert &amp; Connection</p>
                         </a>
                     </div>
                 </div><!-- End grid-d -->
@@ -136,19 +136,19 @@
                     <section> <!-- Begin location -->
                         <label for="location">Search by City:</label>
                         <input type="text" id="location" placeholder="Paris, France" data-clear-btn="true" class="required">
-                        <p>Enter the name or a major city to search.</p>
-                        <div> <!-- Begin submit -->
-                              <input type="submit" id="getWeath" value="Lookup Weather">
-                        </div> <!-- End submit -->
-                    </section> <!-- End location -->
+                            <p>Enter the name or a major city to search.</p>
+                            <div> <!-- Begin submit -->
+                                <input type="submit" id="getWeath" value="Lookup Weather">
+                                    </div> <!-- End submit -->
+                            </section> <!-- End location -->
                     <section>
                         <h3>OR</h3>
                     </section>
                     <section>
                         <label for="location">Search this Location:</label>
                         <input type="submit" id="getLocation" value="Get Current Location">
-                        <p>Search will use your current GPS coordinates.</p>
-                    </section>
+                            <p>Search will use your current GPS coordinates.</p>
+                            </section>
                 </form> <!-- End form -->
             </section> <!-- End form section -->
             <section data-role="content">  <!-- Begin results section -->
@@ -157,7 +157,7 @@
                 <ul data-role="listview" data-inset="true" id="resultsWea">
                 </ul>
                 <input type="reset" id="reset" value="Search a New Location">
-            </section> <!-- End results section -->
+                    </section> <!-- End results section -->
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
                 <nav data-role="navbar">
                     <ul>
@@ -241,7 +241,7 @@
             <section data-role="content"> <!-- Begin  content -->
                 <h1>Notification</h1>
                 <input type="submit" id="notAlert" value="Get Notifcation">
-            </section> <!-- End content -->
+                    </section> <!-- End content -->
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
                 <nav data-role="navbar">
                     <ul>
@@ -264,8 +264,8 @@
                     <li><input type="submit" id="getDir" value="Get Heading"></li>
                     <li><label for="headResults">Current Heading: </label></li>
                     <li><input type="number" id="headResults"><li>
-                    <li><input type="submit" id="stopHead" value="Stop Compass"></li>
-                </ul>
+                        <li><input type="submit" id="stopHead" value="Stop Compass"></li>
+                        </ul>
             </section> <!-- End content -->
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
                 <nav data-role="navbar">
@@ -287,9 +287,9 @@
                 <h1>Connection</h1>
                 <ul>
                     <li><input type="submit" id="getConnect" value="Get Device Connection">
-                    <li><input type="text" id="connType"><li>
-</li>
-                </ul>
+                        <li><input type="text" id="connType"><li>
+                        </li>
+                        </ul>
             </section> <!-- End content -->
             <footer data-role="footer" data-position="fixed"> <!-- Begin footer -->
                 <nav data-role="navbar">
@@ -312,13 +312,13 @@
                 <ul>
                     <li><label for="x">Accelerometer X Position: </label></li>
                     <li><input type="number" id="x"><li>
-                    <li><label for="y">Accelerometer Y Position: </label></li>
-                    <li><input type="text" id="y"><li>
-                    <li><label for="z">Accelerometer Z Position: </label></li>
-                    <li><input type="number" id="z"><li>
-                    <li><input type="submit" id="getMovement" value="Start Device Movement"></li>
-                    <li><input type="submit" id="stopMove" value="Stop Device Movement"></li>
-                </ul>
+                        <li><label for="y">Accelerometer Y Position: </label></li>
+                        <li><input type="text" id="y"><li>
+                            <li><label for="z">Accelerometer Z Position: </label></li>
+                            <li><input type="number" id="z"><li>
+                                <li><input type="submit" id="getMovement" value="Start Device Movement"></li>
+                                <li><input type="submit" id="stopMove" value="Stop Device Movement"></li>
+                                </ul>
             </section> <!-- End content -->
             <section id="currMovement">
             </section>
