@@ -16,6 +16,9 @@ section {
     display: block;
     border: 2px solid #666666;
 }
+#mainNav p {
+	margin-top: 0;
+}
 /* Listview */
 ul { 
     list-style: none; 
@@ -32,6 +35,10 @@ ul {
 }
 #weather h2 {
     font-size: 1.2em;
+}
+#weaAlert {
+	border: 2px solid #fbb03b;
+	text-align: center;
 }
 #dirDisplay {
     background-image: url('../img/point.png'), url('../img/rose.png');

@@ -488,14 +488,6 @@ var whenReady = function () {
     // Research
     $("#research").on("pageinit", loadDynRes);
     // Geolocation
-   /* $("a[href='#geo']").on('click', function(e){  
-        e.preventDefault();
-        console.log("Loading Geoloaction Page");
-       	$.mobile.changePage("#geo", {
-           	//reloadPage:true
-        });
-	});*/
-	
     $('#getGeo').on('click', runGeo);
     // Geolocation/ Weather Mashup
     $('#getLocation').on('click', runLoc);
