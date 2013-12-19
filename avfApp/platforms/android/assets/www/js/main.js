@@ -80,8 +80,9 @@ var toggleView = function () {
 // Display Weather API Data from either the Name field or Geolocation
 var displayData = function (results) {
     $.mobile.changePage($('#weather'));
-    //Empty the Listview;
+    //Empty the Listviews;
     $('#resultsWea').empty();
+    $('#weaAlert').empty();
     // set the variable state to either the state or country
     var state;
     var hour;
@@ -97,19 +98,28 @@ var displayData = function (results) {
         hour = results.sun_phase.sunset.hour - 12;
     }
     // Check for alerts
-    if (results.alerts !== undefined) {
-    	console.log("There are alerts!");
+    console.log(results.alerts);
+    if (results.alerts.length === 0) {
+    	console.log("There are no alerts!");
+    	} else { 
+    	// create a notification
+    	navigator.notification.alert(
+         	results.alerts[0].description,  // alert message
+         	endAlert,                       // end alert
+         	"Weather Alert",            	// notification title
+         	"View Weather Detail"           // End button name
+         );
     	// create a tag with message
-    	var alertMessage = "<li><h2>" + results.alerts[0].description + " is in effect untill " + results.alerts[0].expires + ".</h2></li>";
+    	var alertMessage = "<li><h4>Weather Alert<br>" + results.alerts[0].description + " in effect untill " + results.alerts[0].expires + ".</h4></li>";
     	// add message to the page
-    	$('#resultsWea').prepend(alertMessage);
-    };
+    	$('#weaAlert').prepend(alertMessage);
+    }; // end conditional
     // Create a title message
     var message = "<h4>Current conditions for " + results.location.city + ", " +
     results.location.country + "</h4>";
     // Prepend message to the top of content
     $('#resultsWea').prepend(message);
-    var pic; // create a vairable to hold dynamic picture
+    var pic; // create a variable to hold dynamic picture
     var thisObj = { // create object to hold selected weather info
     all: [{
           desc: ["Currently: ", observ.temp_f +
